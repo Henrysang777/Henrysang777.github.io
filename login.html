@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar Sesión / Registro - Legacy Motors</title>
+    <link rel="stylesheet" href="CSS/estilo.css">
+    <script>
+        (function() {
+            const savedTheme = localStorage.getItem("theme") || "dark";
+            document.documentElement.setAttribute("data-theme", savedTheme);
+        })();
+    </script>
+    <link rel="shortcut icon" href="Imagenes_EXTRA/Isologo.png" type="image/x-icon">
+</head>
+<body>
+
+<!-- Modal de Alerta Personalizado con Banner -->
+<div id="customAlert" class="modal-overlay">
+    <div class="custom-alert-box">
+        <div class="alert-banner">
+            <source srcset="Imagenes_EXTRA/Letters_Logo2.png" media="(prefers-color-scheme: light)" data-theme-logo>
+            <img src="Multimedia/Letters_Logo1.png" alt="Legacy Motors" class="alert-logo">
+        </div>
+        <div class="alert-body">
+            <p id="alertMensaje">Mensaje del sistema...</p>
+            <button type="button" class="btn-alerz`t-cerrar" onclick="cerrarAlertCustom()" data-i18n="btn_aceptar" data-es="ACEPTAR" data-en="ACCEPT">ACEPTAR</button>
+        </div>
+    </div>
+</div>
+
+    <header>
+        <nav class="nav-container">
+            <a href="index.html">
+                <picture class="logo-wrapper">
+                    <source srcset="Imagenes_EXTRA/Letters_Logo2.png" media="(prefers-color-scheme: light)" data-theme-logo>
+                    <img src="Multimedia/Letters_Logo1.png" alt="Logo" class="logo-img">
+                    <div class="rgb-line"></div>
+                </picture>
+            </a>
+
+            <div class="search-wrapper">
+                <input type="search" placeholder="Buscar..." data-es-placeholder="Buscar..." data-en-placeholder="Search..." autocomplete="off" onkeydown="ejecutarBusqueda(event)">
+            </div>
+
+            <div class="nav-links">
+                <div class="dropdown-container">
+                    <button type="button" class="dropdown-btn" id="dropdownBtn">
+                        <span data-i18n="nav_productos" data-es="PRODUCTOS" data-en="PRODUCTS">PRODUCTOS</span> <span class="arrow">▾</span>
+                    </button>
+                    <div class="dropdown-menu" id="dropdownMenu">
+                        <span class="dropdown-header" data-i18n="nav_categorias" data-es="Categorías" data-en="Categories">Categorías</span>
+                        <a href="turbos.html" data-i18n="cat_turbos" data-es="Turbos" data-en="Turbos">Turbos</a>
+                        <a href="NOS.html" data-i18n="cat_nos" data-es="Óxido Nitroso (NOS)" data-en="Nitrous Oxide (NOS)">Óxido Nitroso (NOS)</a>
+                        <a href="discos.html" data-i18n="cat_discos" data-es="Discos de Freno" data-en="Brake Discs">Discos de Freno</a>
+                        <a href="suspen.html" data-i18n="cat_suspen" data-es="Suspensiones" data-en="Suspensions">Suspensiones</a>
+                        <a href="carroceria.html" data-i18n="cat_carroceria" data-es="Carrocería" data-en="Bodywork">Carrocería</a>
+                    </div>
+                </div>
+                
+                <a href="index.html" data-i18n="nav_inicio" data-es="Inicio" data-en="Home">Inicio</a>
+                <a href="sobre_nosotros.html" data-i18n="nav_nosotros" data-es="Sobre Nosotros" data-en="About Us">Sobre Nosotros</a>
+                <a href="contactos.html" data-i18n="nav_contactos" data-es="Contactos" data-en="Contact Us">Contactos</a>
+                <a href="login.html" id="btn-sesion" class="btn-login active" data-i18n="nav_login" data-es="Iniciar sesión" data-en="Sign In">Iniciar sesión</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="auth-main">
+        <div class="auth-card" id="authCard">
+            <div class="form-box login-box">
+                <h1 data-i18n="login_title" data-es="Iniciar sesión" data-en="Sign In">Iniciar sesión</h1>
+                <p class="auth-subtitle-text" data-i18n="login_subtitle" data-es="Bienvenido de nuevo a Legacy Motors" data-en="Welcome back to Legacy Motors">Bienvenido de nuevo a Legacy Motors</p>
+                <form onsubmit="iniciarLOGIN(event); return false;">
+                    <div class="input-group">
+                        <input type="text" id="login-correo" placeholder="Correo electrónico" data-i18n-ph="ph_correo" data-es-placeholder="Correo electrónico" data-en-placeholder="Email address" required>
+                    </div>
+                    <div class="input-group">
+                        <input type="password" id="login-password" placeholder="Contraseña" data-i18n-ph="ph_password" data-es-placeholder="Contraseña" data-en-placeholder="Password" required>
+                    </div>
+                    <button type="submit" class="auth-btn" data-i18n="login_btn" data-es="Iniciar sesión" data-en="Sign In">Iniciar sesión</button>
+                </form>
+                
+                <p class="switch-text">
+                    <span data-i18n="switch_no_cuenta" data-es="¿No tienes cuenta?" data-en="Don't have an account?">¿No tienes cuenta?</span> 
+                    <a href="#" id="showRegister" data-i18n="switch_haz_clic" data-es="Haz clic aquí" data-en="Click here">Haz clic aquí</a>
+                </p>
+            </div>
+
+            <div class="form-box register-box">
+                <h1 data-i18n="reg_title" data-es="Crear cuenta" data-en="Create Account">Crear cuenta</h1>
+                <p class="auth-subtitle-text" data-i18n="reg_subtitle" data-es="Únete a la comunidad de modificaciones" data-en="Join the modification community">Únete a la comunidad de modificaciones</p>
+                
+                <form onsubmit="registrar(event); return false;">
+                    <div class="input-group">
+                        <input type="text" id="reg-usuario" placeholder="Nombre de usuario" data-i18n-ph="ph_usuario" data-es-placeholder="Nombre de usuario" data-en-placeholder="Username" required>
+                    </div>
+                    <div class="input-group">
+                        <input type="text" id="reg-correo" placeholder="Correo electrónico" data-i18n-ph="ph_correo" data-es-placeholder="Correo electrónico" data-en-placeholder="Email address" required>
+                    </div>
+                    <div class="input-group">
+                        <input type="password" id="reg-password" placeholder="Contraseña" data-i18n-ph="ph_password" data-es-placeholder="Contraseña" data-en-placeholder="Password" required>
+                    </div>
+                    <button type="submit" class="auth-btn" data-i18n="reg_btn" data-es="Registrarse" data-en="Register">Registrarse</button>
+                </form>
+
+                <p class="switch-text">
+                    <span data-i18n="switch_ya_cuenta" data-es="¿Ya tienes una cuenta?" data-en="Already have an account?">¿Ya tienes una cuenta?</span> 
+                    <a href="#" id="showLogin" data-i18n="switch_haz_clic" data-es="Haz clic aquí" data-en="Click here">Haz clic aquí</a>
+                </p>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer-legacy">
+        <div class="footer-container">
+            <!-- Columna 1: Logo de la marca, lema y redes -->
+            <div class="footer-col brand-col">
+                <img src="Multimedia/Letters_Logo1.png" alt="Legacy Motors" class="footer-logo">
+                <p class="brand-tagline" data-i18n="footer_tagline" data-es="Tu portal definitivo de piezas de alto rendimiento y tuning." data-en="Your ultimate hub for performance parts and tuning.">Tu portal definitivo de piezas de alto rendimiento y tuning.</p>
+                <div class="social-links">
+                    <a href="https://www.instagram.com/" target="_blank" rel="noopener">Instagram</a>
+                    <a href="https://www.tiktok.com/es-419/" target="_blank" rel="noopener">TikTok</a>
+                </div>
+            </div>
+
+            <!-- Columna 2: Navegación principal -->
+            <div class="footer-col">
+                <h4 data-i18n="footer_nosotros_header" data-es="NOSOTROS" data-en="ABOUT US">NOSOTROS</h4>
+                <ul>
+                    <li><a href="sobre_nosotros.html" data-i18n="nav_nosotros" data-es="Sobre Nosotros" data-en="About Us">Sobre Nosotros</a></li>
+                    <li><a href="sobre_nosotros.html#mision" data-i18n="footer_mision" data-es="Misión y Visión" data-en="Mission & Vision">Misión y Visión</a></li>
+                    <li><a href="contactos.html" data-i18n="nav_contactos" data-es="Contactos" data-en="Contact Us">Contactos</a></li>
+                    <li><a href="login.html" data-i18n="footer_cuenta" data-es="Mi Cuenta" data-en="My Account">Mi Cuenta</a></li>
+                </ul>
+            </div>
+
+            <!-- Columna 3: Atención y Legal -->
+            <div class="footer-col">
+                <h4 data-i18n="footer_soporte_header" data-es="SOPORTE" data-en="SUPPORT">SOPORTE</h4>
+                <ul>
+                    <li><a href="contactos.html" data-i18n="footer_atencion" data-es="Atención al Cliente" data-en="Customer Support">Atención al Cliente</a></li>
+                    <li><a href="sobre_nosotros.html" data-i18n="footer_faq" data-es="Preguntas Frecuentes" data-en="FAQs">Preguntas Frecuentes</a></li>
+                    <li><a href="sobre_nosotros.html" data-i18n="footer_privacidad" data-es="Política de Privacidad" data-en="Privacy Policy">Política de Privacidad</a></li>
+                    <li><a href="sobre_nosotros.html" data-i18n="footer_terminos" data-es="Términos del Servicio" data-en="Terms of Service">Términos del Servicio</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Barra Inferior -->
+        <div class="footer-bottom">
+            <p data-i18n="footer_copyright" data-es="© 2026 Legacy Motors | Todos los derechos reservados | Hecho con pasión por el rendimiento." data-en="© 2026 Legacy Motors | All rights reserved | Built with passion for performance.">© 2026 Legacy Motors | Todos los derechos reservados | Hecho con pasión por el rendimiento.</p>
+        </div>
+    </footer>
+
+    <script>
+        const authCard = document.getElementById('authCard');
+        const showRegister = document.getElementById('showRegister');
+        const showLogin = document.getElementById('showLogin');
+
+        showRegister.addEventListener('click', (e) => {
+            e.preventDefault();
+            document.querySelectorAll('form').forEach(f => f.reset());
+            authCard.classList.add('slide-active');
+        });
+
+        showLogin.addEventListener('click', (e) => {
+            e.preventDefault();
+            document.querySelectorAll('form').forEach(f => f.reset());
+            authCard.classList.remove('slide-active');
+        });
+    </script>
+    <script src="JS/funciones.js"></script>
+    <script src="JS/Traducciones.js"></script>
+</body>
+</html>

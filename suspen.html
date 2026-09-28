@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-es="Catálogo de Suspensiones - Legacy Motors" data-en="Suspensions Catalog - Legacy Motors">Catálogo de Suspensiones - Legacy Motors</title>
+    <link rel="stylesheet" href="CSS/estilo.css">
+        <script>
+        (function() {
+            const savedTheme = localStorage.getItem("theme") || "dark";
+            document.documentElement.setAttribute("data-theme", savedTheme);
+        })();
+    </script>
+        <link rel="shortcut icon" href="Imagenes_EXTRA/Isologo.png" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <nav class="nav-container">
+    <a href="index.html">
+<picture class="logo-wrapper">
+    <source srcset="Imagenes_EXTRA/Letters_Logo2.png" media="(prefers-color-scheme: light)" data-theme-logo>
+    <img src="Multimedia/Letters_Logo1.png" alt="Logo" class="logo-img">
+                    <div class="rgb-line"></div>
+</picture>
+</a>
+            <div class="search-wrapper">
+                <input type="search" placeholder="Buscar..." data-es="Buscar..." data-en="Search...">
+            </div>
+            <div class="nav-links">
+                                <div class="dropdown-container">
+                    <button type="button" class="dropdown-btn" id="dropdownBtn">
+                        <span data-es="PRODUCTOS " data-en="PRODUCTS ">PRODUCTOS </span><span class="arrow">▾</span>
+                    </button>
+                    <div class="dropdown-menu" id="dropdownMenu">
+                        <span class="dropdown-header" data-es="Categorías" data-en="Categories">Categorías</span>
+                        <a href="turbos.html" data-es="Turbos" data-en="Turbos">Turbos</a>
+                        <a href="NOS.html" data-es="Óxido Nitroso (NOS)" data-en="Nitrous Oxide (NOS)">Óxido Nitroso (NOS)</a>
+                        <a href="discos.html" data-es="Discos de Freno" data-en="Brake Discs">Discos de Freno</a>
+                        <a href="suspen.html" data-es="Suspensiones" data-en="Suspensions">Suspensiones</a>
+                        <a href="carroceria.html" data-es="Carrocería" data-en="Bodywork">Carrocería</a>
+                    </div>
+                </div>
+                <a href="index.html" data-es="Inicio" data-en="Home">Inicio</a>
+                <a href="sobre_nosotros.html" data-es="Sobre Nosotros" data-en="About Us">Sobre Nosotros</a>
+                <a href="contactos.html" data-es="Contactos" data-en="Contact">Contactos</a>
+                <a href="login.html" id="btn-sesion" class="btn-login active" data-es="Iniciar sesión" data-en="Log In">Iniciar sesión</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- ==========================================
+            VISTA 1: CATÁLOGO PRINCIPAL (10 PRODUCTOS)
+            ========================================== -->
+        <div id="vista-catalogo">
+            <div class="banner-container">
+                <img src="Imagenes_EXTRA/Legacy_Banner02.png" alt="Logo Legacy Motors" data-es="Logo Legacy Motors" data-en="Legacy Motors Logo" class="banner">
+            </div>
+            <hr>
+                    <a href="index.html" class="btn-volver-inicio" data-es="⬅ Volver al inicio" data-en="⬅ Back to home">
+        ⬅ Volver al inicio
+</a>
+            <h1 class="h1-title" data-es="Catálogo de Suspensiones" data-en="Suspensions Catalog">Catálogo de Suspensiones</h1>
+            <section class="about-section">
+                <p class="about-subtitle" data-es="Elige entre opciones de alto rendimiento para pista y soluciones ajustables para uso diario." data-en="Choose between high-performance track options and adjustable daily solutions.">Elige entre opciones de alto rendimiento para pista y soluciones ajustables para uso diario.</p>
+            </section>
+            <section class="modificaciones-grid">
+                <!-- 1. Amortiguadores Deportivos -->
+                <div class="compt" onclick="cambiarVista('detalle-amortiguadores-deportivos')">
+                    <div class="img-container">
+                        <img src="multimedia/suspension_1.png" alt="Amortiguadores deportivos" data-es="Amortiguadores deportivos" data-en="Sports shock absorbers">
+                    </div>
+                    <h2 data-es="Amortiguadores Deportivos" data-en="Sports Shock Absorbers">Amortiguadores Deportivos</h2>
+                    <p data-es="Mayor precisión en la conducción y respuesta más rápida en curvas." data-en="Greater driving precision and faster cornering response.">Mayor precisión en la conducción y respuesta más rápida en curvas.</p>
+                </div>
+
+                <!-- 2. Muelles Regulables -->
+                <div class="compt" onclick="cambiarVista('detalle-muelles-regulables')">
+                    <div class="img-container">
+                        <img src="Multimedia/suspen 2.jpg" alt="Muelles regulables" data-es="Muelles regulables" data-en="Adjustable springs">
+                    </div>
+                    <h2 data-es="Muelles Regulables" data-en="Adjustable Springs">Muelles Regulables</h2>
+                    <p data-es="Ajusta la altura y la rigidez según el estilo de manejo y el terreno." data-en="Adjust height and stiffness according to driving style and terrain.">Ajusta la altura y la rigidez según el estilo de manejo y el terreno.</p>
+                </div>
+
+                <!-- 3. Suspensión Neumática -->
+                <div class="compt" onclick="cambiarVista('detalle-suspension-neumatica')">
+                    <div class="img-container">
+                        <img src="Multimedia/suspen 3.jpg" alt="Suspensión neumática" data-es="Suspensión neumática" data-en="Air suspension">
+                    </div>
+                    <h2 data-es="Suspensión Neumática" data-en="Air Suspension">Suspensión Neumática</h2>
+                    <p data-es="Comodidad premium con la capacidad de variar la altura de forma rápida." data-en="Premium comfort with the ability to quickly adjust ride height.">Comodidad premium con la capacidad de variar la altura de forma rápida.</p>
+                </div>
+
+                <!-- 4. Barra Estabilizadora -->
+                <div class="compt" onclick="cambiarVista('detalle-barra-estabilizadora')">
+                    <div class="img-container">
+                        <img src="Multimedia/suspen 4.jpg" alt="Barras estabilizadoras" data-es="Barras estabilizadoras" data-en="Sway bars">
+                    </div>
+                    <h2 data-es="Barra Estabilizadora" data-en="Sway Bar">Barra Estabilizadora</h2>
+                    <p data-es="Reduce el balanceo lateral y da confianza en curvas cerradas." data-en="Reduces body roll and boosts confidence in tight corners.">Reduce el balanceo lateral y da confianza en curvas cerradas.</p>
+                </div>
+
+                <!-- 5. Kits de Control -->
+                <div class="compt" onclick="cambiarVista('detalle-kits-control')">
+                    <div class="img-container">
+                        <img src="Multimedia/suspen 5.jpg" alt="Kits de control de altura" data-es="Kits de control de altura" data-en="Height control kits">
+                    </div>
+                    <h2 data-es="Kits de Control" data-en="Control Kits">Kits de Control</h2>
+                    <p data-es="Componentes resistentes para una suspensión más consistente bajo carga." data-en="Heavy-duty components for more consistent suspension under load.">Componentes resistentes para una suspensión más consistente bajo carga.</p>
+                </div>
+
+                <!-- 6. Coilovers Regulables 36 Vías -->
+                <div class="compt" onclick="cambiarVista('detalle-coilovers-36vias')">
+                    <div class="img-container">
+                        <img src="Multimedia/suspen 6.jpg" alt="Coilovers Regulables" data-es="Coilovers Regulables" data-en="Adjustable Coilovers">
+                    </div>
+                    <h2 data-es="Coilovers Regulables 36 Vías" data-en="36-Way Adjustable Coilovers">Coilovers Regulables 36 Vías</h2>
+                    <p data-es="Control total sobre la altura, precarga y dureza de rebote." data-en="Total control over height, preload, and damping stiffness.">Control total sobre la altura, precarga y dureza de rebote.</p>
+                </div>
+
+                <!-- 7. Brazos de Control Ajustables -->
+                <div class="compt" onclick="cambiarVista('detalle-brazos-ajustables')">
+                    <div class="img-container">
+                        <img src="Multimedia/suspen 7.jpg" alt="Brazos de Control Ajustables" data-es="Brazos de Control Ajustables" data-en="Adjustable Control Arms">
+                    </div>
+                    <h2 data-es="Brazos de Control Ajustables" data-en="Adjustable Control Arms">Brazos de Control Ajustables</h2>
+                    <p data-es="Calibración precisa de Camber y Toe para alineaciones perfectas." data-en="Precise Camber and Toe calibration for perfect alignment.">Calibración precisa de Camber y Toe para alineaciones perfectas.</p>
+                </div>
+
+                <!-- 8. Barra de Torreta Superior -->
+                <div class="compt" onclick="cambiarVista('detalle-barra-torreta')">
+                    <div class="img-container">
+                        <img src="Multimedia/suspen 8.jpg" alt="Barra de Torreta Superior" data-es="Barra de Torreta Superior" data-en="Front Strut Bar">
+                    </div>
+                    <h2 data-es="Barra de Torreta Superior" data-en="Front Strut Bar">Barra de Torreta Superior</h2>
+                    <p data-es="Refuerza la rigidez torsional del chasis eliminando flexiones." data-en="Reinforces chassis torsional stiffness by eliminating flex.">Refuerza la rigidez torsional del chasis eliminando flexiones.</p>
+                </div>
+
+                <!-- 9. Kit Bujes de Poliuretano Pro -->
+                <div class="compt" onclick="cambiarVista('detalle-bujes-poliuretano')">
+                    <div class="img-container">
+                        <img src="Multimedia/suspen 9.jpg" alt="Bujes de Poliuretano" data-es="Bujes de Poliuretano" data-en="Polyurethane Bushings">
+                    </div>
+                    <h2 data-es="Kit Bujes de Poliuretano Pro" data-en="Pro Polyurethane Bushings Kit">Kit Bujes de Poliuretano Pro</h2>
+                    <p data-es="Elimina el juego de la suspensión original para máxima respuesta." data-en="Eliminates OEM suspension slack for maximum steering response.">Elimina el juego de la suspensión original para máxima respuesta.</p>
+                </div>
+
+                <!-- 10. Caster/Camber Plates Regulables -->
+                <div class="compt" onclick="cambiarVista('detalle-camber-plates')">
+                    <div class="img-container">
+                        <img src="Multimedia/suspen 10.jpg" alt="Camber Plates Regulables" data-es="Camber Plates Regulables" data-en="Adjustable Camber Plates">
+                    </div>
+                    <h2 data-es="Camber Plates Regulables" data-en="Adjustable Camber Plates">Camber Plates Regulables</h2>
+                    <p data-es="Ajuste independiente de ángulos para un apoyo óptimo en pista." data-en="Independent angle adjustment for optimal track tire contact.">Ajuste independiente de ángulos para un apoyo óptimo en pista.</p>
+                </div>
+            </section>
+            <hr>
+        <section class="about-section">
+                <p class="about-subtitle" data-es="Explora opciones de suspensión a tu conveniencia para tu vehículo." data-en="Explore suspension options for your vehicle at your convenience.">Explora opciones de suspensione a tu conveniencia para tu vehículo .</p>
+            </section>
+        </div>
+
+        <!-- ==========================================
+            VISTAS DE DETALLES (10 SECCIONES DETALLADAS)
+            ========================================== -->
+
+        <!-- 1. DETALLE: Amortiguadores Deportivos -->
+        <div id="detalle-amortiguadores-deportivos" class="vista-detalle oculto">
+            <div class="detalle-header-top">
+                <button class="btn-volver" onclick="cambiarVista('vista-catalogo')" data-es="⬅ Volver al catálogo" data-en="⬅ Back to catalog">⬅ Volver al catálogo</button>
+            </div>
+            <div class="producto-layout">
+                <div class="columna-media">
+                    <div class="imagen-destacada">
+                        <img src="multimedia/suspension_1.png" alt="Amortiguadores Deportivos" data-es="Amortiguadores Deportivos" data-en="Sports Shock Absorbers">
+                    </div>
+                    <div class="seccion-video">
+                        <h3 data-es="Guía de Instalación y Funcionamiento" data-en="Installation and Operation Guide">Guía de Instalación y Funcionamiento</h3>
+                        <p class="video-desc" data-es="Aprende cómo los amortiguadores de gas a alta presión reducen el cabeceo en frenadas y curvas." data-en="Learn how high-pressure gas shocks reduce body dive during braking and cornering.">Aprende cómo los amortiguadores de gas a alta presión reducen el cabeceo en frenadas y curvas.</p>
+                        <div class="video-container">
+                            <iframe src="https://drive.google.com/file/d/1mWdZ6CgzVbSx4G9oD_bfu0wsQAnocht3/preview" title="Instalación Amortiguadores Deportivos" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+                <div class="columna-info">
+                    <h1 class="producto-titulo"><span data-es="Amortiguadores Deportivos " data-en="Sports Shock Absorbers ">Amortiguadores Deportivos </span><span class="badge" data-es="Sport Performance" data-en="Sport Performance">Sport Performance</span></h1>
+                    <p class="producto-descripcion" data-es="Amortiguadores monotubo cargados con gas nitrógeno a alta presión. Proporcionan una respuesta inmediata ante cambios de dirección, eliminando el bamboleo de la carrocería sin comprometer drásticamente el confort de marcha." data-en="High-pressure nitrogen-charged monotube shocks. Provide immediate turn-in response and eliminate body sway without drastically compromising ride comfort.">
+                        Amortiguadores monotubo cargados con gas nitrógeno a alta presión. Proporcionan una respuesta inmediata ante cambios de dirección, eliminando el bamboleo de la carrocería sin comprometer drásticamente el confort de marcha.
+                    </p>
+                    <div class="caja-precio">
+                        <span class="precio-fuerte" data-es="$320.00 / Juego Delantero + Trasero" data-en="$320.00 / Front + Rear Set">$320.00 / Juego Delantero + Trasero</span>
+                        <span class="envio-info" data-es="Precio referencial para tu proyecto." data-en="Reference price for your project.">Precio referencial para tu proyecto.</span>
+                    </div>
+                    <div class="seccion-specs">
+                        <h3 data-es="Compatibilidad Recomendada" data-en="Recommended Compatibility">Compatibilidad Recomendada</h3>
+                        <ul class="lista-compatibilidad">
+                            <li><strong data-es="Modelos Populares:" data-en="Popular Models:">Modelos Populares:</strong> <span data-es="VW Golf GTI, BMW E36 / E46, Honda Civic Si, Mazda 3." data-en="VW Golf GTI, BMW E36 / E46, Honda Civic Si, Mazda 3.">VW Golf GTI, BMW E36 / E46, Honda Civic Si, Mazda 3.</span></li>
+                            <li><strong data-es="Posición:" data-en="Position:">Posición:</strong> <span data-es="Eje Delantero y Trasero." data-en="Front and Rear Axle.">Eje Delantero y Trasero.</span></li>
+                            <li><strong data-es="Uso:" data-en="Use:">Uso:</strong> <span data-es="Conducción urbana rápida, carreteras reviradas y uso diario deportivo." data-en="Brisk urban driving, twisty roads, and sporty daily use.">Conducción urbana rápida, carreteras reviradas y uso diario deportivo.</span></li>
+                        </ul>
+                    </div>
+                    <div class="seccion-specs">
+                        <h3 data-es="Especificaciones Técnicas" data-en="Technical Specifications">Especificaciones Técnicas</h3>
+                        <table class="tabla-especificaciones">
+                            <tbody>
+                                <tr><td><strong data-es="Tecnología" data-en="Technology">Tecnología</strong></td><td data-es="Monotubo cargado con gas Nitrógeno" data-en="Nitrogen gas-charged monotube">Monotubo cargado con gas Nitrógeno</td></tr>
+                                <tr><td><strong data-es="Válvula" data-en="Valving">Válvula</strong></td><td data-es="Sensible a la velocidad (Digresiva)" data-en="Velocity sensitive (Digressive)">Sensible a la velocidad (Digresiva)</td></tr>
+                                <tr><td><strong data-es="Reducción de Rebote" data-en="Rebound Reduction">Reducción de Rebote</strong></td><td data-es="-30% respecto a suspensión OEM" data-en="-30% vs OEM suspension">-30% respecto a suspensión OEM</td></tr>
+                                <tr><td><strong data-es="Compatibilidad de Muelles" data-en="Spring Compatibility">Compatibilidad de Muelles</strong></td><td data-es="Espirales OEM y muelles deportivos de rebaje" data-en="OEM springs and lowering springs">Espirales OEM y muelles deportivos de rebaje</td></tr>
+                                <tr><td><strong data-es="Garantía" data-en="Warranty">Garantía</strong></td><td data-es="2 Años de fábrica" data-en="2-Year factory warranty">2 Años de fábrica</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 2. DETALLE: Muelles Regulables -->
+        <div id="detalle-muelles-regulables" class="vista-detalle oculto">
+            <div class="detalle-header-top">
+                <button class="btn-volver" onclick="cambiarVista('vista-catalogo')" data-es="⬅ Volver al catálogo" data-en="⬅ Back to catalog">⬅ Volver al catálogo</button>
+            </div>
+            <div class="producto-layout">
+                <div class="columna-media">
+                    <div class="imagen-destacada">
+                        <img src="Multimedia/suspen 2.jpg" alt="Muelles Regulables" data-es="Muelles Regulables" data-en="Adjustable Springs">
+                    </div>
+                    <div class="seccion-video">
+                        <h3 data-es="Ajuste de Altura con Muelles Progresivos" data-en="Height Adjustment with Progressive Springs">Ajuste de Altura con Muelles Progresivos</h3>
+                        <p class="video-desc" data-es="Video tutorial mostrando cómo regular la altura de la rosca del muelle para lograr la postura (fitment) ideal." data-en="Video tutorial showing how to adjust spring sleeve threads to achieve ideal fitment.">Video tutorial mostrando cómo regular la altura de la rosca del muelle para lograr la postura (fitment) ideal.</p>
+                        <div class="video-container">
+                            <iframe src="https://drive.google.com/file/d/1mWdZ6CgzVbSx4G9oD_bfu0wsQAnocht3/preview" title="Ajuste Muelles Regulables" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+                <div class="columna-info">
+                    <h1 class="producto-titulo"><span data-es="Muelles Regulables " data-en="Adjustable Springs ">Muelles Regulables </span><span class="badge" data-es="Lowering Springs Kit" data-en="Lowering Springs Kit">Lowering Springs Kit</span></h1>
+                    <p class="producto-descripcion" data-es="Espirales con tasa progresiva montados sobre manguitos roscados de aluminio. Permiten calibrar manualmente la altura del vehículo rebajando el centro de gravedad para una tracción y estabilidad superiores." data-en="Progressive-rate springs mounted on threaded aluminum sleeves. Manually calibrate ride height to lower center of gravity for superior traction and stability.">
+                        Espirales con tasa progresiva montados sobre manguitos roscados de aluminio. Permiten calibrar manualmente la altura del vehículo rebajando el centro de gravedad para una tracción y estabilidad superiores.
+                    </p>
+                    <div class="caja-precio">
+                        <span class="precio-fuerte" data-es="$240.00 / Kit Completo" data-en="$240.00 / Full Kit">$240.00 / Kit Completo</span>
+                        <span class="envio-info" data-es="Precio referencial para tu proyecto." data-en="Reference price for your project.">Precio referencial para tu proyecto.</span>
+                    </div>
+                    <div class="seccion-specs">
+                        <h3 data-es="Compatibilidad Recomendada" data-en="Recommended Compatibility">Compatibilidad Recomendada</h3>
+                        <ul class="lista-compatibilidad">
+                            <li><strong data-es="Modelos Populares:" data-en="Popular Models:">Modelos Populares:</strong> <span data-es="Toyota GT86 / Subaru BRZ, VW Jetta / Golf, Audi A3, Nissan Sentra SR." data-en="Toyota GT86 / Subaru BRZ, VW Jetta / Golf, Audi A3, Nissan Sentra SR.">Toyota GT86 / Subaru BRZ, VW Jetta / Golf, Audi A3, Nissan Sentra SR.</span></li>
+                            <li><strong data-es="Posición:" data-en="Position:">Posición:</strong> <span data-es="Kit para las 4 ruedas." data-en="4-wheel kit.">Kit para las 4 ruedas.</span></li>
+                            <li><strong data-es="Uso:" data-en="Use:">Uso:</strong> <span data-es="Mejora estética (stance) y conducción urbana deportiva." data-en="Stance enhancement and sporty daily driving.">Mejora estética (stance) y conducción urbana deportiva.</span></li>
+                        </ul>
+                    </div>
+                    <div class="seccion-specs">
+                        <h3 data-es="Especificaciones Técnicas" data-en="Technical Specifications">Especificaciones Técnicas</h3>
+                        <table class="tabla-especificaciones">
+                            <tbody>
+                                <tr><td><strong data-es="Material" data-en="Material">Material</strong></td><td data-es="Acero al Silicio-Cromo SAE 9254 forjado en frío" data-en="Cold-wound SAE 9254 Silicon-Chrome Steel">Acero al Silicio-Cromo SAE 9254 forjado en frío</td></tr>
+                                <tr><td><strong data-es="Rango de Rebaje" data-en="Lowering Range">Rango de Rebaje</strong></td><td data-es="20 mm a 50 mm ajustables" data-en="20 mm to 50 mm adjustable">20 mm a 50 mm ajustables</td></tr>
+                                <tr><td><strong data-es="Tasa de Muelle" data-en="Spring Rate">Tasa de Muelle</strong></td><td data-es="Progresiva de doble tasa (Dual Rate)" data-en="Dual-rate progressive">Progresiva de doble tasa (Dual Rate)</td></tr>
+                                <tr><td><strong data-es="Tratamiento" data-en="Coating">Tratamiento</strong></td><td data-es="Pintura Epoxi anticorrosiva curada al horno" data-en="Oven-cured anti-corrosion epoxy powder coat">Pintura Epoxi anticorrosiva curada al horno</td></tr>
+                                <tr><td><strong data-es="Garantía" data-en="Warranty">Garantía</strong></td><td data-es="1 Año de fábrica" data-en="1-Year factory warranty">1 Año de fábrica</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 3. DETALLE: Suspensión Neumática -->
+        <div id="detalle-suspension-neumatica" class="vista-detalle oculto">
+            <div class="detalle-header-top">
+                <button class="btn-volver" onclick="cambiarVista('vista-catalogo')" data-es="⬅ Volver al catálogo" data-en="⬅ Back to catalog">⬅ Volver al catálogo</button>
+            </div>
+            <div class="producto-layout">
+                <div class="columna-media">
+                    <div class="imagen-destacada">
+                        <img src="Multimedia/suspen 3.jpg" alt="Suspensión Neumática" data-es="Suspensión Neumática" data-en="Air Suspension">
+                    </div>
+                    <div class="seccion-video">
+                        <h3 data-es="Demostración de Suspensión Neumática" data-en="Air Suspension Demo">Demostración de Suspensión Neumática</h3>
+                        <p class="video-desc" data-es="Observa el cambio instantáneo de altura al presionar un botón desde el control inalámbrico o teléfono." data-en="Watch instant height adjustment at the touch of a button via wireless remote or phone app.">Observa el cambio instantáneo de altura al presionar un botón desde el control inalámbrico o teléfono.</p>
+                        <div class="video-container">
+                            <iframe src="https://drive.google.com/file/d/1mWdZ6CgzVbSx4G9oD_bfu0wsQAnocht3/preview" title="Suspensión Neumática Demo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+                <div class="columna-info">
+                    <h1 class="producto-titulo"><span data-es="Suspensión Neumática " data-en="Air Suspension ">Suspensión Neumática </span><span class="badge" data-es="Air Ride Management" data-en="Air Ride Management">Air Ride Management</span></h1>
+                    <p class="producto-descripcion" data-es="Sistema neumático premium de alto rendimiento. Sustituye los muelles tradicionales por bolsas de aire reforzadas alimentadas por compresor, permitiendo aparcar a ras de suelo y elevar el auto para rodar cómodamente." data-en="Premium high-performance air ride system. Replaces traditional springs with compressor-fed reinforced air bags, allowing ground-slammed parking and comfortable driving height.">
+                        Sistema neumático premium de alto rendimiento. Sustituye los muelles tradicionales por bolsas de aire reforzadas alimentadas por compresor, permitiendo aparcar a ras de suelo y elevar el auto para rodar cómodamente.
+                    </p>
+                    <div class="caja-precio">
+                        <span class="precio-fuerte" data-es="$2,450.00 / Kit Completo con Gestión" data-en="$2,450.00 / Full Kit with Management">$2,450.00 / Kit Completo con Gestión</span>
+                        <span class="envio-info" data-es="Precio referencial para tu proyecto." data-en="Reference price for your project.">Precio referencial para tu proyecto.</span>
+                    </div>
+                    <div class="seccion-specs">
+                        <h3 data-es="Compatibilidad Recomendada" data-en="Recommended Compatibility">Compatibilidad Recomendada</h3>
+                        <ul class="lista-compatibilidad">
+                            <li><strong data-es="Modelos Populares:" data-en="Popular Models:">Modelos Populares:</strong> <span data-es="Audi A4 / A6, Mercedes-Benz Clase C / E, BMW Serie 3 / 5, VW Arteon." data-en="Audi A4 / A6, Mercedes-Benz C / E Class, BMW 3 / 5 Series, VW Arteon.">Audi A4 / A6, Mercedes-Benz Clase C / E, BMW Serie 3 / 5, VW Arteon.</span></li>
+                            <li><strong data-es="Posición:" data-en="Position:">Posición:</strong> <span data-es="Sistema integral de 4 esquinas." data-en="Full 4-corner system.">Sistema integral de 4 esquinas.</span></li>
+                            <li><strong data-es="Uso:" data-en="Use:">Uso:</strong> <span data-es="Exhibición (Showcar), confort extremo diario y versatilidad de altura." data-en="Showcars, extreme daily comfort, and versatile height control.">Exhibición (Showcar), confort extremo diario y versatilidad de altura.</span></li>
+                        </ul>
+                    </div>
+                    <div class="seccion-specs">
+                        <h3 data-es="Especificaciones Técnicas" data-en="Technical Specifications">Especificaciones Técnicas</h3>
+                        <table class="tabla-especificaciones">
+                            <tbody>
+                                <tr><td><strong data-es="Bolsas de Aire" data-en="Air Bags">Bolsas de Aire</strong></td><td data-es="Triple Bellow sintéticas reforzadas con hilos de Kevlar" data-en="Synthetic Triple Bellow reinforced with Kevlar threads">Triple Bellow sintéticas reforzadas con hilos de Kevlar</td></tr>
+                                <tr><td><strong data-es="Tanque de Aire" data-en="Air Tank">Tanque de Aire</strong></td><td data-es="Aluminio pulido de 5 Galones (200 PSI max)" data-en="5 Gallon polished aluminum (200 PSI max)">Aluminio pulido de 5 Galones (200 PSI max)</td></tr>
+                                <tr><td><strong data-es="Compresor" data-en="Compressor">Compresor</strong></td><td data-es="Vía 444C de llenado continuo rápido" data-en="Viair 444C fast continuous fill">Vía 444C de llenado continuo rápido</td></tr>
+                                <tr><td><strong data-es="Gestión Electrónica" data-en="Electronic Management">Gestión Electrónica</strong></td><td data-es="Bloque de electroválvulas digital con Bluetooth" data-en="Digital solenoid manifold with Bluetooth">Bloque de electroválvulas digital con Bluetooth</td></tr>
+                                <tr><td><strong data-es="Garantía" data-en="Warranty">Garantía</strong></td><td data-es="2 Años de fábrica" data-en="2-Year factory warranty">2 Años de fábrica</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 4. DETALLE: Barra Estabilizadora -->
+        <div id="detalle-barra-estabilizadora" class="vista-detalle oculto">
+            <div class="detalle-header-top">
+                <button class="btn-volver" onclick="cambiarVista('vista-catalogo')" data-es="⬅ Volver al catálogo" data-en="⬅ Back to catalog">⬅ Volver al catálogo</button>
+            </div>
+            <div class="producto-layout">
+                <div class="columna-media">
+                    <div class="imagen-destacada">
+                        <img src="Multimedia/suspen 4.jpg" alt="Barra Estabilizadora" data-es="Barra Estabilizadora" data-en="Sway Bar">
+                    </div>
+                    <div class="seccion-video">
+                        <h3 data-es="Prueba de Balanceo en Curva" data-en="Cornering Roll Test">Prueba de Balanceo en Curva</h3>
+                        <p class="video-desc" data-es="Comparativa en pista entre una suspensión con barra de fábrica versus la barra estabilizadora reforzada." data-en="Track comparison between factory sway bar suspension vs reinforced sway bar setup.">Comparativa en pista entre una suspensión con barra de fábrica versus la barra estabilizadora reforzada.</p>
+                        <div class="video-container">
+                            <iframe src="https://drive.google.com/file/d/1mWdZ6CgzVbSx4G9oD_bfu0wsQAnocht3/preview" title="Test Barra Estabilizadora" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+                <div class="columna-info">
+                    <h1 class="producto-titulo"><span data-es="Barra Estabilizadora " data-en="Sway Bar ">Barra Estabilizadora </span><span class="badge" data-es="Anti-Roll Bar Pro" data-en="Anti-Roll Bar Pro">Anti-Roll Bar Pro</span></h1>
+                    <p class="producto-descripcion" data-es="Barra maciza en acero forjado con diámetro incrementado. Vincula ambos lados del eje para neutralizar el sobreviraje y subviraje, manteniendo las llantas totalmente apoyadas en giros cerrados." data-en="Solid forged steel bar with increased diameter. Links both sides of the axle to neutralize oversteer and understeer, keeping tires fully planted during hard turns.">
+                        Barra maciza en acero forjado con diámetro incrementado. Vincula ambos lados del eje para neutralizar el sobreviraje y subviraje, manteniendo las llantas totalmente apoyadas en giros cerrados.
+                    </p>
+                    <div class="caja-precio">
+                        <span class="precio-fuerte" data-es="$210.00 / Unidad" data-en="$210.00 / Unit">$210.00 / Unidad</span>
+                        <span class="envio-info" data-es="Precio referencial para tu proyecto." data-en="Reference price for your project.">Precio referencial para tu proyecto.</span>
+                    </div>
+                    <div class="seccion-specs">
+                        <h3 data-es="Compatibilidad Recomendada" data-en="Recommended Compatibility">Compatibilidad Recomendada</h3>
+                        <ul class="lista-compatibilidad">
+                            <li><strong data-es="Modelos Populares:" data-en="Popular Models:">Modelos Populares:</strong> <span data-es="Subaru WRX / STI, Ford Fiesta ST, Honda Civic Type R, Hyundai Veloster N." data-en="Subaru WRX / STI, Ford Fiesta ST, Honda Civic Type R, Hyundai Veloster N.">Subaru WRX / STI, Ford Fiesta ST, Honda Civic Type R, Hyundai Veloster N.</span></li>
+                            <li><strong data-es="Posición:" data-en="Position:">Posición:</strong> <span data-es="Eje Delantero o Eje Trasero." data-en="Front or Rear Axle.">Eje Delantero o Eje Trasero.</span></li>
+                            <li><strong data-es="Uso:" data-en="Use:">Uso:</strong> <span data-es="Track Days, Slalom, Autocross y manejo entusiasta en carretera." data-en="Track Days, Slalom, Autocross, and enthusiastic street driving.">Track Days, Slalom, Autocross y manejo entusiasta en carretera.</span></li>
+                        </ul>
+                    </div>
+                    <div class="seccion-specs">
+                        <h3 data-es="Especificaciones Técnicas" data-en="Technical Specifications">Especificaciones Técnicas</h3>
+                        <table class="tabla-especificaciones">
+                            <tbody>
+                                <tr><td><strong data-es="Diámetro" data-en="Diameter">Diámetro</strong></td><td data-es="24 mm - 28 mm (según modelo)" data-en="24 mm - 28 mm (model depending)">24 mm - 28 mm (según modelo)</td></tr>
+                                <tr><td><strong data-es="Ajustabilidad" data-en="Adjustability">Ajustabilidad</strong></td><td data-es="3 Puntos de anclaje para variar la rigidez (+20% / +40%)" data-en="3 Mounting points to vary stiffness (+20% / +40%)">3 Puntos de anclaje para variar la rigidez (+20% / +40%)</td></tr>
+                                <tr><td><strong data-es="Bujes Incluidos" data-en="Bushings Included">Bujes Incluidos</strong></td><td data-es="Poliuretano autolubricante de alta densidad" data-en="High-density self-lubricating polyurethane">Poliuretano autolubricante de alta densidad</td></tr>
+                                <tr><td><strong data-es="Tratamiento" data-en="Coating">Tratamiento</strong></td><td data-es="Recubrimiento de pintura en polvo anticorrosión" data-en="Anti-corrosion powder coating">Recubrimiento de pintura en polvo anticorrosión</td></tr>
+                                <tr><td><strong data-es="Garantía" data-en="Warranty">Garantía</strong></td><td data-es="1 Año de fábrica" data-en="1-Year factory warranty">1 Año de fábrica</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 5. DETALLE: Kits de Control -->
+        <div id="detalle-kits-control" class="vista-detalle oculto">
+            <div class="detalle-header-top">
+                <button class="btn-volver" onclick="cambiarVista('vista-catalogo')" data-es="⬅ Volver al catálogo" data-en="⬅ Back to catalog">⬅ Volver al catálogo</button>
+            </div>
+            <div class="producto-layout">
+                <div class="columna-media">
+                    <div class="imagen-destacada">
+                        <img src="Multimedia/suspen 5.jpg" alt="Kits de Control" data-es="Kits de Control" data-en="Control Kits">
+                    </div>
+                    <div class="seccion-video">
+                        <h3 data-es="Instalación de Kit de Control y Rótulas" data-en="Control Kit & Ball Joints Installation">Instalación de Kit de Control y Rótulas</h3>
+                        <p class="video-desc" data-es="Proceso de montaje de bielas reforzadas y brazos de suspensión para garantizar la alineación." data-en="Assembly process of reinforced endlinks and control arms to ensure alignment stability.">Proceso de montaje de bielas reforzadas y brazos de suspensión para garantizar la alineación.</p>
+                        <div class="video-container">
+                            <iframe src="https://drive.google.com/file/d/1mWdZ6CgzVbSx4G9oD_bfu0wsQAnocht3/preview" title="Instalación Kit de Control" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+                <div class="columna-info">
+                    <h1 class="producto-titulo"><span data-es="Kits de Control " data-en="Control Kits ">Kits de Control </span><span class="badge" data-es="Heavy Duty Linkage" data-en="Heavy Duty Linkage">Heavy Duty Linkage</span></h1>
+                    <p class="producto-descripcion" data-es="Paquete de brazos articulados, tirantes y bielas estabilizadoras regulables. Diseñado para soportar cargas laterales extremas sin flexión ni desgaste prematuro en vehículos modificados." data-en="Package of articulated arms, tie rods, and adjustable endlinks. Engineered to withstand extreme side loads without flex or premature wear in modified vehicles.">
+                        Paquete de brazos articulados, tirantes y bielas estabilizadoras regulables. Diseñado para soportar cargas laterales extremas sin flexión ni desgaste prematuro en vehículos modificados.
+                    </p>
+                    <div class="caja-precio">
+                        <span class="precio-fuerte" data-es="$380.00 / Juego Completo" data-en="$380.00 / Full Set">$380.00 / Juego Completo</span>
+                        <span class="envio-info" data-es="Precio referencial para tu proyecto." data-en="Reference price for your project.">Precio referencial para tu proyecto.</span>
+                    </div>
+                    <div class="seccion-specs">
+                        <h3 data-es="Compatibilidad Recomendada" data-en="Recommended Compatibility">Compatibilidad Recomendada</h3>
+                        <ul class="lista-compatibilidad">
+                            <li><strong data-es="Modelos Populares:" data-en="Popular Models:">Modelos Populares:</strong> <span data-es="Ford Mustang GT, Chevrolet Camaro, Nissan 350Z / 370Z, BMW M3." data-en="Ford Mustang GT, Chevrolet Camaro, Nissan 350Z / 370Z, BMW M3.">Ford Mustang GT, Chevrolet Camaro, Nissan 350Z / 370Z, BMW M3.</span></li>
+                            <li><strong data-es="Posición:" data-en="Position:">Posición:</strong> <span data-es="Eje Delantero y Trasero." data-en="Front and Rear Axle.">Eje Delantero y Trasero.</span></li>
+                            <li><strong data-es="Uso:" data-en="Use:">Uso:</strong> <span data-es="Drift, arrancones y vehículos con alta potencia." data-en="Drift, drag racing, and high-power builds.">Drift, arrancones y vehículos con alta potencia.</span></li>
+                        </ul>
+                    </div>
+                    <div class="seccion-specs">
+                        <h3 data-es="Especificaciones Técnicas" data-en="Technical Specifications">Especificaciones Técnicas</h3>
+                        <table class="tabla-especificaciones">
+                            <tbody>
+                                <tr><td><strong data-es="Material" data-en="Material">Material</strong></td><td data-es="Aluminio Forjado 6061-T6 mecanizado CNC" data-en="CNC-machined 6061-T6 Forged Aluminum">Aluminio Forjado 6061-T6 mecanizado CNC</td></tr>
+                                <tr><td><strong data-es="Rótulas" data-en="Ball Joints">Rótulas</strong></td><td data-es="Pillow-Ball de acero cromo-molibdeno selladas" data-en="Sealed Chromoly Pillow-Ball joints">Pillow-Ball de acero cromo-molibdeno selladas</td></tr>
+                                <tr><td><strong data-es="Resistencia a la Tracción" data-en="Tensile Strength">Resistencia a la Tracción</strong></td><td data-es="+50% comparado con componentes originales OEM" data-en="+50% compared to OEM stock components">+50% comparado con componentes originales OEM</td></tr>
+                                <tr><td><strong data-es="Ajuste" data-en="Adjustment">Ajuste</strong></td><td data-es="Rosca micrométrica con contra-tuerca de seguridad" data-en="Micrometric thread with safety locknut">Rosca micrométrica con contra-tuerca de seguridad</td></tr>
+                                <tr><td><strong data-es="Garantía" data-en="Warranty">Garantía</strong></td><td data-es="1 Año de fábrica" data-en="1-Year factory warranty">1 Año de fábrica</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 6. DETALLE: Coilovers Regulables 36 Vías -->
+        <div id="detalle-coilovers-36vias" class="vista-detalle oculto">
+            <div class="detalle-header-top">
+                <button class="btn-volver" onclick="cambiarVista('vista-catalogo')" data-es="⬅ Volver al catálogo" data-en="⬅ Back to catalog">⬅ Volver al catálogo</button>
+            </div>
+            <div class="producto-layout">
+                <div class="columna-media">
+                    <div class="imagen-destacada">
+                        <img src="Multimedia/suspen 6.jpg" alt="Coilovers Regulables 36 Vías" data-es="Coilovers Regulables 36 Vías" data-en="36-Way Adjustable Coilovers">
+                    </div>
+                    <div class="seccion-video">
+                        <h3 data-es="Calibración de Dureza y Precarga" data-en="Damping and Preload Calibration">Calibración de Dureza y Precarga</h3>
+                        <p class="video-desc" data-es="Tutorial de cómo girar la perilla superior de 36 niveles para pasar de modo calle a modo circuito." data-en="Tutorial on dialing the top 36-level knob to switch from street mode to track mode.">Tutorial de cómo girar la perilla superior de 36 niveles para pasar de modo calle a modo circuito.</p>
+                        <div class="video-container">
+                            <iframe src="https://drive.google.com/file/d/1mWdZ6CgzVbSx4G9oD_bfu0wsQAnocht3/preview" title="Calibración Coilovers" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+                <div class="columna-info">
+                    <h1 class="producto-titulo"><span data-es="Coilovers 36 Vías " data-en="36-Way Coilovers ">Coilovers 36 Vías </span><span class="badge" data-es="Track & Race Spec" data-en="Track & Race Spec">Track & Race Spec</span></h1>
+                    <p class="producto-descripcion" data-es="Sistema de suspensión roscada integral. Ofrece ajuste independiente de la altura de la carrocería (sin alterar la carrera del amortiguador), precarga de muelle y 36 niveles de dureza de amortiguación." data-en="Full coilover suspension system. Offers independent body ride height adjustment (without affecting shock stroke), spring preload, and 36 damping stiffness levels.">
+                        Sistema de suspensión roscada integral. Ofrece ajuste independiente de la altura de la carrocería (sin alterar la carrera del amortiguador), precarga de muelle y 36 niveles de dureza de amortiguación.
+                    </p>
+                    <div class="caja-precio">
+                        <span class="precio-fuerte" data-es="$980.00 / Set 4 Ruedas" data-en="$980.00 / 4-Wheel Set">$980.00 / Set 4 Ruedas</span>
+                        <span class="envio-info" data-es="Precio referencial para tu proyecto." data-en="Reference price for your project.">Precio referencial para tu proyecto.</span>
+                    </div>
+                    <div class="seccion-specs">
+                        <h3 data-es="Compatibilidad Recomendada" data-en="Recommended Compatibility">Compatibilidad Recomendada</h3>
+                        <ul class="lista-compatibilidad">
+                            <li><strong data-es="Modelos Populares:" data-en="Popular Models:">Modelos Populares:</strong> <span data-es="Honda S2000, Nissan Silvia S14 / S15, Mazda MX-5 Miata, VW Golf R." data-en="Honda S2000, Nissan Silvia S14 / S15, Mazda MX-5 Miata, VW Golf R.">Honda S2000, Nissan Silvia S14 / S15, Mazda MX-5 Miata, VW Golf R.</span></li>
+                            <li><strong data-es="Posición:" data-en="Position:">Posición:</strong> <span data-es="Las 4 esquinas del vehículo." data-en="All 4 corners of the vehicle.">Las 4 esquinas del vehículo.</span></li>
+                            <li><strong data-es="Uso:" data-en="Use:">Uso:</strong> <span data-es="Circuito, Drift y conducción de alto rendimiento." data-en="Track, Drift, and high-performance driving.">Circuito, Drift y conducción de alto rendimiento.</span></li>
+                        </ul>
+                    </div>
+                    <div class="seccion-specs">
+                        <h3 data-es="Especificaciones Técnicas" data-en="Technical Specifications">Especificaciones Técnicas</h3>
+                        <table class="tabla-especificaciones">
+                            <tbody>
+                                <tr><td><strong data-es="Cuerpo del Amortiguador" data-en="Shock Body">Cuerpo del Amortiguador</strong></td><td data-es="Monotubo de 53 mm de diámetro con pistón de gran flujo" data-en="53 mm diameter monotube with high-flow piston">Monotubo de 53 mm de diámetro con pistón de gran flujo</td></tr>
+                                <tr><td><strong data-es="Ajuste de Dureza" data-en="Damping Adjustment">Ajuste de Dureza</strong></td><td data-es="36 Clics regulables en la parte superior" data-en="36 adjustable top clicks">36 Clics regulables en la parte superior</td></tr>
+                                <tr><td><strong data-es="Copelas Incluidas" data-en="Top Mounts Included">Copelas Incluidas</strong></td><td data-es="Aluminio con rótula esférica y ajuste de Camber delantero" data-en="Aluminum with pillow-ball and front Camber adjustment">Aluminio con rótula esférica y ajuste de Camber delantero</td></tr>
+                                <tr><td><strong data-es="Aceite" data-en="Oil">Aceite</strong></td><td data-es="Sintético de viscosidad constante resistente al calor" data-en="Heat-resistant constant-viscosity synthetic">Sintético de viscosidad constante resistente al calor</td></tr>
+                                <tr><td><strong data-es="Garantía" data-en="Warranty">Garantía</strong></td><td data-es="2 Años de fábrica" data-en="2-Year factory warranty">2 Años de fábrica</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 7. DETALLE: Brazos de Control Ajustables -->
+        <div id="detalle-brazos-ajustables" class="vista-detalle oculto">
+            <div class="detalle-header-top">
+                <button class="btn-volver" onclick="cambiarVista('vista-catalogo')" data-es="⬅ Volver al catálogo" data-en="⬅ Back to catalog">⬅ Volver al catálogo</button>
+            </div>
+            <div class="producto-layout">
+                <div class="columna-media">
+                    <div class="imagen-destacada">
+                        <img src="Multimedia/suspen 7.jpg" alt="Brazos de Control Ajustables" data-es="Brazos de Control Ajustables" data-en="Adjustable Control Arms">
+                    </div>
+                    <div class="seccion-video">
+                        <h3 data-es="Alineación de Camber Trasero" data-en="Rear Camber Alignment">Alineación de Camber Trasero</h3>
+                        <p class="video-desc" data-es="Demostración práctica de cómo corregir el ángulo de caída en autos rebajados." data-en="Practical demo on correcting negative camber on lowered vehicles.">Demostración práctica de cómo corregir el ángulo de caída en autos rebajados.</p>
+                        <div class="video-container">
+                            <iframe src="https://drive.google.com/file/d/1mWdZ6CgzVbSx4G9oD_bfu0wsQAnocht3/preview" title="Alineación Camber Trasero" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+                <div class="columna-info">
+                    <h1 class="producto-titulo"><span data-es="Brazos Ajustables " data-en="Adjustable Arms ">Brazos Ajustables </span><span class="badge" data-es="Camber & Toe Alignment" data-en="Camber & Toe Alignment">Camber & Toe Alignment</span></h1>
+                    <p class="producto-descripcion" data-es="Brazos tubulares fabricados en acero chromoly con extremos de rótula uniball. Diseñados para corregir los ángulos de caída (camber) y convergencia (toe) tras bajar la suspensión." data-en="Tubular arms made from chromoly steel with uniball ends. Designed to correct camber and toe angles after lowering suspension.">
+                        Brazos tubulares fabricados en acero chromoly con extremos de rótula uniball. Diseñados para corregir los ángulos de caída (camber) y convergencia (toe) tras bajar la suspensión.
+                    </p>
+                    <div class="caja-precio">
+                        <span class="precio-fuerte" data-es="$290.00 / Par Trasero" data-en="$290.00 / Rear Pair">$290.00 / Par Trasero</span>
+                        <span class="envio-info" data-es="Precio referencial para tu proyecto." data-en="Reference price for your project.">Precio referencial para tu proyecto.</span>
+                    </div>
+                    <div class="seccion-specs">
+                        <h3 data-es="Compatibilidad Recomendada" data-en="Recommended Compatibility">Compatibilidad Recomendada</h3>
+                        <ul class="lista-compatibilidad">
+                            <li><strong data-es="Modelos Populares:" data-en="Popular Models:">Modelos Populares:</strong> <span data-es="Nissan GT-R R35, Subaru BRZ, BMW E90 / E92, Toyota Supra A90." data-en="Nissan GT-R R35, Subaru BRZ, BMW E90 / E92, Toyota Supra A90.">Nissan GT-R R35, Subaru BRZ, BMW E90 / E92, Toyota Supra A90.</span></li>
+                            <li><strong data-es="Posición:" data-en="Position:">Posición:</strong> <span data-es="Eje Trasero." data-en="Rear Axle.">Eje Trasero.</span></li>
+                            <li><strong data-es="Uso:" data-en="Use:">Uso:</strong> <span data-es="Calibración de alineación avanzada para pista o stance extreme." data-en="Advanced alignment calibration for track or extreme stance.">Calibración de alineación avanzada para pista o stance extreme.</span></li>
+                        </ul>
+                    </div>
+                    <div class="seccion-specs">
+                        <h3 data-es="Especificaciones Técnicas" data-en="Technical Specifications">Especificaciones Técnicas</h3>
+                        <table class="tabla-especificaciones">
+                            <tbody>
+                                <tr><td><strong data-es="Tubería" data-en="Tubing">Tubería</strong></td><td data-es="Aleación de Acero Chromoly 4130 sin costuras" data-en="Seamless 4130 Chromoly Steel alloy">Aleación de Acero Chromoly 4130 sin costuras</td></tr>
+                                <tr><td><strong data-es="Rótulas" data-en="Rod Ends">Rótulas</strong></td><td data-es="Uniball de Acero Inoxidable recubiertas en Teflón" data-en="Teflon-lined Stainless Steel Uniball">Uniball de Acero Inoxidable recubiertas en Teflón</td></tr>
+                                <tr><td><strong data-es="Rango de Ajuste" data-en="Adjustment Range">Rango de Ajuste</strong></td><td data-es="-4° a +4° de ángulo de caída" data-en="-4° to +4° camber angle">-4° a +4° de ángulo de caída</td></tr>
+                                <tr><td><strong data-es="Facilidad de Ajuste" data-en="Ease of Adjustment">Facilidad de Ajuste</strong></td><td data-es="Tensor central de doble rosca giratorio en auto" data-en="On-car turnbuckle double-thread adjustment">Tensor central de doble rosca giratorio en auto</td></tr>
+                                <tr><td><strong data-es="Garantía" data-en="Warranty">Garantía</strong></td><td data-es="1 Año de fábrica" data-en="1-Year factory warranty">1 Año de fábrica</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 8. DETALLE: Barra de Torreta Superior -->
+        <div id="detalle-barra-torreta" class="vista-detalle oculto">
+            <div class="detalle-header-top">
+                <button class="btn-volver" onclick="cambiarVista('vista-catalogo')" data-es="⬅ Volver al catálogo" data-en="⬅ Back to catalog">⬅ Volver al catálogo</button>
+            </div>
+            <div class="producto-layout">
+                <div class="columna-media">
+                    <div class="imagen-destacada">
+                        <img src="Multimedia/suspen 8.jpg" alt="Barra de Torreta Superior" data-es="Barra de Torreta Superior" data-en="Front Strut Bar">
+                    </div>
+                    <div class="seccion-video">
+                        <h3 data-es="Instalación de Barra de Torreta" data-en="Strut Bar Installation">Instalación de Barra de Torreta</h3>
+                        <p class="video-desc" data-es="Demostración de cómo la barra reduce la flexión del chasis durante giros exigentes." data-en="Demonstration of how the bar reduces chassis flex during aggressive cornering.">Demostración de cómo la barra reduce la flexión del chasis durante giros exigentes.</p>
+                        <div class="video-container">
+                            <iframe src="https://drive.google.com/file/d/1mWdZ6CgzVbSx4G9oD_bfu0wsQAnocht3/preview" title="Instalación Barra Torreta" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+                <div class="columna-info">
+                    <h1 class="producto-titulo"><span data-es="Barra de Torreta Superior " data-en="Front Strut Bar ">Barra de Torreta Superior </span><span class="badge" data-es="Strut Tower Bar" data-en="Strut Tower Bar">Strut Tower Bar</span></h1>
+                    <p class="producto-descripcion" data-es="Barra de refuerzo fabricada en aluminio extruido de alta resistencia que conecta ambas torretas de suspensión delanteras. Minimiza la flexión del chasis para mejorar la precisión de la dirección." data-en="Reinforcement bar made of high-strength extruded aluminum connecting both front strut towers. Minimizes chassis flex for sharper steering response.">
+                        Barra de refuerzo fabricada en aluminio extruido de alta resistencia que conecta ambas torretas de suspensión delanteras. Minimiza la flexión del chasis para mejorar la precisión de la dirección.
+                    </p>
+                    <div class="caja-precio">
+                        <span class="precio-fuerte" data-es="$140.00 / Unidad" data-en="$140.00 / Unit">$140.00 / Unidad</span>
+                        <span class="envio-info" data-es="Precio referencial para tu proyecto." data-en="Reference price for your project.">Precio referencial para tu proyecto.</span>
+                    </div>
+                    <div class="seccion-specs">
+                        <h3 data-es="Compatibilidad Recomendada" data-en="Recommended Compatibility">Compatibilidad Recomendada</h3>
+                        <ul class="lista-compatibilidad">
+                            <li><strong data-es="Modelos Populares:" data-en="Popular Models:">Modelos Populares:</strong> <span data-es="Honda Civic, Subaru WRX, Toyota GT86, BMW Serie 3." data-en="Honda Civic, Subaru WRX, Toyota GT86, BMW 3 Series.">Honda Civic, Subaru WRX, Toyota GT86, BMW Serie 3.</span></li>
+                            <li><strong data-es="Posición:" data-en="Position:">Posición:</strong> <span data-es="Torretas Delanteras Superior." data-en="Front Upper Strut Towers.">Torretas Delanteras Superior.</span></li>
+                            <li><strong data-es="Uso:" data-en="Use:">Uso:</strong> <span data-es="Manejo deportivo en carretera y circuito." data-en="Sporty street driving and track work.">Manejo deportivo en carretera y circuito.</span></li>
+                        </ul>
+                    </div>
+                    <div class="seccion-specs">
+                        <h3 data-es="Especificaciones Técnicas" data-en="Technical Specifications">Especificaciones Técnicas</h3>
+                        <table class="tabla-especificaciones">
+                            <tbody>
+                                <tr><td><strong data-es="Material" data-en="Material">Material</strong></td><td data-es="Aluminio de grado aeronáutico con bases de acero" data-en="Aircraft-grade aluminum with steel mounts">Aluminio de grado aeronáutico con bases de acero</td></tr>
+                                <tr><td><strong data-es="Acabado" data-en="Finish">Acabado</strong></td><td data-es="Anodizado resistente a arañazos y temperatura" data-en="Scratch and heat resistant anodized finish">Anodizado resistente a arañazos y temperatura</td></tr>
+                                <tr><td><strong data-es="Instalación" data-en="Installation">Instalación</strong></td><td data-es="Directa Plug & Play sin modificaciones" data-en="Direct Plug & Play without modification">Directa Plug & Play sin modificaciones</td></tr>
+                                <tr><td><strong data-es="Garantía" data-en="Warranty">Garantía</strong></td><td data-es="1 Año de fábrica" data-en="1-Year factory warranty">1 Año de fábrica</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 9. DETALLE: Kit Bujes de Poliuretano Pro -->
+        <div id="detalle-bujes-poliuretano" class="vista-detalle oculto">
+            <div class="detalle-header-top">
+                <button class="btn-volver" onclick="cambiarVista('vista-catalogo')" data-es="⬅ Volver al catálogo" data-en="⬅ Back to catalog">⬅ Volver al catálogo</button>
+            </div>
+            <div class="producto-layout">
+                <div class="columna-media">
+                    <div class="imagen-destacada">
+                        <img src="Multimedia/suspen 9.jpg" alt="Bujes de Poliuretano" data-es="Bujes de Poliuretano" data-en="Polyurethane Bushings">
+                    </div>
+                    <div class="seccion-video">
+                        <h3 data-es="Reemplazo de Bujes de Goma por Poliuretano" data-en="Rubber to Polyurethane Bushing Replacement">Reemplazo de Bujes de Goma por Poliuretano</h3>
+                        <p class="video-desc" data-es="Proceso de extracción de bujes originales e instalación del kit de poliuretano." data-en="Removal process of OEM rubber bushings and installation of polyurethane kit.">Proceso de extracción de bujes originales e instalación del kit de poliuretano.</p>
+                        <div class="video-container">
+                            <iframe src="https://drive.google.com/file/d/1mWdZ6CgzVbSx4G9oD_bfu0wsQAnocht3/preview" title="Instalación Bujes Poliuretano" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+                <div class="columna-info">
+                    <h1 class="producto-titulo"><span data-es="Kit Bujes de Poliuretano " data-en="Polyurethane Bushings Kit ">Kit Bujes de Poliuretano </span><span class="badge" data-es="Polyurethane Bushings Pro" data-en="Polyurethane Bushings Pro">Polyurethane Bushings Pro</span></h1>
+                    <p class="producto-descripcion" data-es="Bujes de alta dureza diseñados para reemplazar los de goma original. Eliminan la deflexión en los puntos de pivote de la suspensión, ofreciendo una respuesta inmediata de la dirección." data-en="High-durometer bushings designed to replace stock rubber. Eliminate flex at suspension pivot points for instant steering feedback.">
+                        Bujes de alta dureza diseñados para reemplazar los de goma original. Eliminan la deflexión en los puntos de pivote de la suspensión, ofreciendo una respuesta inmediata de la dirección.
+                    </p>
+                    <div class="caja-precio">
+                        <span class="precio-fuerte" data-es="$165.00 / Kit Completo" data-en="$165.00 / Full Kit">$165.00 / Kit Completo</span>
+                        <span class="envio-info" data-es="Precio referencial para tu proyecto." data-en="Reference price for your project.">Precio referencial para tu proyecto.</span>
+                    </div>
+                    <div class="seccion-specs">
+                        <h3 data-es="Compatibilidad Recomendada" data-en="Recommended Compatibility">Compatibilidad Recomendada</h3>
+                        <ul class="lista-compatibilidad">
+                            <li><strong data-es="Modelos Populares:" data-en="Popular Models:">Modelos Populares:</strong> <span data-es="Mazda MX-5, VW Golf / Jetta, Nissan 350Z, Honda Integra." data-en="Mazda MX-5, VW Golf / Jetta, Nissan 350Z, Honda Integra.">Mazda MX-5, VW Golf / Jetta, Nissan 350Z, Honda Integra.</span></li>
+                            <li><strong data-es="Posición:" data-en="Position:">Posición:</strong> <span data-es="Brazos de control delanteros y traseros, barras estabilizadoras." data-en="Front and rear control arms, sway bars.">Brazos de control delanteros y traseros, barras estabilizadoras.</span></li>
+                            <li><strong data-es="Uso:" data-en="Use:">Uso:</strong> <span data-es="Track Days, carreras y vehículos de alto rendimiento." data-en="Track Days, racing, and high-performance vehicles.">Track Days, carreras y vehículos de alto rendimiento.</span></li>
+                        </ul>
+                    </div>
+                    <div class="seccion-specs">
+                        <h3 data-es="Especificaciones Técnicas" data-en="Technical Specifications">Especificaciones Técnicas</h3>
+                        <table class="tabla-especificaciones">
+                            <tbody>
+                                <tr><td><strong data-es="Dureza Durométrica" data-en="Durometer Rating">Dureza Durométrica</strong></td><td data-es="80A - 90A Shore" data-en="80A - 90A Shore">80A - 90A Shore</td></tr>
+                                <tr><td><strong data-es="Resistencia" data-en="Resistance">Resistencia</strong></td><td data-es="Alta resistencia a aceites, combustibles y rayos UV" data-en="High resistance to oil, fuel, and UV rays">Alta resistencia a aceites, combustibles y rayos UV</td></tr>
+                                <tr><td><strong data-es="Incluye" data-en="Includes">Incluye</strong></td><td data-es="Grasa de disulfuro de molibdeno para montaje silencioso" data-en="Molybdenum disulfide grease for quiet assembly">Grasa de disulfuro de molibdeno para montaje silencioso</td></tr>
+                                <tr><td><strong data-es="Garantía" data-en="Warranty">Garantía</strong></td><td data-es="De por vida limitada" data-en="Limited lifetime warranty">De por vida limitada</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 10. DETALLE: Camber Plates Regulables -->
+        <div id="detalle-camber-plates" class="vista-detalle oculto">
+            <div class="detalle-header-top">
+                <button class="btn-volver" onclick="cambiarVista('vista-catalogo')" data-es="⬅ Volver al catálogo" data-en="⬅ Back to catalog">⬅ Volver al catálogo</button>
+            </div>
+            <div class="producto-layout">
+                <div class="columna-media">
+                    <div class="imagen-destacada">
+                        <img src="Multimedia/suspen 10.jpg" alt="Camber Plates Regulables" data-es="Camber Plates Regulables" data-en="Adjustable Camber Plates">
+                    </div>
+                    <div class="seccion-video">
+                        <h3 data-es="Ajuste de Caster y Camber en Copelas" data-en="Caster & Camber Adjustment on Top Mounts">Ajuste de Caster y Camber en Copelas</h3>
+                        <p class="video-desc" data-es="Aprende a regular las platinas superiores para optimizar la superficie de contacto del neumático en pista." data-en="Learn how to adjust top plates to optimize tire contact patch on track.">Aprende a regular las platinas superiores para optimizar la superficie de contacto del neumático en pista.</p>
+                        <div class="video-container">
+                            <iframe src="https://drive.google.com/file/d/1mWdZ6CgzVbSx4G9oD_bfu0wsQAnocht3/preview" title="Ajuste Camber Plates" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+                <div class="columna-info">
+                    <h1 class="producto-titulo"><span data-es="Camber Plates Regulables " data-en="Adjustable Camber Plates ">Camber Plates Regulables </span><span class="badge" data-es="Adjustable Top Mounts" data-en="Adjustable Top Mounts">Adjustable Top Mounts</span></h1>
+                    <p class="producto-descripcion" data-es="Copelas o platinas superiores fabricadas en aluminio billet 6061-T6 con rótulas uniball esféricas. Permiten ajustar de forma independiente los ángulos de caída (Camber) y avance (Caster) directamente desde las torretas de suspensión." data-en="Top plates CNC-machined from 6061-T6 billet aluminum with spherical uniball joints. Allow independent Camber and Caster adjustment directly from strut towers.">
+                        Copelas o platinas superiores fabricadas en aluminio billet 6061-T6 con rótulas uniball esféricas. Permiten ajustar de forma independiente los ángulos de caída (Camber) y avance (Caster) directamente desde las torretas de suspensión.
+                    </p>
+                    <div class="caja-precio">
+                        <span class="precio-fuerte" data-es="$180.00 / Par Delantero" data-en="$180.00 / Front Pair">$180.00 / Par Delantero</span>
+                        <span class="envio-info" data-es="Precio referencial para tu proyecto." data-en="Reference price for your project.">Precio referencial para tu proyecto.</span>
+                    </div>
+                    <div class="seccion-specs">
+                        <h3 data-es="Compatibilidad Recomendada" data-en="Recommended Compatibility">Compatibilidad Recomendada</h3>
+                        <ul class="lista-compatibilidad">
+                            <li><strong data-es="Modelos Populares:" data-en="Popular Models:">Modelos Populares:</strong> <span data-es="BMW E30 / E36 / E46, Ford Mustang, Nissan Silvia, VW Golf / Jetta." data-en="BMW E30 / E36 / E46, Ford Mustang, Nissan Silvia, VW Golf / Jetta.">BMW E30 / E36 / E46, Ford Mustang, Nissan Silvia, VW Golf / Jetta.</span></li>
+                            <li><strong data-es="Posición:" data-en="Position:">Posición:</strong> <span data-es="Torretas Delanteras." data-en="Front Strut Towers.">Torretas Delanteras.</span></li>
+                            <li><strong data-es="Uso:" data-en="Use:">Uso:</strong> <span data-es="Track Days, Drift y alineaciones de alta precisión para circuito." data-en="Track Days, Drift, and high-precision track alignment.">Track Days, Drift y alineaciones de alta precisión para circuito.</span></li>
+                        </ul>
+                    </div>
+                    <div class="seccion-specs">
+                        <h3 data-es="Especificaciones Técnicas" data-en="Technical Specifications">Especificaciones Técnicas</h3>
+                        <table class="tabla-especificaciones">
+                            <tbody>
+                                <tr><td><strong data-es="Material" data-en="Material">Material</strong></td><td data-es="Aluminio Billet 6061-T6 mecanizado por CNC" data-en="CNC-machined 6061-T6 Billet Aluminum">Aluminio Billet 6061-T6 mecanizado por CNC</td></tr>
+                                <tr><td><strong data-es="Rótula" data-en="Bearing">Rótula</strong></td><td data-es="Rótula esférica Uniball de acero inoxidable de alta resistencia" data-en="High-strength Stainless Steel Uniball spherical bearing">Rótula esférica Uniball de acero inoxidable de alta resistencia</td></tr>
+                                <tr><td><strong data-es="Rango de Ajuste" data-en="Adjustment Range">Rango de Ajuste</strong></td><td data-es="Camber: -3° a +3° / Caster ajustable" data-en="Camber: -3° to +3° / Adjustable Caster">Camber: -3° a +3° / Caster ajustable</td></tr>
+                                <tr><td><strong data-es="Compatibilidad" data-en="Compatibility">Compatibility</strong></td><td data-es="Coilovers aftermarket y amortiguadores de rendimiento" data-en="Aftermarket coilovers and performance dampers">Coilovers aftermarket y amortiguadores de rendimiento</td></tr>
+                                <tr><td><strong data-es="Garantía" data-en="Warranty">Garantía</strong></td><td data-es="1 Año de fábrica" data-en="1-Year factory warranty">1 Año de fábrica</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer-legacy">
+        <div class="footer-container">
+            <!-- Columna 1: Logo de la marca, lema y redes -->
+            <div class="footer-col brand-col">
+                <img src="Multimedia/Letters_Logo1.png" alt="Legacy Motors" class="footer-logo">
+                <p class="brand-tagline" data-es="Tu portal definitivo de piezas de alto rendimiento y tuning." data-en="Your ultimate portal for high-performance and tuning parts.">Tu portal definitivo de piezas de alto rendimiento y tuning.</p>
+                <div class="social-links">
+                    <a href="https://www.instagram.com/" target="_blank" rel="noopener">Instagram</a>
+                    <a href="https://www.tiktok.com/es-419/" target="_blank" rel="noopener">TikTok</a>
+                </div>
+            </div>
+
+            <!-- Columna 2: Navegación principal -->
+            <div class="footer-col">
+                <h4 data-es="NOSOTROS" data-en="ABOUT US">NOSOTROS</h4>
+                <ul>
+                    <li><a href="sobre_nosotros.html" data-es="Sobre Nosotros" data-en="About Us">Sobre Nosotros</a></li>
+                    <li><a href="sobre_nosotros.html#mision" data-es="Misión y Visión" data-en="Mission & Vision">Misión y Visión</a></li>
+                    <li><a href="contactos.html" data-es="Contactos" data-en="Contact">Contactos</a></li>
+                    <li><a href="login.html" data-es="Mi Cuenta" data-en="My Account">Mi Cuenta</a></li>
+                </ul>
+            </div>
+
+            <!-- Columna 3: Atención y Legal -->
+            <div class="footer-col">
+                <h4 data-es="SOPORTE" data-en="SUPPORT">SOPORTE</h4>
+                <ul>
+                  <li><a href="contactos.html" data-es="Atención al Cliente" data-en="Customer Support">Atención al Cliente</a></li>
+                    <li><a href="sobre_nosotros.html" data-es="Preguntas Frecuentes" data-en="FAQs">Preguntas Frecuentes</a></li>
+                    <li><a href="sobre_nosotros.html" data-es="Política de Privacidad" data-en="Privacy Policy">Política de Privacidad</a></li>
+                    <li><a href="sobre_nosotros.html" data-es="Términos del Servicio" data-en="Terms of Service">Términos del Servicio</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Barra Inferior -->
+        <div class="footer-bottom">
+            <p data-es="© 2026 Legacy Motors | Todos los derechos reservados | Hecho con pasión por el rendimiento." data-en="© 2026 Legacy Motors | All rights reserved | Made with passion for performance.">© 2026 Legacy Motors | Todos los derechos reservados | Hecho con pasión por el rendimiento.</p>
+        </div>
+    </footer>
+
+    <!-- Script para controlar la navegación interactiva entre catálogo y fichas técnicas -->
+    <script>
+        function cambiarVista(idVista) {
+            // 1. Ocultar la vista principal del catálogo
+            document.getElementById('vista-catalogo').style.display = 'none';
+
+            // 2. Ocultar todas las vistas de detalles
+            const vistasDetalle = document.querySelectorAll('.vista-detalle');
+            vistasDetalle.forEach(vista => {
+                vista.classList.add('oculto');
+            });
+
+            // 3. Mostrar la vista seleccionada
+            if (idVista === 'vista-catalogo') {
+                document.getElementById('vista-catalogo').style.display = 'block';
+            } else {
+                const vistaSeleccionada = document.getElementById(idVista);
+                if (vistaSeleccionada) {
+                    vistaSeleccionada.classList.remove('oculto');
+                }
+            }
+
+            // 4. Desplazar la pantalla arriba suavemente
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    </script>
+    <script src="JS/funciones.js"></script>
+    <script src="JS/Traducciones.js"></script>
+</body>
+</html>

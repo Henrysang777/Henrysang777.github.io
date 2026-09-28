@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Configuración de Cuenta - Legacy Motors</title>
+    <link rel="stylesheet" href="CSS/estilo.css">
+    <script>
+        (function() {
+            const savedTheme = localStorage.getItem("theme") || "dark";
+            document.documentElement.setAttribute("data-theme", savedTheme);
+        })();
+    </script>
+    <link rel="shortcut icon" href="Imagenes_EXTRA/Isologo.png" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <nav class="nav-container">
+            <a href="index.html">
+                <picture class="logo-wrapper">
+                    <source srcset="Imagenes_EXTRA/Letters_Logo2.png" media="(prefers-color-scheme: light)" data-theme-logo>
+                    <img src="Multimedia/Letters_Logo1.png" alt="Logo" class="logo-img">
+                    <div class="rgb-line"></div>
+                </picture>
+            </a>
+
+            <!-- Modal de Alerta Custom -->
+            <div id="customAlert" class="modal-overlay">
+                <div class="custom-alert-box">
+                    <div class="alert-banner">
+                        <source srcset="Imagenes_EXTRA/Letters_Logo2.png" media="(prefers-color-scheme: light)" data-theme-logo>
+                        <img src="Multimedia/Letters_Logo1.png" alt="Legacy Motors" class="alert-logo">
+                    </div>
+                    <div class="alert-body">
+                        <p id="alertMensaje">Mensaje del sistema...</p>
+                        <button type="button" class="btn-alert-cerrar" onclick="cerrarAlertCustom()">ACEPTAR</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="search-wrapper">
+                <input type="text" placeholder="Buscar..." onkeydown="ejecutarBusqueda(event)" autocomplete="off">
+            </div>
+
+            <div class="nav-links">
+                <div class="dropdown-container">
+                    <button type="button" class="dropdown-btn" id="dropdownBtn">
+                        PRODUCTOS <span class="arrow">▾</span>
+                    </button>
+                    <div class="dropdown-menu" id="dropdownMenu">
+                        <span class="dropdown-header">Categorías</span>
+                        <a href="turbos.html">Turbos</a>
+                        <a href="NOS.html">Óxido Nitroso (NOS)</a>
+                        <a href="discos.html">Discos de Freno</a>
+                        <a href="suspen.html">Suspensiones</a>
+                        <a href="carroceria.html">Carrocería</a>
+                    </div>
+                </div>
+                <a href="index.html">Inicio</a>
+                <a href="sobre_nosotros.html">Sobre Nosotros</a>
+                <a href="contactos.html">Contactos</a>
+                <a href="cuenta.html" id="btn-sesion" class="btn-login active">Cuenta</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="account-card">
+            <!-- Banner superior -->
+            <div class="banner-container">
+                <img src="Imagenes_EXTRA/Legacy_Banner02.png" alt="Logo Legacy Motors" class="banner">
+            </div>
+
+            <h1 class="page-title">CONFIGURACION</h1>
+
+            <!-- Tarjeta Nombre de Cuenta -->
+            <div class="config-box user-box">
+                <div class="avatar-icon">
+                    <img id="avatar-usuario-display" src="Imagenes_EXTRA/Isologo.png" alt="Avatar" class="user-isologo">
+                </div>
+                <h2 id="nombre-usuario-display" class="user-display-name">CARGANDO...</h2>
+            </div>
+
+            <!-- Tarjeta Aspecto -->
+            <div class="config-box aspect-box">
+                <h2 class="section-label">ASPECTO</h2>
+                <div class="theme-options">
+                    <label class="radio-theme">
+                        <input type="radio" name="theme" value="dark">
+                        <span class="custom-radio"></span>
+                        Oscuro
+                    </label>
+
+                    <label class="radio-theme">
+                        <input type="radio" name="theme" value="light">
+                        <span class="custom-radio"></span>
+                        Claro
+                    </label>
+                </div>
+            </div>
+
+            <!-- Tarjeta Idioma -->
+            <div class="config-box aspect-box">
+                <h2 class="section-label">IDIOMA</h2>
+                <div class="theme-options">
+                    <label class="radio-theme">
+                        <input type="radio" name="language" value="es" checked>
+                        <span class="custom-radio"></span>
+                        Español
+                    </label>
+
+                    <label class="radio-theme">
+                        <input type="radio" name="language" value="en">
+                        <span class="custom-radio"></span>
+                        Inglés
+                    </label>
+                </div>
+            </div>
+
+            <!-- Botón Cerrar Sesión -->
+            <div class="logout-wrapper">
+                <button type="button" class="btn-logout" onclick="cerrarSesion()">Cerrar sesion</button>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer-legacy">
+        <div class="footer-container">
+            <!-- Columna 1: Logo de la marca, lema y redes -->
+            <div class="footer-col brand-col">
+                <img src="Multimedia/Letters_Logo1.png" alt="Legacy Motors" class="footer-logo">
+                <p class="brand-tagline">Tu portal definitivo de piezas de alto rendimiento y tuning.</p>
+                <div class="social-links">
+                    <a href="https://www.instagram.com/" target="_blank" rel="noopener">Instagram</a>
+                    <a href="https://www.tiktok.com/es-419/" target="_blank" rel="noopener">TikTok</a>
+                </div>
+            </div>
+
+            <!-- Columna 2: Navegación principal -->
+            <div class="footer-col">
+                <h4>NOSOTROS</h4>
+                <ul>
+                    <li><a href="sobre_nosotros.html">Sobre Nosotros</a></li>
+                    <li><a href="sobre_nosotros.html#mision">Misión y Visión</a></li>
+                    <li><a href="contactos.html">Contactos</a></li>
+                    <li><a href="cuenta.html">Mi Cuenta</a></li>
+                </ul>
+            </div>
+
+            <!-- Columna 3: Atención y Legal -->
+            <div class="footer-col">
+                <h4>SOPORTE</h4>
+                <ul>
+                    <li><a href="contactos.html">Atención al Cliente</a></li>
+                    <li><a href="sobre_nosotros.html">Preguntas Frecuentes</a></li>
+                    <li><a href="sobre_nosotros.html">Política de Privacidad</a></li>
+                    <li><a href="sobre_nosotros.html">Términos del Servicio</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Barra Inferior -->
+        <div class="footer-bottom">
+            <p>© 2026 Legacy Motors | Todos los derechos reservados | Hecho con pasión por el rendimiento.</p>
+        </div>
+    </footer>
+
+    <!-- Elemento oculto para Google Translate -->
+    <div id="google_translate_element" style="display:none;"></div>
+
+    <script src="JS/funciones.js"></script>
+    <script src="JS/Traducciones.js"></script>
+</body>
+</html>

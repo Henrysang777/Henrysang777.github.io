@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-es="Catálogo de Óxido Nitroso - Legacy Motors" data-en="Nitrous Oxide Catalog - Legacy Motors">Catálogo de Óxido Nitroso - Legacy Motors</title>
+    <link rel="stylesheet" href="CSS/estilo.css">
+        <script>
+        (function() {
+            const savedTheme = localStorage.getItem("theme") || "dark";
+            document.documentElement.setAttribute("data-theme", savedTheme);
+        })();
+    </script>
+        <link rel="shortcut icon" href="Imagenes_EXTRA/Isologo.png" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <nav class="nav-container">
+            <div class="logo-wrapper">
+                <source srcset="Imagenes_EXTRA/Letters_Logo2.png" media="(prefers-color-scheme: light)" data-theme-logo>
+                <img src="Multimedia/Letters_Logo1.png" alt="Legacy Motors" class="logo-img">
+                <div class="rgb-line"></div>
+            </div>
+            <div class="search-wrapper">
+                <input type="search" placeholder="Buscar..." data-es="Buscar..." data-en="Search...">
+            </div>
+            <div class="nav-links">
+                                <div class="dropdown-container">
+                    <button type="button" class="dropdown-btn" id="dropdownBtn">
+                        <span data-es="PRODUCTOS " data-en="PRODUCTS ">PRODUCTOS </span><span class="arrow">▾</span>
+                    </button>
+                    <div class="dropdown-menu" id="dropdownMenu">
+                        <span class="dropdown-header" data-es="Categorías" data-en="Categories">Categorías</span>
+                        <a href="turbos.html" data-es="Turbos" data-en="Turbos">Turbos</a>
+                        <a href="NOS.html" data-es="Óxido Nitroso (NOS)" data-en="Nitrous Oxide (NOS)">Óxido Nitroso (NOS)</a>
+                        <a href="discos.html" data-es="Discos de Freno" data-en="Brake Discs">Discos de Freno</a>
+                        <a href="suspen.html" data-es="Suspensiones" data-en="Suspensions">Suspensiones</a>
+                        <a href="carroceria.html" data-es="Carrocería" data-en="Bodywork">Carrocería</a>
+                    </div>
+                </div>
+                <a href="index.html" data-es="Inicio" data-en="Home">Inicio</a>
+                <a href="sobre_nosotros.html" data-es="Sobre Nosotros" data-en="About Us">Sobre Nosotros</a>
+                <a href="contactos.html" data-es="Contactos" data-en="Contact">Contactos</a>
+                <a href="login.html" id="btn-sesion" class="btn-login active" data-es="Iniciar sesión" data-en="Log In">Iniciar sesión</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- ==========================================
+            VISTA 1: CATÁLOGO PRINCIPAL (10 PRODUCTOS)
+            ========================================== -->
+        <div id="vista-catalogo">
+            <div class="banner-container">
+                <img src="Imagenes_EXTRA/Legacy_Banner02.png" alt="Logo Legacy Motors" data-es="Logo Legacy Motors" data-en="Legacy Motors Logo" class="banner">
+            </div>
+            <hr>
+        <a href="index.html" class="btn-volver-inicio" data-es="⬅ Volver al inicio" data-en="⬅ Back to home">
+        ⬅ Volver al inicio
+</a>
+            <h1 class="h1-title" data-es="Catálogo de Óxido Nitroso" data-en="Nitrous Oxide Catalog">Catálogo de Óxido Nitroso</h1>
+            <section class="about-section">
+                <p class="about-subtitle" data-es="Encuentra sistemas de NOS listos para mejorar la aceleración y la velocidad máxima." data-en="Find NOS systems ready to boost acceleration and top speed.">Encuentra sistemas de NOS listos para mejorar la aceleración y la velocidad máxima.</p>
+            </section>
+            
+            <section class="modificaciones-grid">
+                <!-- 1. Kit NOS Básico -->
+                <div class="compt" onclick="cambiarVista('detalle-nos-basico')">
+                    <div class="img-container">
+                        <img src="multimedia/nos_1.png" alt="Kit NOS Básico" data-es="Kit NOS Básico" data-en="Basic NOS Kit">
+                    </div>
+                    <h2 data-es="Kit NOS Básico" data-en="Basic NOS Kit">Kit NOS Básico</h2>
+                    <p data-es="Ideal para principiantes y primeras modificaciones." data-en="Ideal for beginners and first-time modifications.">Ideal para principiantes y primeras modificaciones.</p>
+                </div>
+
+                <!-- 2. Kit NOS Avanzado -->
+                <div class="compt" onclick="cambiarVista('detalle-nos-avanzado')">
+                    <div class="img-container">
+                        <img src="Multimedia/NOS 2.avif" alt="Kit NOS Avanzado" data-es="Kit NOS Avanzado" data-en="Advanced NOS Kit">
+                    </div>
+                    <h2 data-es="Kit NOS Avanzado" data-en="Advanced NOS Kit">Kit NOS Avanzado</h2>
+                    <p data-es="Mayor potencia para uso en pista y competencia." data-en="Increased power for track and competition use.">Mayor potencia para uso en pista y competencia.</p>
+                </div>
+
+                <!-- 3. Sistema NOS Profesional -->
+                <div class="compt" onclick="cambiarVista('detalle-nos-profesional')">
+                    <div class="img-container">
+                        <img src="Multimedia/NOS 3.avif" alt="Sistema NOS Profesional" data-es="Sistema NOS Profesional" data-en="Professional NOS System">
+                    </div>
+                    <h2 data-es="Sistema NOS Profesional" data-en="Professional NOS System">Sistema NOS Profesional</h2>
+                    <p data-es="Control completo de activación y seguridad." data-en="Complete activation and safety control.">Control completo de activación y seguridad.</p>
+                </div>
+
+                <!-- 4. Kit NOS de Rendimiento -->
+                <div class="compt" onclick="cambiarVista('detalle-nos-rendimiento')">
+                    <div class="img-container">
+                        <img src="Multimedia/NOS 4.avif" alt="Kit NOS de Rendimiento" data-es="Kit NOS de Rendimiento" data-en="Performance NOS Kit">
+                    </div>
+                    <h2 data-es="Kit NOS de Rendimiento" data-en="Performance NOS Kit">Kit NOS de Rendimiento</h2>
+                    <p data-es="Configuración optimizada para carreras cortas." data-en="Optimized configuration for short races.">Configuración optimizada para carreras cortas.</p>
+                </div>
+
+                <!-- 5. Kit NOS Pro-Tuning -->
+                <div class="compt" onclick="cambiarVista('detalle-nos-protuning')">
+                    <div class="img-container">
+                        <img src="Multimedia/NOS 5.avif" alt="Kit NOS Pro-Tuning" data-es="Kit NOS Pro-Tuning" data-en="Pro-Tuning NOS Kit">
+                    </div>
+                    <h2 data-es="Kit NOS Pro-Tuning" data-en="Pro-Tuning NOS Kit">Kit NOS Pro-Tuning</h2>
+                    <p data-es="Para usuarios que buscan potencia responsable." data-en="For users seeking responsible power.">Para usuarios que buscan potencia responsable.</p>
+                </div>
+
+                <!-- 6. Kit NOS Nitro-Max (NUEVO) -->
+                <div class="compt" onclick="cambiarVista('detalle-nos-max')">
+                    <div class="img-container">
+                        <img src="Multimedia/NOS 6.avif" alt="Kit NOS Nitro-Max" data-es="Kit NOS Nitro-Max" data-en="Nitro-Max NOS Kit">
+                    </div>
+                    <h2 data-es="Kit NOS Nitro-Max" data-en="Nitro-Max NOS Kit">Kit NOS Nitro-Max</h2>
+                    <p data-es="Rendimiento masivo en altas revoluciones para vehículos de alta competencia." data-en="Massive high-RPM performance for high-competition vehicles.">Rendimiento masivo en altas revoluciones para vehículos de alta competencia.</p>
+                </div>
+
+                <!-- 7. Kit NOS Eco-Shot (NUEVO) -->
+                <div class="compt" onclick="cambiarVista('detalle-nos-eco')">
+                    <div class="img-container">
+                        <img src="Multimedia/NOS 7.avif" alt="Kit NOS Eco-Shot" data-es="Kit NOS Eco-Shot" data-en="Eco-Shot NOS Kit">
+                    </div>
+                    <h2 data-es="Kit NOS Eco-Shot" data-en="Eco-Shot NOS Kit">Kit NOS Eco-Shot</h2>
+                    <p data-es="Dosificación eficiente para un consumo de gas optimizado en cada disparo." data-en="Efficient dosing for optimized gas consumption on every shot.">Dosificación eficiente para un consumo de gas optimizado en cada disparo.</p>
+                </div>
+
+                <!-- 8. Kit NOS Titan-X (NUEVO) -->
+                <div class="compt" onclick="cambiarVista('detalle-nos-titan')">
+                    <div class="img-container">
+                        <img src="Multimedia/NOS 8.avif" alt="Kit NOS Titan-X" data-es="Kit NOS Titan-X" data-en="Titan-X NOS Kit">
+                    </div>
+                    <h2 data-es="Kit NOS Titan-X" data-en="Titan-X NOS Kit">Kit NOS Titan-X</h2>
+                    <p data-es="Solidez y torque extremo diseñado para motores V8 y proyectos pesados." data-en="Extreme solidity and torque designed for V8 engines and heavy builds.">Solidez y torque extremo diseñado para motores V8 y proyectos pesados.</p>
+                </div>
+
+                <!-- 9. Kit NOS Apex-Flow (NUEVO) -->
+                <div class="compt" onclick="cambiarVista('detalle-nos-apex')">
+                    <div class="img-container">
+                        <img src="Multimedia/NOS 9.avif" alt="Kit NOS Apex-Flow" data-es="Kit NOS Apex-Flow" data-en="Apex-Flow NOS Kit">
+                    </div>
+                    <h2 data-es="Kit NOS Apex-Flow" data-en="Apex-Flow NOS Kit">Kit NOS Apex-Flow</h2>
+                    <p data-es="Inyección fluida y constante para una entrega de potencia lineal en pista." data-en="Smooth and constant injection for linear power delivery on track.">Inyección fluida y constante para una entrega de potencia lineal en pista.</p>
+                </div>
+
+                <!-- 10. Kit NOS Velocity-Pro (NUEVO) -->
+                <div class="compt" onclick="cambiarVista('detalle-nos-velocity')">
+                    <div class="img-container">
+                        <img src="Multimedia/NOS 10.avif" alt="Kit NOS Velocity-Pro" data-es="Kit NOS Velocity-Pro" data-en="Velocity-Pro NOS Kit">
+                    </div>
+                    <h2 data-es="Kit NOS Velocity-Pro" data-en="Velocity-Pro NOS Kit">Kit NOS Velocity-Pro</h2>
+                    <p data-es="Tecnología de última generación para alcanzar la velocidad máxima en segundos." data-en="Next-generation technology to reach top speed in seconds.">Tecnología de última generación para alcanzar la velocidad máxima en segundos.</p>
+                </div>
+            </section>
+            <hr>
+            <section class="about-section">
+                <p class="about-subtitle" data-es="Explora opciones de NOS y transforma cada salida en una experiencia de alto impacto." data-en="Explore NOS options and turn every launch into a high-impact experience.">Explora opciones de NOS y transforma cada salida en una experiencia de alto impacto.</p>
+            </section>
+        </div>
+
+        <!--VISTAS DE DETALLES (10 SECCIONES DETALLADAS)-->
+
+        <!-- 1. DETALLE: Kit NOS Básico -->
+        <div id="detalle-nos-basico" class="vista-detalle oculto">
+            <div class="detalle-header-top">
+                <button class="btn-volver" onclick="cambiarVista('vista-catalogo')" data-es="⬅ Volver al catálogo" data-en="⬅ Back to catalog">⬅ Volver al catálogo</button>
+            </div>
+            <div class="producto-layout">
+                <div class="columna-media">
+                    <div class="imagen-destacada">
+                        <img src="multimedia/nos_1.png" alt="Kit NOS Básico" data-es="Kit NOS Básico" data-en="Basic NOS Kit">
+                    </div>
+                    <div class="seccion-video">
+                        <h3 data-es="Tutorial de Instalación" data-en="Installation Tutorial">Tutorial de Instalación</h3>
+                        <p class="video-desc" data-es="Aprende a instalar de forma segura tu Kit NOS Básico y configurar los solenoides de activación." data-en="Learn how to safely install your Basic NOS Kit and configure the activation solenoids.">Aprende a instalar de forma segura tu Kit NOS Básico y configurar los solenoides de activación.</p>
+                        <div class="video-container">
+                            <iframe src="https://drive.google.com/file/d/1Njaej2vPbDffXbkgd6ETMjwz1pk9D9pe/preview" title="Instalación Kit NOS Básico" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+                <div class="columna-info">
+                    <h1 class="producto-titulo"><span data-es="Kit NOS Básico " data-en="Basic NOS Kit ">Kit NOS Básico </span><span class="badge" data-es="Entry Level" data-en="Entry Level">Entry Level</span></h1>
+                    <p class="producto-descripcion" data-es="Ideal para principiantes y primeras modificaciones. Este kit proporciona un incremento seguro de potencia sin sobrecargar los componentes internos del motor." data-en="Ideal for beginners and initial modifications. This kit provides a safe power increase without overloading internal engine components.">
+                        Ideal para principiantes y primeras modificaciones. Este kit proporciona un incremento seguro de potencia sin sobrecargar los componentes internos del motor.
+                    </p>
+                    <div class="caja-precio">
+                        <span class="precio-fuerte" data-es="$450.00" data-en="$450.00">$450.00</span>
+                        <span class="envio-info" data-es="Precio referencial para tu proyecto." data-en="Reference price for your project.">Precio referencial para tu proyecto.</span>
+                    </div>
+                    <div class="seccion-specs">
+                        <h3 data-es="Compatibilidad Recomendada" data-en="Recommended Compatibility">Compatibilidad Recomendada</h3>
+                        <ul class="lista-compatibilidad">
+                            <li><strong data-es="Motores:" data-en="Engines:">Motores:</strong> <span data-es="4 cilindros (1.4L a 2.0L) atmosféricos." data-en="Naturally aspirated 4 cylinders (1.4L to 2.0L).">4 cilindros (1.4L a 2.0L) atmosféricos.</span></li>
+                            <li><strong data-es="Modelos Populares:" data-en="Popular Models:">Modelos Populares:</strong> <span data-es="Honda Civic, Toyota Corolla, Nissan Sentra, VW Gol." data-en="Honda Civic, Toyota Corolla, Nissan Sentra, VW Gol.">Honda Civic, Toyota Corolla, Nissan Sentra, VW Gol.</span></li>
+                            <li><strong data-es="Uso:" data-en="Use:">Uso:</strong> <span data-es="Iniciación al tuning y pruebas de aceleración ligera." data-en="Tuning initiation and light acceleration tests.">Iniciación al tuning y pruebas de aceleración ligera.</span></li>
+                        </ul>
+                    </div>
+                    <div class="seccion-specs">
+                        <h3 data-es="Especificaciones Técnicas" data-en="Technical Specifications">Especificaciones Técnicas</h3>
+                        <table class="tabla-especificaciones">
+                            <tbody>
+                                <tr><td><strong data-es="Ganancia de Potencia" data-en="Power Gain">Ganancia de Potencia</strong></td><td data-es="+35 HP a +50 HP" data-en="+35 HP to +50 HP">+35 HP a +50 HP</td></tr>
+                                <tr><td><strong data-es="Capacidad del Tanque" data-en="Tank Capacity">Capacidad del Tanque</strong></td><td data-es="10 lbs (Aluminio)" data-en="10 lbs (Aluminum)">10 lbs (Aluminio)</td></tr>
+                                <tr><td><strong data-es="Tipo de Inyección" data-en="Injection Type">Tipo de Inyección</strong></td><td data-es="Húmeda (Wet Shot)" data-en="Wet Shot">Húmeda (Wet Shot)</td></tr>
+                                <tr><td><strong data-es="Activación" data-en="Activation">Activación</strong></td><td data-es="Microswitch en acelerador" data-en="Throttle microswitch">Microswitch en acelerador</td></tr>
+                                <tr><td><strong data-es="Garantía" data-en="Warranty">Garantía</strong></td><td data-es="1 Año de fábrica" data-en="1-Year factory warranty">1 Año de fábrica</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 2. DETALLE: Kit NOS Avanzado -->
+        <div id="detalle-nos-avanzado" class="vista-detalle oculto">
+            <div class="detalle-header-top">
+                <button class="btn-volver" onclick="cambiarVista('vista-catalogo')" data-es="⬅ Volver al catálogo" data-en="⬅ Back to catalog">⬅ Volver al catálogo</button>
+            </div>
+            <div class="producto-layout">
+                <div class="columna-media">
+                    <div class="imagen-destacada">
+                        <img src="Multimedia/NOS 2.avif" alt="Kit NOS Avanzado" data-es="Kit NOS Avanzado" data-en="Advanced NOS Kit">
+                    </div>
+                    <div class="seccion-video">
+                        <h3 data-es="Guía de Puesta a Punto" data-en="Tuning Guide">Guía de Puesta a Punto</h3>
+                        <p class="video-desc" data-es="Aprende a ajustar la mezcla de nitrógeno y combustible para obtener máxima respuesta en pista." data-en="Learn how to tune the nitrous and fuel mixture for maximum track response.">Aprende a ajustar la mezcla de nitrógeno y combustible para obtener máxima respuesta en pista.</p>
+                        <div class="video-container">
+                            <iframe src="https://drive.google.com/file/d/1Njaej2vPbDffXbkgd6ETMjwz1pk9D9pe/preview" title="Instalación Kit NOS Avanzado" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+                <div class="columna-info">
+                    <h1 class="producto-titulo"><span data-es="Kit NOS Avanzado " data-en="Advanced NOS Kit ">Kit NOS Avanzado </span><span class="badge" data-es="Street & Track" data-en="Street & Track">Street & Track</span></h1>
+                    <p class="producto-descripcion" data-es="Mayor potencia para uso en pista y competencia. Diseñado para entusiastas que buscan un flujo superior y una entrega inmediata de potencia." data-en="Higher power for track and competition use. Designed for enthusiasts seeking superior flow and instant power delivery.">
+                        Mayor potencia para uso en pista y competencia. Diseñado para entusiastas que buscan un flujo superior y una entrega inmediata de potencia.
+                    </p>
+                    <div class="caja-precio">
+                        <span class="precio-fuerte" data-es="$780.00" data-en="$780.00">$780.00</span>
+                        <span class="envio-info" data-es="Precio referencial para tu proyecto." data-en="Reference price for your project.">Precio referencial para tu proyecto.</span>
+                    </div>
+                    <div class="seccion-specs">
+                        <h3 data-es="Compatibilidad Recomendada" data-en="Recommended Compatibility">Compatibilidad Recomendada</h3>
+                        <ul class="lista-compatibilidad">
+                            <li><strong data-es="Motores:" data-en="Engines:">Motores:</strong> <span data-es="4 y 6 cilindros modificados." data-en="Modified 4 and 6 cylinders.">4 y 6 cilindros modificados.</span></li>
+                            <li><strong data-es="Modelos Populares:" data-en="Popular Models:">Modelos Populares:</strong> <span data-es="Subaru WRX, Mitsubishi Lancer Evo, Nissan 350Z/370Z, BMW E46." data-en="Subaru WRX, Mitsubishi Lancer Evo, Nissan 350Z/370Z, BMW E46.">Subaru WRX, Mitsubishi Lancer Evo, Nissan 350Z/370Z, BMW E46.</span></li>
+                            <li><strong data-es="Uso:" data-en="Use:">Uso:</strong> <span data-es="Track Days y competencias de calle preparadas." data-en="Track Days and prepared street racing.">Track Days y competencias de calle preparadas.</span></li>
+                        </ul>
+                    </div>
+                    <div class="seccion-specs">
+                        <h3 data-es="Especificaciones Técnicas" data-en="Technical Specifications">Especificaciones Técnicas</h3>
+                        <table class="tabla-especificaciones">
+                            <tbody>
+                                <tr><td><strong data-es="Ganancia de Potencia" data-en="Power Gain">Ganancia de Potencia</strong></td><td data-es="+75 HP a +125 HP" data-en="+75 HP to +125 HP">+75 HP a +125 HP</td></tr>
+                                <tr><td><strong data-es="Capacidad del Tanque" data-en="Tank Capacity">Capacidad del Tanque</strong></td><td data-es="10 lbs / 15 lbs opcional" data-en="10 lbs / 15 lbs optional">10 lbs / 15 lbs opcional</td></tr>
+                                <tr><td><strong data-es="Tipo de Inyección" data-en="Injection Type">Tipo de Inyección</strong></td><td data-es="Húmeda progresiva" data-en="Progressive wet">Húmeda progresiva</td></tr>
+                                <tr><td><strong data-es="Solenoides" data-en="Solenoids">Solenoides</strong></td><td data-es="Alto flujo de alta velocidad" data-en="High-speed high-flow">Alto flujo de alta velocidad</td></tr>
+                                <tr><td><strong data-es="Garantía" data-en="Warranty">Garantía</strong></td><td data-es="1 Año de fábrica" data-en="1-Year factory warranty">1 Año de fábrica</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 3. DETALLE: Sistema NOS Profesional -->
+        <div id="detalle-nos-profesional" class="vista-detalle oculto">
+            <div class="detalle-header-top">
+                <button class="btn-volver" onclick="cambiarVista('vista-catalogo')" data-es="⬅ Volver al catálogo" data-en="⬅ Back to catalog">⬅ Volver al catálogo</button>
+            </div>
+            <div class="producto-layout">
+                <div class="columna-media">
+                    <div class="imagen-destacada">
+                        <img src="Multimedia/NOS 3.avif" alt="Sistema NOS Profesional" data-es="Sistema NOS Profesional" data-en="Professional NOS System">
+                    </div>
+                    <div class="seccion-video">
+                        <h3 data-es="Configuración Pro Spec" data-en="Pro Spec Configuration">Configuración Pro Spec</h3>
+                        <p class="video-desc" data-es="Revisa el montaje de la distribución Direct Port y la calibración del controlador digital progresivo." data-en="Check out the Direct Port distribution setup and digital progressive controller calibration.">Revisa el montaje de la distribución Direct Port y la calibración del controlador digital progresivo.</p>
+                        <div class="video-container">
+                            <iframe src="https://drive.google.com/file/d/1Njaej2vPbDffXbkgd6ETMjwz1pk9D9pe/preview" title="Instalación Sistema NOS Profesional" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+                <div class="columna-info">
+                    <h1 class="producto-titulo"><span data-es="Sistema NOS Profesional " data-en="Professional NOS System ">Sistema NOS Profesional </span><span class="badge" data-es="Pro Racing" data-en="Pro Racing">Pro Racing</span></h1>
+                    <p class="producto-descripcion" data-es="Control completo de activación y máxima seguridad. Ofrece inyección directa por cilindro (Direct Port) para entregar ráfagas masivas de potencia." data-en="Complete activation control and maximum safety. Features Direct Port injection per cylinder to deliver massive bursts of power.">
+                        Control completo de activación y máxima seguridad. Ofrece inyección directa por cilindro (Direct Port) para entregar ráfagas masivas de potencia.
+                    </p>
+                    <div class="caja-precio">
+                        <span class="precio-fuerte" data-es="$1,250.00" data-en="$1,250.00">$1,250.00</span>
+                        <span class="envio-info" data-es="Precio referencial para tu proyecto." data-en="Reference price for your project.">Precio referencial para tu proyecto.</span>
+                    </div>
+                    <div class="seccion-specs">
+                        <h3 data-es="Compatibilidad Recomendada" data-en="Recommended Compatibility">Compatibilidad Recomendada</h3>
+                        <ul class="lista-compatibilidad">
+                            <li><strong data-es="Motores:" data-en="Engines:">Motores:</strong> <span data-es="V6 y V8 de alta cilindrada o preparaciones de competición." data-en="High-displacement V6/V8 or race-built engines.">V6 y V8 de alta cilindrada o preparaciones de competición.</span></li>
+                            <li><strong data-es="Modelos Populares:" data-en="Popular Models:">Modelos Populares:</strong> <span data-es="Mustang GT, Camaro SS, Toyota Supra (2JZ), Dodge Challenger." data-en="Mustang GT, Camaro SS, Toyota Supra (2JZ), Dodge Challenger.">Mustang GT, Camaro SS, Toyota Supra (2JZ), Dodge Challenger.</span></li>
+                            <li><strong data-es="Uso:" data-en="Use:">Uso:</strong> <span data-es="Carreras de aceleración profesional (Drag Racing) y circuito." data-en="Professional drag racing and circuit racing.">Carreras de aceleración profesional (Drag Racing) y circuito.</span></li>
+                        </ul>
+                    </div>
+                    <div class="seccion-specs">
+                        <h3 data-es="Especificaciones Técnicas" data-en="Technical Specifications">Especificaciones Técnicas</h3>
+                        <table class="tabla-especificaciones">
+                            <tbody>
+                                <tr><td><strong data-es="Ganancia de Potencia" data-en="Power Gain">Ganancia de Potencia</strong></td><td data-es="+150 HP a +250+ HP" data-en="+150 HP to +250+ HP">+150 HP a +250+ HP</td></tr>
+                                <tr><td><strong data-es="Capacidad del Tanque" data-en="Tank Capacity">Capacidad del Tanque</strong></td><td data-es="15 lbs (Opción dual)" data-en="15 lbs (Dual option)">15 lbs (Opción dual)</td></tr>
+                                <tr><td><strong data-es="Tipo de Inyección" data-en="Injection Type">Tipo de Inyección</strong></td><td data-es="Direct Port (Inyector por puerto)" data-en="Direct Port (Per-port injector)">Direct Port (Inyector por puerto)</td></tr>
+                                <tr><td><strong data-es="Controlador" data-en="Controller">Controlador</strong></td><td data-es="Digital Progresivo de tiempo/RPM" data-en="Digital Progressive time/RPM">Digital Progresivo de tiempo/RPM</td></tr>
+                                <tr><td><strong data-es="Garantía" data-en="Warranty">Garantía</strong></td><td data-es="1 Año de fábrica" data-en="1-Year factory warranty">1 Año de fábrica</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 4. DETALLE: Kit NOS de Rendimiento -->
+        <div id="detalle-nos-rendimiento" class="vista-detalle oculto">
+            <div class="detalle-header-top">
+                <button class="btn-volver" onclick="cambiarVista('vista-catalogo')" data-es="⬅ Volver al catálogo" data-en="⬅ Back to catalog">⬅ Volver al catálogo</button>
+            </div>
+            <div class="producto-layout">
+                <div class="columna-media">
+                    <div class="imagen-destacada">
+                        <img src="Multimedia/NOS 4.avif" alt="Kit NOS de Rendimiento" data-es="Kit NOS de Rendimiento" data-en="Performance NOS Kit">
+                    </div>
+                    <div class="seccion-video">
+                        <h3 data-es="Optimización de Salida" data-en="Launch Optimization">Optimización de Salida</h3>
+                        <p class="video-desc" data-es="Configuración del interruptor de ventana de RPM para arranques inmediatos en cuarto de milla." data-en="RPM window switch configuration for instant launches in quarter-mile racing.">Configuración del interruptor de ventana de RPM para arranques inmediatos en cuarto de milla.</p>
+                        <div class="video-container">
+                            <iframe src="https://drive.google.com/file/d/1Njaej2vPbDffXbkgd6ETMjwz1pk9D9pe/preview" title="Instalación Kit NOS de Rendimiento" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+                <div class="columna-info">
+                    <h1 class="producto-titulo"><span data-es="Kit NOS de Rendimiento " data-en="Performance NOS Kit ">Kit NOS de Rendimiento </span><span class="badge" data-es="Drag Spec" data-en="Drag Spec">Drag Spec</span></h1>
+                    <p class="producto-descripcion" data-es="Configuración optimizada específicamente para carreras cortas de aceleración. Proporciona torque instantáneo en el momento de arrancar." data-en="Optimized configuration specifically for short drag races. Delivers instant torque right off the line.">
+                        Configuración optimizada específicamente para carreras cortas de aceleración. Proporciona torque instantáneo en el momento de arrancar.
+                    </p>
+                    <div class="caja-precio">
+                        <span class="precio-fuerte" data-es="$620.00" data-en="$620.00">$620.00</span>
+                        <span class="envio-info" data-es="Precio referencial para tu proyecto." data-en="Reference price for your project.">Precio referencial para tu proyecto.</span>
+                    </div>
+                    <div class="seccion-specs">
+                        <h3 data-es="Compatibilidad Recomendada" data-en="Recommended Compatibility">Compatibilidad Recomendada</h3>
+                        <ul class="lista-compatibilidad">
+                            <li><strong data-es="Motores:" data-en="Engines:">Motores:</strong> <span data-es="4 cilindros e intermedios preparados para arrancones." data-en="4 cylinders and intermediate engines prepared for drag racing.">4 cilindros e intermedios preparados para arrancones.</span></li>
+                            <li><strong data-es="Modelos Populares:" data-en="Popular Models:">Modelos Populares:</strong> <span data-es="Honda Integra, VW Golf GTI, Ford Focus ST." data-en="Honda Integra, VW Golf GTI, Ford Focus ST.">Honda Integra, VW Golf GTI, Ford Focus ST.</span></li>
+                            <li><strong data-es="Uso:" data-en="Use:">Uso:</strong> <span data-es="Pruebas de 1/4 y 1/8 de milla." data-en="1/4 and 1/8 mile runs.">Pruebas de 1/4 y 1/8 de milla.</span></li>
+                        </ul>
+                    </div>
+                    <div class="seccion-specs">
+                        <h3 data-es="Especificaciones Técnicas" data-en="Technical Specifications">Especificaciones Técnicas</h3>
+                        <table class="tabla-especificaciones">
+                            <tbody>
+                                <tr><td><strong data-es="Ganancia de Potencia" data-en="Power Gain">Ganancia de Potencia</strong></td><td data-es="+50 HP a +100 HP" data-en="+50 HP to +100 HP">+50 HP a +100 HP</td></tr>
+                                <tr><td><strong data-es="Capacidad del Tanque" data-en="Tank Capacity">Capacidad del Tanque</strong></td><td data-es="10 lbs High-Flow" data-en="10 lbs High-Flow">10 lbs High-Flow</td></tr>
+                                <tr><td><strong data-es="Tipo de Inyección" data-en="Injection Type">Tipo de Inyección</strong></td><td data-es="Húmeda monopunto de rápida respuesta" data-en="Fast-response single-point wet">Húmeda monopunto de rápida respuesta</td></tr>
+                                <tr><td><strong data-es="Activación" data-en="Activation">Activación</strong></td><td data-es="RPM Window Switch + TPS" data-en="RPM Window Switch + TPS">RPM Window Switch + TPS</td></tr>
+                                <tr><td><strong data-es="Garantía" data-en="Warranty">Garantía</strong></td><td data-es="1 Año de fábrica" data-en="1-Year factory warranty">1 Año de fábrica</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 5. DETALLE: Kit NOS Pro-Tuning -->
+        <div id="detalle-nos-protuning" class="vista-detalle oculto">
+            <div class="detalle-header-top">
+                <button class="btn-volver" onclick="cambiarVista('vista-catalogo')" data-es="⬅ Volver al catálogo" data-en="⬅ Back to catalog">⬅ Volver al catálogo</button>
+            </div>
+            <div class="producto-layout">
+                <div class="columna-media">
+                    <div class="imagen-destacada">
+                        <img src="Multimedia/NOS 5.avif" alt="Kit NOS Pro-Tuning" data-es="Kit NOS Pro-Tuning" data-en="Pro-Tuning NOS Kit">
+                    </div>
+                    <div class="seccion-video">
+                        <h3 data-es="Mapeo y Calibración Digital" data-en="Digital Mapping & Calibration">Mapeo y Calibración Digital</h3>
+                        <p class="video-desc" data-es="Mira cómo enlazar el kit Pro-Tuning con la reprogramación ECU de tu vehículo para una entrega progresiva." data-en="See how to link the Pro-Tuning kit with your vehicle's ECU remap for progressive power delivery.">Mira cómo enlazar el kit Pro-Tuning con la reprogramación ECU de tu vehículo para una entrega progresiva.</p>
+                        <div class="video-container">
+                            <iframe src="https://drive.google.com/file/d/1Njaej2vPbDffXbkgd6ETMjwz1pk9D9pe/preview" title="Instalación Kit NOS Pro-Tuning" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+                <div class="columna-info">
+                    <h1 class="producto-titulo"><span data-es="Kit NOS Pro-Tuning " data-en="Pro-Tuning NOS Kit ">Kit NOS Pro-Tuning </span><span class="badge" data-es="Precision Spec" data-en="Precision Spec">Precision Spec</span></h1>
+                    <p class="producto-descripcion" data-es="Diseñado para usuarios que buscan potencia administrada de manera responsable. Permite mapear y sincronizar la inyección con la ECU." data-en="Designed for users looking for responsibly managed power. Allows mapping and synchronizing injection with the ECU.">
+                        Diseñado para usuarios que buscan potencia administrada de manera responsable. Permite mapear y sincronizar la inyección con la ECU.
+                    </p>
+                    <div class="caja-precio">
+                        <span class="precio-fuerte" data-es="$950.00" data-en="$950.00">$950.00</span>
+                        <span class="envio-info" data-es="Precio referencial para tu proyecto." data-en="Reference price for your project.">Precio referencial para tu proyecto.</span>
+                    </div>
+                    <div class="seccion-specs">
+                        <h3 data-es="Compatibilidad Recomendada" data-en="Recommended Compatibility">Compatibilidad Recomendada</h3>
+                        <ul class="lista-compatibilidad">
+                            <li><strong data-es="Motores:" data-en="Engines:">Motores:</strong> <span data-es="Motores modernos con ECU reprogramable o standalone." data-en="Modern engines with reflashable or standalone ECU.">Motores modernos con ECU reprogramable o standalone.</span></li>
+                            <li><strong data-es="Modelos Populares:" data-en="Popular Models:">Modelos Populares:</strong> <span data-es="Nissan GT-R, Audi S3/RS3, BMW M2/M4, Toyota GR Yaris." data-en="Nissan GT-R, Audi S3/RS3, BMW M2/M4, Toyota GR Yaris.">Nissan GT-R, Audi S3/RS3, BMW M2/M4, Toyota GR Yaris.</span></li>
+                            <li><strong data-es="Uso:" data-en="Use:">Uso:</strong> <span data-es="Tuning de precisión y máximo aprovechamiento térmico." data-en="Precision tuning and maximum thermal efficiency.">Tuning de precisión y máximo aprovechamiento térmico.</span></li>
+                        </ul>
+                    </div>
+                    <div class="seccion-specs">
+                        <h3 data-es="Especificaciones Técnicas" data-en="Technical Specifications">Especificaciones Técnicas</h3>
+                        <table class="tabla-especificaciones">
+                            <tbody>
+                                <tr><td><strong data-es="Ganancia de Potencia" data-en="Power Gain">Ganancia de Potencia</strong></td><td data-es="+100 HP a +175 HP" data-en="+100 HP to +175 HP">+100 HP a +175 HP</td></tr>
+                                <tr><td><strong data-es="Capacidad del Tanque" data-en="Tank Capacity">Capacidad del Tanque</strong></td><td data-es="12 lbs de alta pureza" data-en="12 lbs high purity">12 lbs de alta pureza</td></tr>
+                                <tr><td><strong data-es="Tipo de Inyección" data-en="Injection Type">Tipo de Inyección</strong></td><td data-es="Electrónica programable de precisión" data-en="Precision programmable electronic">Electrónica programable de precisión</td></tr>
+                                <tr><td><strong data-es="Integración" data-en="Integration">Integración</strong></td><td data-es="Sincronizable con ECU / Telemetría" data-en="ECU / Telemetry syncable">Sincronizable con ECU / Telemetría</td></tr>
+                                <tr><td><strong data-es="Garantía" data-en="Warranty">Garantía</strong></td><td data-es="1 Año de fábrica" data-en="1-Year factory warranty">1 Año de fábrica</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 6. DETALLE: Kit NOS Nitro-Max -->
+        <div id="detalle-nos-max" class="vista-detalle oculto">
+            <div class="detalle-header-top">
+                <button class="btn-volver" onclick="cambiarVista('vista-catalogo')" data-es="⬅ Volver al catálogo" data-en="⬅ Back to catalog">⬅ Volver al catálogo</button>
+            </div>
+            <div class="producto-layout">
+                <div class="columna-media">
+                    <div class="imagen-destacada">
+                        <img src="Multimedia/NOS 6.avif" alt="Kit NOS Nitro-Max" data-es="Kit NOS Nitro-Max" data-en="Nitro-Max NOS Kit">
+                    </div>
+                    <div class="seccion-video">
+                        <h3 data-es="Prueba de Presión Nitro-Max" data-en="Nitro-Max Pressure Test">Prueba de Presión Nitro-Max</h3>
+                        <p class="video-desc" data-es="Revisa el rendimiento del Nitro-Max en banco de pruebas y su comportamiento a altas RPM." data-en="Check Nitro-Max dyno performance and high-RPM behavior.">Revisa el rendimiento del Nitro-Max en banco de pruebas y su comportamiento a altas RPM.</p>
+                        <div class="video-container">
+                            <iframe src="https://drive.google.com/file/d/1Njaej2vPbDffXbkgd6ETMjwz1pk9D9pe/preview" title="Instalación Kit NOS Nitro-Max" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+                <div class="columna-info">
+                    <h1 class="producto-titulo"><span data-es="Kit NOS Nitro-Max " data-en="Nitro-Max NOS Kit ">Kit NOS Nitro-Max </span><span class="badge" data-es="Race Performance" data-en="Race Performance">Race Performance</span></h1>
+                    <p class="producto-descripcion" data-es="El Kit Nitro-Max está pensado para motores forjados que requieren una presión masiva en la parte alta del tacómetro. Entrega un flujo constante garantizando cero caídas de presión." data-en="The Nitro-Max Kit is built for forged engines requiring massive top-end pressure. Delivers constant flow with zero pressure drops.">
+                        El Kit Nitro-Max está pensado para motores forjados que requieren una presión masiva en la parte alta del tacómetro. Entrega un flujo constante garantizando cero caídas de presión.
+                    </p>
+                    <div class="caja-precio">
+                        <span class="precio-fuerte" data-es="$1,100.00" data-en="$1,100.00">$1,100.00</span>
+                        <span class="envio-info" data-es="Precio referencial para tu proyecto." data-en="Reference price for your project.">Precio referencial para tu proyecto.</span>
+                    </div>
+                    <div class="seccion-specs">
+                        <h3 data-es="Compatibilidad Recomendada" data-en="Recommended Compatibility">Compatibilidad Recomendada</h3>
+                        <ul class="lista-compatibilidad">
+                            <li><strong data-es="Motores:" data-en="Engines:">Motores:</strong> <span data-es="6 cilindros en línea y V6 forjados." data-en="Forged inline-6 and V6 engines.">6 cilindros en línea y V6 forjados.</span></li>
+                            <li><strong data-es="Modelos Populares:" data-en="Popular Models:">Modelos Populares:</strong> <span data-es="Toyota Supra (1JZ/2JZ), Nissan Skyline GT-R (RB26), Ford Mustang EcoBoost preparado." data-en="Toyota Supra (1JZ/2JZ), Nissan Skyline GT-R (RB26), built Ford Mustang EcoBoost.">Toyota Supra (1JZ/2JZ), Nissan Skyline GT-R (RB26), Ford Mustang EcoBoost preparado.</span></li>
+                            <li><strong data-es="Uso:" data-en="Use:">Uso:</strong> <span data-es="Pista, Time Attack y carreras de aceleración." data-en="Track, Time Attack, and drag racing.">Pista, Time Attack y carreras de aceleración.</span></li>
+                        </ul>
+                    </div>
+                    <div class="seccion-specs">
+                        <h3 data-es="Especificaciones Técnicas" data-en="Technical Specifications">Especificaciones Técnicas</h3>
+                        <table class="tabla-especificaciones">
+                            <tbody>
+                                <tr><td><strong data-es="Ganancia de Potencia" data-en="Power Gain">Ganancia de Potencia</strong></td><td data-es="+125 HP a +200 HP" data-en="+125 HP to +200 HP">+125 HP a +200 HP</td></tr>
+                                <tr><td><strong data-es="Capacidad del Tanque" data-en="Tank Capacity">Capacidad del Tanque</strong></td><td data-es="15 lbs Fibra de Carbono" data-en="15 lbs Carbon Fiber">15 lbs Fibra de Carbono</td></tr>
+                                <tr><td><strong data-es="Tipo de Inyección" data-en="Injection Type">Tipo de Inyección</strong></td><td data-es="Dual Stage (Doble Etapa)" data-en="Dual Stage">Dual Stage (Doble Etapa)</td></tr>
+                                <tr><td><strong data-es="Calentador de Tanque" data-en="Bottle Heater">Calentador de Tanque</strong></td><td data-es="Incluido con termostato" data-en="Included with thermostat">Incluido con termostato</td></tr>
+                                <tr><td><strong data-es="Garantía" data-en="Warranty">Garantía</strong></td><td data-es="1 Año de fábrica" data-en="1-Year factory warranty">1 Año de fábrica</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 7. DETALLE: Kit NOS Eco-Shot -->
+        <div id="detalle-nos-eco" class="vista-detalle oculto">
+            <div class="detalle-header-top">
+                <button class="btn-volver" onclick="cambiarVista('vista-catalogo')" data-es="⬅ Volver al catálogo" data-en="⬅ Back to catalog">⬅ Volver al catálogo</button>
+            </div>
+            <div class="producto-layout">
+                <div class="columna-media">
+                    <div class="imagen-destacada">
+                        <img src="Multimedia/NOS 7.avif" alt="Kit NOS Eco-Shot" data-es="Kit NOS Eco-Shot" data-en="Eco-Shot NOS Kit">
+                    </div>
+                    <div class="seccion-video">
+                        <h3 data-es="Ajuste de Válvulas Eco-Shot" data-en="Eco-Shot Valve Adjustment">Ajuste de Válvulas Eco-Shot</h3>
+                        <p class="video-desc" data-es="Aprende a regular las microboquillas para ahorrar carga del tanque sin sacrificar potencia." data-en="Learn how to adjust micro-nozzles to save nitrous consumption without sacrificing power.">Aprende a regular las microboquillas para ahorrar carga del tanque sin sacrificar potencia.</p>
+                        <div class="video-container">
+                            <iframe src="https://drive.google.com/file/d/1Njaej2vPbDffXbkgd6ETMjwz1pk9D9pe/preview" title="Instalación Kit NOS Eco-Shot" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+                <div class="columna-info">
+                    <h1 class="producto-titulo"><span data-es="Kit NOS Eco-Shot " data-en="Eco-Shot NOS Kit ">Kit NOS Eco-Shot </span><span class="badge" data-es="Efficiency Spec" data-en="Efficiency Spec">Efficiency Spec</span></h1>
+                    <p class="producto-descripcion" data-es="Sistema optimizado con microboquillas de alta dispersión que reducen el consumo de óxido nitroso hasta un 25% por disparo, manteniendo una aceleración contundente." data-en="Optimized system featuring high-dispersion micro-nozzles that reduce nitrous consumption by up to 25% per shot while maintaining punchy acceleration.">
+                        Sistema optimizado con microboquillas de alta dispersión que reducen el consumo de óxido nitroso hasta un 25% por disparo, manteniendo una aceleración contundente.
+                    </p>
+                    <div class="caja-precio">
+                        <span class="precio-fuerte" data-es="$520.00" data-en="$520.00">$520.00</span>
+                        <span class="envio-info" data-es="Precio referencial para tu proyecto." data-en="Reference price for your project.">Precio referencial para tu proyecto.</span>
+                    </div>
+                    <div class="seccion-specs">
+                        <h3 data-es="Compatibilidad Recomendada" data-en="Recommended Compatibility">Compatibilidad Recomendada</h3>
+                        <ul class="lista-compatibilidad">
+                            <li><strong data-es="Motores:" data-en="Engines:">Motores:</strong> <span data-es="4 cilindros compactos de uso diario." data-en="Compact 4-cylinder daily drivers.">4 cilindros compactos de uso diario.</span></li>
+                            <li><strong data-es="Modelos Populares:" data-en="Popular Models:">Modelos Populares:</strong> <span data-es="Suzuki Swift Sport, Ford Fiesta ST, Mazda 3, Hyundai Veloster." data-en="Suzuki Swift Sport, Ford Fiesta ST, Mazda 3, Hyundai Veloster.">Suzuki Swift Sport, Ford Fiesta ST, Mazda 3, Hyundai Veloster.</span></li>
+                            <li><strong data-es="Uso:" data-en="Use:">Uso:</strong> <span data-es="Conducción deportiva urbana y adelantamientos rápidos." data-en="Sporty urban driving and quick overtaking.">Conducción deportiva urbana y adelantamientos rápidos.</span></li>
+                        </ul>
+                    </div>
+                    <div class="seccion-specs">
+                        <h3 data-es="Especificaciones Técnicas" data-en="Technical Specifications">Especificaciones Técnicas</h3>
+                        <table class="tabla-especificaciones">
+                            <tbody>
+                                <tr><td><strong data-es="Ganancia de Potencia" data-en="Power Gain">Ganancia de Potencia</strong></td><td data-es="+40 HP a +65 HP" data-en="+40 HP to +65 HP">+40 HP a +65 HP</td></tr>
+                                <tr><td><strong data-es="Capacidad del Tanque" data-en="Tank Capacity">Capacidad del Tanque</strong></td><td data-es="10 lbs ultraligero" data-en="10 lbs ultra-lightweight">10 lbs ultraligero</td></tr>
+                                <tr><td><strong data-es="Eficiencia de Gas" data-en="Gas Efficiency">Eficiencia de Gas</strong></td><td data-es="+25% de disparos por recarga" data-en="+25% more shots per refill">+25% de disparos por recarga</td></tr>
+                                <tr><td><strong data-es="Inyector" data-en="Injector">Inyector</strong></td><td data-es="Micro-Nozzle de precisión" data-en="Precision Micro-Nozzle">Micro-Nozzle de precisión</td></tr>
+                                <tr><td><strong data-es="Garantía" data-en="Warranty">Garantía</strong></td><td data-es="1 Año de fábrica" data-en="1-Year factory warranty">1 Año de fábrica</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 8. DETALLE: Kit NOS Titan-X -->
+        <div id="detalle-nos-titan" class="vista-detalle oculto">
+            <div class="detalle-header-top">
+                <button class="btn-volver" onclick="cambiarVista('vista-catalogo')" data-es="⬅ Volver al catálogo" data-en="⬅ Back to catalog">⬅ Volver al catálogo</button>
+            </div>
+            <div class="producto-layout">
+                <div class="columna-media">
+                    <div class="imagen-destacada">
+                        <img src="Multimedia/NOS 8.avif" alt="Kit NOS Titan-X" data-es="Kit NOS Titan-X" data-en="Titan-X NOS Kit">
+                    </div>
+                    <div class="seccion-video">
+                        <h3 data-es="Instalación en Motores V8" data-en="V8 Engine Installation">Instalación en Motores V8</h3>
+                        <p class="video-desc" data-es="Guía para el armado del bloque de distribución reforzado Titan-X en motores de gran cilindrada." data-en="Guide for assembling the reinforced Titan-X distribution block on large-displacement engines.">Guía para el armado del bloque de distribución reforzado Titan-X en motores de gran cilindrada.</p>
+                        <div class="video-container">
+                            <iframe src="https://drive.google.com/file/d/1Njaej2vPbDffXbkgd6ETMjwz1pk9D9pe/preview" title="Instalación Kit NOS Titan-X" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+                <div class="columna-info">
+                    <h1 class="producto-titulo"><span data-es="Kit NOS Titan-X " data-en="Titan-X NOS Kit ">Kit NOS Titan-X </span><span class="badge" data-es="Heavy Duty" data-en="Heavy Duty">Heavy Duty</span></h1>
+                    <p class="producto-descripcion" data-es="Construido con componentes de grado industrial y tubería blindada de acero inoxidable. Ofrece un torque brutal diseñado para soportar las exigencias de motores V8 o de bloque grande." data-en="Built with industrial-grade components and braided stainless steel lines. Delivers brutal torque engineered to handle V8 and big-block demands.">
+                        Construido con componentes de grado industrial y tubería blindada de acero inoxidable. Ofrece un torque brutal diseñado para soportar las exigencias de motores V8 o de bloque grande.
+                    </p>
+                    <div class="caja-precio">
+                        <span class="precio-fuerte" data-es="$1,350.00" data-en="$1,350.00">$1,350.00</span>
+                        <span class="envio-info" data-es="Precio referencial para tu proyecto." data-en="Reference price for your project.">Precio referencial para tu proyecto.</span>
+                    </div>
+                    <div class="seccion-specs">
+                        <h3 data-es="Compatibilidad Recomendada" data-en="Recommended Compatibility">Compatibilidad Recomendada</h3>
+                        <ul class="lista-compatibilidad">
+                            <li><strong data-es="Motores:" data-en="Engines:">Motores:</strong> <span data-es="V8, V10 y camionetas/autos Muscle." data-en="V8, V10, and Muscle trucks/cars.">V8, V10 y camionetas/autos Muscle.</span></li>
+                            <li><strong data-es="Modelos Populares:" data-en="Popular Models:">Modelos Populares:</strong> <span data-es="Dodge RAM TRX, Corvette C7/C8, Ford F-150 Raptor, Chevrolet Camaro ZL1." data-en="Dodge RAM TRX, Corvette C7/C8, Ford F-150 Raptor, Chevrolet Camaro ZL1.">Dodge RAM TRX, Corvette C7/C8, Ford F-150 Raptor, Chevrolet Camaro ZL1.</span></li>
+                            <li><strong data-es="Uso:" data-en="Use:">Uso:</strong> <span data-es="Arrastre, drag racing pesado y exhibición." data-en="Towing, heavy drag racing, and show.">Arrastre, drag racing pesado y exhibición.</span></li>
+                        </ul>
+                    </div>
+                    <div class="seccion-specs">
+                        <h3 data-es="Especificaciones Técnicas" data-en="Technical Specifications">Especificaciones Técnicas</h3>
+                        <table class="tabla-especificaciones">
+                            <tbody>
+                                <tr><td><strong data-es="Ganancia de Potencia" data-en="Power Gain">Ganancia de Potencia</strong></td><td data-es="+200 HP a +300 HP" data-en="+200 HP to +300 HP">+200 HP a +300 HP</td></tr>
+                                <tr><td><strong data-es="Capacidad del Tanque" data-en="Tank Capacity">Capacidad del Tanque</strong></td><td data-es="15 lbs Doble Válvula de Salida" data-en="15 lbs Dual Outlet Valve">15 lbs Doble Válvula de Salida</td></tr>
+                                <tr><td><strong data-es="Líneas de Alimentación" data-en="Feed Lines">Líneas de Alimentación</strong></td><td data-es="AN-6 Acero Inoxidable Trenzado" data-en="AN-6 Braided Stainless Steel">AN-6 Acero Inoxidable Trenzado</td></tr>
+                                <tr><td><strong data-es="Purga de Seguridad" data-en="Safety Purge">Purga de Seguridad</strong></td><td data-es="Sistema Purge Kit Pro Incluido" data-en="Purge Kit Pro system included">Sistema Purge Kit Pro Incluido</td></tr>
+                                <tr><td><strong data-es="Garantía" data-en="Warranty">Garantía</strong></td><td data-es="2 Años de fábrica" data-en="2-Year factory warranty">2 Años de fábrica</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 9. DETALLE: Kit NOS Apex-Flow -->
+        <div id="detalle-nos-apex" class="vista-detalle oculto">
+            <div class="detalle-header-top">
+                <button class="btn-volver" onclick="cambiarVista('vista-catalogo')" data-es="⬅ Volver al catálogo" data-en="⬅ Back to catalog">⬅ Volver al catálogo</button>
+            </div>
+            <div class="producto-layout">
+                <div class="columna-media">
+                    <div class="imagen-destacada">
+                        <img src="Multimedia/NOS 9.avif" alt="Kit NOS Apex-Flow" data-es="Kit NOS Apex-Flow" data-en="Apex-Flow NOS Kit">
+                    </div>
+                    <div class="seccion-video">
+                        <h3 data-es="Sincronización en Curvas" data-en="Cornering Synchronization">Sincronización en Curvas</h3>
+                        <p class="video-desc" data-es="Cómo configurar el sensor de aceleración lateral para activar el NOS Apex-Flow en salidas de curva." data-en="How to configure the lateral acceleration sensor to activate NOS Apex-Flow coming out of corners.">Cómo configurar el sensor de aceleración lateral para activar el NOS Apex-Flow en salidas de curva.</p>
+                        <div class="video-container">
+                            <iframe src="https://drive.google.com/file/d/1Njaej2vPbDffXbkgd6ETMjwz1pk9D9pe/preview" title="Instalación Kit NOS Apex-Flow" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+                <div class="columna-info">
+                    <h1 class="producto-titulo"><span data-es="Kit NOS Apex-Flow " data-en="Apex-Flow NOS Kit ">Kit NOS Apex-Flow </span><span class="badge" data-es="Circuit Spec" data-en="Circuit Spec">Circuit Spec</span></h1>
+                    <p class="producto-descripcion" data-es="Desarrollado para circuitos cerrados. Su modulador de flujo evita sobrevirajes repentinos entregando el gas de forma suave y uniforme a lo largo de las rectas." data-en="Developed for closed road courses. Its flow modulator prevents sudden oversteer by delivering gas smoothly along the straights.">
+                        Desarrollado para circuitos cerrados. Su modulador de flujo evita sobrevirajes repentinos entregando el gas de forma suave y uniforme a lo largo de las rectas.
+                    </p>
+                    <div class="caja-precio">
+                        <span class="precio-fuerte" data-es="$890.00" data-en="$890.00">$890.00</span>
+                        <span class="envio-info" data-es="Precio referencial para tu proyecto." data-en="Reference price for your project.">Precio referencial para tu proyecto.</span>
+                    </div>
+                    <div class="seccion-specs">
+                        <h3 data-es="Compatibilidad Recomendada" data-en="Recommended Compatibility">Compatibilidad Recomendada</h3>
+                        <ul class="lista-compatibilidad">
+                            <li><strong data-es="Motores:" data-en="Engines:">Motores:</strong> <span data-es="Autos deportivos de tracción trasera o integral." data-en="RWD or AWD sports cars.">Autos deportivos de tracción trasera o integral.</span></li>
+                            <li><strong data-es="Modelos Populares:" data-en="Popular Models:">Modelos Populares:</strong> <span data-es="BMW M3/M4, Porsche 718 Cayman, Mazda MX-5, Toyota GT86/GR86." data-en="BMW M3/M4, Porsche 718 Cayman, Mazda MX-5, Toyota GT86/GR86.">BMW M3/M4, Porsche 718 Cayman, Mazda MX-5, Toyota GT86/GR86.</span></li>
+                            <li><strong data-es="Uso:" data-en="Use:">Uso:</strong> <span data-es="Circuito, Track Days y competencias de manejo técnico." data-en="Circuit racing, Track Days, and technical driving events.">Circuito, Track Days y competencias de manejo técnico.</span></li>
+                        </ul>
+                    </div>
+                    <div class="seccion-specs">
+                        <h3 data-es="Especificaciones Técnicas" data-en="Technical Specifications">Especificaciones Técnicas</h3>
+                        <table class="tabla-especificaciones">
+                            <tbody>
+                                <tr><td><strong data-es="Ganancia de Potencia" data-en="Power Gain">Ganancia de Potencia</strong></td><td data-es="+60 HP a +110 HP" data-en="+60 HP to +110 HP">+60 HP a +110 HP</td></tr>
+                                <tr><td><strong data-es="Capacidad del Tanque" data-en="Tank Capacity">Capacidad del Tanque</strong></td><td data-es="10 lbs de perfil bajo" data-en="10 lbs low profile">10 lbs de perfil bajo</td></tr>
+                                <tr><td><strong data-es="Modulación" data-en="Modulation">Modulación</strong></td><td data-es="Flujo lineal controlado por ángulo de dirección/TPS" data-en="Linear flow controlled by steering angle/TPS">Flujo lineal controlado por ángulo de dirección/TPS</td></tr>
+                                <tr><td><strong data-es="Válvulas" data-en="Valves">Válvulas</strong></td><td data-es="Ultra-fast Solenoids" data-en="Ultra-fast Solenoids">Ultra-fast Solenoids</td></tr>
+                                <tr><td><strong data-es="Garantía" data-en="Warranty">Garantía</strong></td><td data-es="1 Año de fábrica" data-en="1-Year factory warranty">1 Año de fábrica</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 10. DETALLE: Kit NOS Velocity-Pro -->
+        <div id="detalle-nos-velocity" class="vista-detalle oculto">
+            <div class="detalle-header-top">
+                <button class="btn-volver" onclick="cambiarVista('vista-catalogo')" data-es="⬅ Volver al catálogo" data-en="⬅ Back to catalog">⬅ Volver al catálogo</button>
+            </div>
+            <div class="producto-layout">
+                <div class="columna-media">
+                    <div class="imagen-destacada">
+                        <img src="Multimedia/NOS 10.avif" alt="Kit NOS Velocity-Pro" data-es="Kit NOS Velocity-Pro" data-en="Velocity-Pro NOS Kit">
+                    </div>
+                    <div class="seccion-video">
+                        <h3 data-es="Activación de Ultra Velocidad" data-en="Ultra Speed Activation">Activación de Ultra Velocidad</h3>
+                        <p class="video-desc" data-es="Tutorial de instalación del disparador piezoeléctrico de velocidad máxima." data-en="Installation tutorial for top-speed piezoelectric trigger.">Tutorial de instalación del disparador piezoeléctrico de velocidad máxima.</p>
+                        <div class="video-container">
+                            <iframe src="https://drive.google.com/file/d/1Njaej2vPbDffXbkgd6ETMjwz1pk9D9pe/preview" title="Instalación Kit NOS Velocity-Pro" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+                <div class="columna-info">
+                    <h1 class="producto-titulo"><span data-es="Kit NOS Velocity-Pro " data-en="Velocity-Pro NOS Kit ">Kit NOS Velocity-Pro </span><span class="badge" data-es="Top Speed Spec" data-en="Top Speed Spec">Top Speed Spec</span></h1>
+                    <p class="producto-descripcion" data-es="Equipado con un solenoide de respuesta ultrasónica que elimina el retraso de apertura a cero milisegundos. Diseñado para alcanzar la velocidad punta en cuestión de segundos." data-en="Equipped with an ultrasonic-response solenoid that eliminates opening lag to zero milliseconds. Designed to hit top speed in seconds.">
+                        Equipado con un solenoide de respuesta ultrasónica que elimina el retraso de apertura a cero milisegundos. Diseñado para alcanzar la velocidad punta en cuestión de segundos.
+                    </p>
+                    <div class="caja-precio">
+                        <span class="precio-fuerte" data-es="$1,050.00" data-en="$1,050.00">$1,050.00</span>
+                        <span class="envio-info" data-es="Precio referencial para tu proyecto." data-en="Reference price for your project.">Precio referencial para tu proyecto.</span>
+                    </div>
+                    <div class="seccion-specs">
+                        <h3 data-es="Compatibilidad Recomendada" data-en="Recommended Compatibility">Compatibilidad Recomendada</h3>
+                        <ul class="lista-compatibilidad">
+                            <li><strong data-es="Motores:" data-en="Engines:">Motores:</strong> <span data-es="Motores turboalimentados de media y alta cilindrada." data-en="Mid to high-displacement turbocharged engines.">Motores turboalimentados de media y alta cilindrada.</span></li>
+                            <li><strong data-es="Modelos Populares:" data-en="Popular Models:">Modelos Populares:</strong> <span data-es="Audi RS6/RS7, Mercedes-AMG C63, Nissan 370Z Nismo, Golf R." data-en="Audi RS6/RS7, Mercedes-AMG C63, Nissan 370Z Nismo, Golf R.">Audi RS6/RS7, Mercedes-AMG C63, Nissan 370Z Nismo, Golf R.</span></li>
+                            <li><strong data-es="Uso:" data-en="Use:">Uso:</strong> <span data-es="Pruebas de velocidad máxima (Half-Mile y Roll Racing)." data-en="Top-speed events (Half-Mile and Roll Racing).">Pruebas de velocidad máxima (Half-Mile y Roll Racing).</span></li>
+                        </ul>
+                    </div>
+                    <div class="seccion-specs">
+                        <h3 data-es="Especificaciones Técnicas" data-en="Technical Specifications">Especificaciones Técnicas</h3>
+                        <table class="tabla-especificaciones">
+                            <tbody>
+                                <tr><td><strong data-es="Ganancia de Potencia" data-en="Power Gain">Ganancia de Potencia</strong></td><td data-es="+90 HP a +180 HP" data-en="+90 HP to +180 HP">+90 HP a +180 HP</td></tr>
+                                <tr><td><strong data-es="Capacidad del Tanque" data-en="Tank Capacity">Capacidad del Tanque</strong></td><td data-es="12 lbs con funda térmica" data-en="12 lbs with thermal blanket">12 lbs con funda térmica</td></tr>
+                                <tr><td><strong data-es="Velocidad de Respuesta" data-en="Response Speed">Velocidad de Respuesta</strong></td><td data-es="0.01 segundos (Respuesta Ultrasónica)" data-en="0.01 seconds (Ultrasonic Response)">0.01 segundos (Respuesta Ultrasónica)</td></tr>
+                                <tr><td><strong data-es="Monitoreo" data-en="Monitoring">Monitoreo</strong></td><td data-es="Manómetro digital de presión en cabina" data-en="Digital in-cabin pressure gauge">Manómetro digital de presión en cabina</td></tr>
+                                <tr><td><strong data-es="Garantía" data-en="Warranty">Garantía</strong></td><td data-es="1 Año de fábrica" data-en="1-Year factory warranty">1 Año de fábrica</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+<footer class="footer-legacy">
+    <div class="footer-container">
+        <!-- Columna 1: Logo de la marca, lema y redes -->
+        <div class="footer-col brand-col">
+            <img src="Multimedia/Letters_Logo1.png" alt="Legacy Motors" class="footer-logo">
+            <p class="brand-tagline" data-es="Tu portal definitivo de piezas de alto rendimiento y tuning." data-en="Your ultimate portal for high-performance and tuning parts.">Tu portal definitivo de piezas de alto rendimiento y tuning.</p>
+            <div class="social-links">
+                <a href="https://www.instagram.com/" target="_blank" rel="noopener">Instagram</a>
+                <a href="https://www.tiktok.com/es-419/" target="_blank" rel="noopener">TikTok</a>
+            </div>
+        </div>
+
+        <!-- Columna 2: Navegación principal -->
+        <div class="footer-col">
+            <h4 data-es="NOSOTROS" data-en="ABOUT US">NOSOTROS</h4>
+            <ul>
+                <li><a href="sobre_nosotros.html" data-es="Sobre Nosotros" data-en="About Us">Sobre Nosotros</a></li>
+                <li><a href="sobre_nosotros.html#mision" data-es="Misión y Visión" data-en="Mission & Vision">Misión y Visión</a></li>
+                <li><a href="contactos.html" data-es="Contactos" data-en="Contact">Contactos</a></li>
+                <li><a href="login.html" data-es="Mi Cuenta" data-en="My Account">Mi Cuenta</a></li>
+            </ul>
+        </div>
+
+        <!-- Columna 3: Atención y Legal -->
+        <div class="footer-col">
+            <h4 data-es="SOPORTE" data-en="SUPPORT">SOPORTE</h4>
+            <ul>
+<li><a href="contactos.html" data-es="Atención al Cliente" data-en="Customer Support">Atención al Cliente</a></li>
+                <li><a href="sobre_nosotros.html" data-es="Preguntas Frecuentes" data-en="FAQs">Preguntas Frecuentes</a></li>
+                <li><a href="sobre_nosotros.html" data-es="Política de Privacidad" data-en="Privacy Policy">Política de Privacidad</a></li>
+                <li><a href="sobre_nosotros.html" data-es="Términos del Servicio" data-en="Terms of Service">Términos del Servicio</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Barra Inferior -->
+    <div class="footer-bottom">
+        <p data-es="© 2026 Legacy Motors | Todos los derechos reservados | Hecho con pasión por el rendimiento." data-en="© 2026 Legacy Motors | All rights reserved | Made with passion for performance.">© 2026 Legacy Motors | Todos los derechos reservados | Hecho con pasión por el rendimiento.</p>
+    </div>
+</footer>
+
+    <!-- Script de navegación interactiva entre catálogo y detalles -->
+    <script>
+        function cambiarVista(idVista) {
+            // 1. Ocultar la vista principal del catálogo
+            document.getElementById('vista-catalogo').style.display = 'none';
+
+            // 2. Ocultar todas las vistas de detalle
+            const vistasDetalle = document.querySelectorAll('.vista-detalle');
+            vistasDetalle.forEach(vista => {
+                vista.classList.add('oculto');
+            });
+
+            // 3. Mostrar la vista solicitada
+            if (idVista === 'vista-catalogo') {
+                document.getElementById('vista-catalogo').style.display = 'block';
+            } else {
+                const vistaSeleccionada = document.getElementById(idVista);
+                if (vistaSeleccionada) {
+                    vistaSeleccionada.classList.remove('oculto');
+                }
+            }
+
+            // 4. Volver al inicio de la página suavemente
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    </script>
+    <script src="JS/funciones.js"></script>
+    <script src="JS/Traducciones.js"></script>
+</body>
+</html>

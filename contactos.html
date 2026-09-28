@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contactos - Legacy Motors</title>
+    <link rel="stylesheet" href="CSS/estilo.css">
+        <script>
+        (function() {
+            const savedTheme = localStorage.getItem("theme") || "dark";
+            document.documentElement.setAttribute("data-theme", savedTheme);
+        })();
+    </script>
+        <link rel="shortcut icon" href="Imagenes_EXTRA/Isologo.png" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <nav class="nav-container">
+    <a href="index.html">
+<picture class="logo-wrapper">
+    <source srcset="Imagenes_EXTRA/Letters_Logo2.png" media="(prefers-color-scheme: light)" data-theme-logo>
+    <img src="Multimedia/Letters_Logo1.png" alt="Logo" class="logo-img">
+                    <div class="rgb-line"></div>
+</picture>
+</a>
+
+            <div class="search-wrapper">
+                <input type="search" placeholder="Buscar..." data-es="Buscar..." data-en="Search...">
+            </div>
+
+            <div class="nav-links">
+                                <div class="dropdown-container">
+                    <button type="button" class="dropdown-btn" id="dropdownBtn">
+                        <span data-es="PRODUCTOS" data-en="PRODUCTS">PRODUCTOS</span> <span class="arrow">▾</span>
+                    </button>
+                    <div class="dropdown-menu" id="dropdownMenu">
+                        <span class="dropdown-header" data-es="Categorías" data-en="Categories">Categorías</span>
+                        <a href="turbos.html" data-es="Turbos" data-en="Turbos">Turbos</a>
+                        <a href="NOS.html" data-es="Óxido Nitroso (NOS)" data-en="Nitrous Oxide (NOS)">Óxido Nitroso (NOS)</a>
+                        <a href="discos.html" data-es="Discos de Freno" data-en="Brake Discs">Discos de Freno</a>
+                        <a href="suspen.html" data-es="Suspensiones" data-en="Suspensions">Suspensiones</a>
+                        <a href="carroceria.html" data-es="Carrocería" data-en="Bodywork">Carrocería</a>
+                    </div>
+                </div>
+                <a href="index.html" data-es="Inicio" data-en="Home">Inicio</a>
+                <a href="sobre_nosotros.html" data-es="Sobre Nosotros" data-en="About Us">Sobre Nosotros</a>
+                <a href="contactos.html" class="active" data-es="Contactos" data-en="Contact">Contactos</a>
+                <a href="login.html" id="btn-sesion" class="btn-login active" data-es="Iniciar sesión" data-en="Log In">Iniciar sesión</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="banner-container">
+            <img src="Imagenes_EXTRA/Legacy_Banner01.png" alt="Banner" class="banner">
+        </div>
+        
+        <hr>
+
+        <section class="about-section">
+            <h1 class="h1-title" data-es="Contactos Oficiales" data-en="Official Contacts">Contactos Oficiales</h1>
+        </section>
+
+        <section class="contact-block">
+            <h2 class="contact-subtitle" data-es="Redes Sociales" data-en="Social Media">Redes Sociales</h2>
+            
+            <div class="contact-grid">
+                <a href="https://www.tiktok.com/@legacymotors26?_r=1&_t=ZS-99zHBUHFgPw" target="_blank" rel="noopener" class="card-link">
+                    <div class="compt contact-card">
+                        <div class="img-container">
+                            <img src="Imagenes_EXTRA/Tiktok_Icon.png" alt="TikTok" width="250px">
+                        </div>
+                        <h2>TikTok @Legacy_MotorsSV</h2>
+                    </div>
+                </a>
+
+                <a href="https://www.instagram.com/legacymotorssv?stkn=eHo1Y291OWR6OTNv" target="_blank" rel="noopener" class="card-link">
+                    <div class="compt contact-card">
+                        <div class="img-container">
+                            <img src="Imagenes_EXTRA/Instagram_Icon.png" alt="Instagram" width="250px">
+                        </div>
+                        <h2>Instagram @legacy_motorssv</h2>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <hr>
+
+        <section class="contact-block">
+            <h2 class="contact-subtitle" data-es="Soporte Técnico" data-en="Technical Support">Soporte Técnico</h2>
+            
+            <div class="contact-grid">
+                <div class="compt contact-card phone-card">
+                    <h2 data-es="Contacto Telefónico" data-en="Phone Contact">Contacto Telefónico</h2>
+                    <ul class="phone-list">
+                        <li>+503 7243-9381</li>
+                        <li>+503 6845-1682</li>
+                        <li>+503 3248-6769</li>
+                    </ul>
+                </div>
+
+                <a href="https://www.google.com/gmail" target="_blank" rel="noopener" class="card-link">
+                    <div class="compt contact-card">
+                        <div class="img-container">
+                            <img src="Imagenes_EXTRA/Gmail_Icon.webp" alt="Gmail" width="250px">
+                        </div>
+                        <h2 data-es="Correo Electrónico" data-en="Email">Correo Electrónico</h2>
+                    </div>
+                </a>
+            </div>
+        </section>
+    </main>
+
+<footer class="footer-legacy">
+    <div class="footer-container">
+        <!-- Columna 1: Logo de la marca, lema y redes -->
+        <div class="footer-col brand-col">
+            <img src="Multimedia/Letters_Logo1.png" alt="Legacy Motors" class="footer-logo">
+            <p class="brand-tagline" data-es="Tu portal definitivo de piezas de alto rendimiento y tuning." data-en="Your ultimate portal for high performance and tuning parts.">Tu portal definitivo de piezas de alto rendimiento y tuning.</p>
+            <div class="social-links">
+                <a href="https://www.instagram.com/" target="_blank" rel="noopener">Instagram</a>
+                <a href="https://www.tiktok.com/es-419/" target="_blank" rel="noopener">TikTok</a>
+            </div>
+        </div>
+
+        <!-- Columna 2: Navegación principal -->
+        <div class="footer-col">
+            <h4 data-es="NOSOTROS" data-en="ABOUT US">NOSOTROS</h4>
+            <ul>
+                <li><a href="sobre_nosotros.html" data-es="Sobre Nosotros" data-en="About Us">Sobre Nosotros</a></li>
+                <li><a href="sobre_nosotros.html#mision" data-es="Misión y Visión" data-en="Mission & Vision">Misión y Visión</a></li>
+                <li><a href="contactos.html" data-es="Contactos" data-en="Contact">Contactos</a></li>
+                <li><a href="login.html" data-es="Mi Cuenta" data-en="My Account">Mi Cuenta</a></li>
+            </ul>
+        </div>
+
+        <!-- Columna 3: Atención y Legal -->
+        <div class="footer-col">
+            <h4 data-es="SOPORTE" data-en="SUPPORT">SOPORTE</h4>
+            <ul>
+                <li><a href="contactos.html" data-es="Atención al Cliente" data-en="Customer Support">Atención al Cliente</a></li>
+                <li><a href="sobre_nosotros.html" data-es="Preguntas Frecuentes" data-en="FAQ">Preguntas Frecuentes</a></li>
+                <li><a href="sobre_nosotros.html" data-es="Política de Privacidad" data-en="Privacy Policy">Política de Privacidad</a></li>
+                <li><a href="sobre_nosotros.html" data-es="Términos del Servicio" data-en="Terms of Service">Términos del Servicio</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Barra Inferior -->
+    <div class="footer-bottom">
+        <p data-es="© 2026 Legacy Motors | Todos los derechos reservados | Hecho con pasión por el rendimiento." data-en="© 2026 Legacy Motors | All rights reserved | Made with passion for performance.">© 2026 Legacy Motors | Todos los derechos reservados | Hecho con pasión por el rendimiento.</p>
+    </div>
+</footer>
+    <script src="JS/funciones.js"></script>
+    <script src="JS/Traducciones.js"></script>
+</body>
+</html>

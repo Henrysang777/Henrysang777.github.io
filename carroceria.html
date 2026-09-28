@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo de Carrocería - Legacy Motors</title>
+    <link rel="stylesheet" href="CSS/estilo.css">
+        <script>
+        (function() {
+            const savedTheme = localStorage.getItem("theme") || "dark";
+            document.documentElement.setAttribute("data-theme", savedTheme);
+        })();
+    </script>
+        <link rel="shortcut icon" href="Imagenes_EXTRA/Isologo.png" type="image/x-icon">
+<body>
+    <header>
+        <nav class="nav-container">
+    <a href="index.html">
+<picture class="logo-wrapper">
+    <source srcset="Imagenes_EXTRA/Letters_Logo2.png" media="(prefers-color-scheme: light)" data-theme-logo>
+    <img src="Multimedia/Letters_Logo1.png" alt="Logo" class="logo-img">
+                    <div class="rgb-line"></div>
+</picture>
+</a>
+            <div class="search-wrapper">
+                <input type="search" placeholder="Buscar..." data-es="Buscar..." data-en="Search...">
+            </div>
+            <div class="nav-links">
+                                <div class="dropdown-container">
+                    <button type="button" class="dropdown-btn" id="dropdownBtn">
+                        <span data-es="PRODUCTOS" data-en="PRODUCTS">PRODUCTOS</span> <span class="arrow">▾</span>
+                    </button>
+                    <div class="dropdown-menu" id="dropdownMenu">
+                        <span class="dropdown-header" data-es="Categorías" data-en="Categories">Categorías</span>
+                        <a href="turbos.html" data-es="Turbos" data-en="Turbos">Turbos</a>
+                        <a href="NOS.html" data-es="Óxido Nitroso (NOS)" data-en="Nitrous Oxide (NOS)">Óxido Nitroso (NOS)</a>
+                        <a href="discos.html" data-es="Discos de Freno" data-en="Brake Discs">Discos de Freno</a>
+                        <a href="suspen.html" data-es="Suspensiones" data-en="Suspensions">Suspensiones</a>
+                        <a href="carroceria.html" data-es="Carrocería" data-en="Bodywork">Carrocería</a>
+                    </div>
+                </div>
+                <a href="index.html" data-es="Inicio" data-en="Home">Inicio</a>
+                <a href="sobre_nosotros.html" data-es="Sobre Nosotros" data-en="About Us">Sobre Nosotros</a>
+                <a href="contactos.html" data-es="Contactos" data-en="Contact">Contactos</a>
+                <a href="login.html" id="btn-sesion" class="btn-login active" data-es="Iniciar sesión" data-en="Log In">Iniciar sesión</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- ==========================================
+            VISTA 1: CATÁLOGO PRINCIPAL (10 PRODUCTOS)
+            ========================================== -->
+        <div id="vista-catalogo">
+            <div class="banner-container">
+                <img src="Imagenes_EXTRA/Legacy_Banner02.png" alt="Logo Legacy Motors" class="banner">
+            </div>
+            <hr>
+        <a href="index.html" class="btn-volver-inicio" data-es="⬅ Volver al inicio" data-en="⬅ Back to home">
+        ⬅ Volver al inicio
+</a>
+            <h1 class="h1-title" data-es="Catálogo de Carrocería" data-en="Bodywork Catalog">Catálogo de Carrocería</h1>
+            <section class="about-section">
+                <p class="about-subtitle" data-es="Descubre accesorios de carrocería que transforman el estilo y la aerodinámica de tu auto." data-en="Discover bodywork accessories that transform your car's style and aerodynamics.">Descubre accesorios de carrocería que transforman el estilo y la aerodinámica de tu auto.</p>
+            </section>
+
+            <section class="modificaciones-grid">
+                <!-- 1. Alerón Deportivo -->
+                <div class="compt" onclick="cambiarVista('detalle-aleron-deportivo')">
+                    <div class="img-container">
+                        <img src="multimedia/ale 1.jpg" alt="Alerón deportivo">
+                    </div>
+                    <h2 data-es="Alerón Deportivo" data-en="Sports Spoiler">Alerón Deportivo</h2>
+                    <p data-es="Mejora el agarre y el aspecto agresivo del vehículo." data-en="Improves grip and the aggressive look of the vehicle.">Mejora el agarre y el aspecto agresivo del vehículo.</p>
+                </div>
+
+                <!-- 2. Kit Widebody -->
+                <div class="compt" onclick="cambiarVista('detalle-kit-widebody')">
+                    <div class="img-container">
+                        <img src="multimedia/ale 2.png" alt="Kit widebody">
+                    </div>
+                    <h2 data-es="Kit Widebody" data-en="Widebody Kit">Kit Widebody</h2>
+                    <p data-es="Ancho y presencia estética en cada esquina." data-en="Width and aesthetic presence on every corner.">Ancho y presencia estética en cada esquina.</p>
+                </div>
+
+                <!-- 3. Parachoques Delantero -->
+                <div class="compt" onclick="cambiarVista('detalle-parachoques-delantero')">
+                    <div class="img-container">
+                        <img src="Multimedia/ale 3.png" alt="Parachoques delantero">
+                    </div>
+                    <h2 data-es="Parachoques Delantero" data-en="Front Bumper">Parachoques Delantero</h2>
+                    <p data-es="Estilo agresivo con mejor entrada de aire." data-en="Aggressive style with better air intake.">Estilo agresivo con mejor entrada de aire.</p>
+                </div>
+
+                <!-- 4. Difusor Trasero -->
+                <div class="compt" onclick="cambiarVista('detalle-difusor-trasero')">
+                    <div class="img-container">
+                        <img src="multimedia/ale 4.jpg" alt="Difusor trasero">
+                    </div>
+                    <h2 data-es="Difusor Trasero" data-en="Rear Diffuser">Difusor Trasero</h2>
+                    <p data-es="Mayor estabilidad en altas velocidades." data-en="Greater stability at high speeds.">Mayor estabilidad en altas velocidades.</p>
+                </div>
+
+                <!-- 5. Aletas Laterales -->
+                <div class="compt" onclick="cambiarVista('detalle-aletas-laterales')">
+                    <div class="img-container">
+                        <img src="Multimedia/ale 5.png" alt="Aletas laterales">
+                    </div>
+                    <h2 data-es="Aletas Laterales" data-en="Side Winglets">Aletas Laterales</h2>
+                    <p data-es="Detalle aerodinámico con acabado deportivo." data-en="Aerodynamic detail with a sporty finish.">Detalle aerodinámico con acabado deportivo.</p>
+                </div>
+
+                <!-- 6. Capó en Fibra de Carbono (NUEVO) -->
+                <div class="compt" onclick="cambiarVista('detalle-capo-carbono')">
+                    <div class="img-container">
+                        <img src="Multimedia/ale 6.jpg" alt="Capó en Fibra de Carbono">
+                    </div>
+                    <h2 data-es="Capó en Fibra de Carbono" data-en="Carbon Fiber Hood">Capó en Fibra de Carbono</h2>
+                    <p data-es="Reducción extrema de peso con extractores de calor." data-en="Extreme weight reduction with heat extractors.">Reducción extrema de peso con extractores de calor.</p>
+                </div>
+
+                <!-- 7. Canards Aerodinámicos (NUEVO) -->
+                <div class="compt" onclick="cambiarVista('detalle-canards-aero')">
+                    <div class="img-container">
+                        <img src="Multimedia/ale 7.jpg" alt="Canards Aerodinámicos">
+                    </div>
+                    <h2 data-es="Canards Aerodinámicos" data-en="Aerodynamic Canards">Canards Aerodinámicos</h2>
+                    <p data-es="Aumentan la carga aerodinámica en el tren delantero." data-en="Increase front-end downforce.">Aumentan la carga aerodinámica en el tren delantero.</p>
+                </div>
+
+                <!-- 8. Faldones Laterales Pro (NUEVO) -->
+                <div class="compt" onclick="cambiarVista('detalle-faldones-laterales')">
+                    <div class="img-container">
+                        <img src="Multimedia/ale 8.jpg" alt="Faldones Laterales Pro">
+                    </div>
+                    <h2 data-es="Faldones Laterales Pro" data-en="Pro Side Skirts">Faldones Laterales Pro</h2>
+                    <p data-es="Canalizan el flujo de aire bajo la carrocería reduciendo la turbulencia." data-en="Channel airflow under the body to reduce turbulence.">Canalizan el flujo de aire bajo la carrocería reduciendo la turbulencia.</p>
+                </div>
+
+                <!-- 9. Espejos Retrovisores Aero Fibra (NUEVO) -->
+                <div class="compt" onclick="cambiarVista('detalle-espejos-aero')">
+                    <div class="img-container">
+                        <img src="Multimedia/ale 9.jpg" alt="Espejos Retrovisores Aero Fibra">
+                    </div>
+                    <h2 data-es="Espejos Retrovisores Aero" data-en="Aero Side Mirrors">Espejos Retrovisores Aero</h2>
+                    <p data-es="Diseño de baja resistencia aerodinámica en fibra de carbono." data-en="Low drag carbon fiber design.">Diseño de baja resistencia aerodinámica en fibra de carbono.</p>
+                </div>
+
+                <!-- 10. Splitter Delantero con Tirantes (NUEVO) -->
+                <div class="compt" onclick="cambiarVista('detalle-splitter-delantero')">
+                    <div class="img-container">
+                        <img src="Multimedia/ale 10.jpg" alt="Splitter Delantero con Tirantes">
+                    </div>
+                    <h2 data-es="Splitter Delantero con Tirantes" data-en="Front Splitter with Support Rods">Splitter Delantero con Tirantes</h2>
+                    <p data-es="Genera agarre directo a alta velocidad sellando el flujo inferior." data-en="Generates direct high-speed grip by sealing lower airflow.">Genera agarre directo a alta velocidad sellando el flujo inferior.</p>
+                </div>
+            </section>
+            <hr>
+            <section class="about-section">
+                <p class="about-subtitle" data-es="Elige las piezas de carrocería que hagan único a tu auto dentro de la pista o la calle." data-en="Choose body parts that make your car unique on the track or the street.">Elige las piezas de carrocería que hagan único a tu auto dentro de la pista o la calle.</p>
+            </section>
+        </div>
+
+        <!-- ==========================================
+             VISTAS DE DETALLES (10 SECCIONES DETALLADAS)
+             ========================================== -->
+
+        <!-- 1. DETALLE: Alerón Deportivo -->
+        <div id="detalle-aleron-deportivo" class="vista-detalle oculto">
+            <div class="detalle-header-top">
+                <button class="btn-volver" onclick="cambiarVista('vista-catalogo')" data-es="⬅ Volver al catálogo" data-en="⬅ Back to catalog">⬅ Volver al catálogo</button>
+            </div>
+            <div class="producto-layout">
+                <div class="columna-media">
+                    <div class="imagen-destacada">
+                        <img src="Multimedia/ale 1.jpg" alt="Alerón Deportivo">
+                    </div>
+                    <div class="seccion-video">
+                        <h3 data-es="Guía de Instalación y Ajuste de Carga" data-en="Installation and Downforce Adjustment Guide">Guía de Instalación y Ajuste de Carga</h3>
+                        <p class="video-desc" data-es="Aprende a regular el ángulo de ataque del alerón para maximizar el Downforce en pista." data-en="Learn how to adjust the wing angle of attack to maximize track downforce.">Aprende a regular el ángulo de ataque del alerón para maximizar el Downforce en pista.</p>
+                        <div class="video-container">
+                            <iframe src="https://drive.google.com/file/d/1x2E8cVtTonmrRqJGRYAiMLsyBmy3CQjM/preview" title="Instalación Alerón Deportivo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+                <div class="columna-info">
+                    <h1 class="producto-titulo"><span data-es="Alerón Deportivo" data-en="Sports Spoiler">Alerón Deportivo</span> <span class="badge">GT Spec Carbon</span></h1>
+                    <p class="producto-descripcion" data-es="Alerón aerodinámico fabricado en fibra de carbono real con soportes CNC de aluminio aeroespacial. Incrementa la carga aerodinámica trasera garantizando máxima tracción a velocidades superiores a 120 km/h." data-en="Aerodynamic spoiler made of real carbon fiber with aerospace aluminum CNC brackets. Increases rear downforce ensuring maximum traction at speeds above 120 km/h.">
+                        Alerón aerodinámico fabricado en fibra de carbono real con soportes CNC de aluminio aeroespacial. Incrementa la carga aerodinámica trasera garantizando máxima tracción a velocidades superiores a 120 km/h.
+                    </p>
+                    <div class="caja-precio">
+                        <span class="precio-fuerte" data-es="$450.00 / Unidad" data-en="$450.00 / Unit">$450.00 / Unidad</span>
+                        <span class="envio-info" data-es="Precio referencial para tu proyecto." data-en="Reference price for your project.">Precio referencial para tu proyecto.</span>
+                    </div>
+                    <div class="seccion-specs">
+                        <h3 data-es="Compatibilidad Recomendada" data-en="Recommended Compatibility">Compatibilidad Recomendada</h3>
+                        <ul class="lista-compatibilidad">
+                            <li><strong data-es="Modelos Populares:" data-en="Popular Models:">Modelos Populares:</strong> Subaru BRZ / GT86, Honda Civic Hatchback, Nissan 350Z / 370Z, BMW Serie 2 / 3.</li>
+                            <li><strong data-es="Montaje:" data-en="Mounting:">Montaje:</strong> <span data-es="Tapón o perforación sobre puerta de maletero." data-en="Plug or drilling on trunk lid.">Tapón o perforación sobre puerta de maletero.</span></li>
+                            <li><strong data-es="Uso:" data-en="Usage:">Uso:</strong> <span data-es="Track Days, Time Attack y estilo deportivo de calle." data-en="Track Days, Time Attack, and sporty street style.">Track Days, Time Attack y estilo deportivo de calle.</span></li>
+                        </ul>
+                    </div>
+                    <div class="seccion-specs">
+                        <h3 data-es="Especificaciones Técnicas" data-en="Technical Specifications">Especificaciones Técnicas</h3>
+                        <table class="tabla-especificaciones">
+                            <tbody>
+                                <tr><td><strong data-es="Material" data-en="Material">Material</strong></td><td data-es="Fibra de Carbono 3K de alto brillo / Aluminio T6-6061" data-en="High-gloss 3K Carbon Fiber / T6-6061 Aluminum">Fibra de Carbono 3K de alto brillo / Aluminio T6-6061</td></tr>
+                                <tr><td><strong data-es="Ancho" data-en="Width">Ancho</strong></td><td data-es="1450 mm de ala principal" data-en="1450 mm main wing">1450 mm de ala principal</td></tr>
+                                <tr><td><strong data-es="Ajuste de Ángulo" data-en="Angle Adjustment">Ajuste de Ángulo</strong></td><td data-es="3 Niveles de inclinación regulable" data-en="3 Levels of adjustable tilt">3 Niveles de inclinación regulable</td></tr>
+                                <tr><td><strong data-es="Peso" data-en="Weight">Peso</strong></td><td data-es="Ultraligero (~3.8 kg)" data-en="Ultra-light (~3.8 kg)">Ultraligero (~3.8 kg)</td></tr>
+                                <tr><td><strong data-es="Garantía" data-en="Warranty">Garantía</strong></td><td data-es="1 Año por defectos de manufactura" data-en="1 Year for manufacturing defects">1 Año por defectos de manufactura</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 2. DETALLE: Kit Widebody -->
+        <div id="detalle-kit-widebody" class="vista-detalle oculto">
+            <div class="detalle-header-top">
+                <button class="btn-volver" onclick="cambiarVista('vista-catalogo')" data-es="⬅ Volver al catálogo" data-en="⬅ Back to catalog">⬅ Volver al catálogo</button>
+            </div>
+            <div class="producto-layout">
+                <div class="columna-media">
+                    <div class="imagen-destacada">
+                        <img src="Multimedia/ale 2.png" alt="Kit Widebody">
+                    </div>
+                    <div class="seccion-video">
+                        <h3 data-es="Proceso de Ensanchado y Modelado" data-en="Widening and Modeling Process">Proceso de Ensanchado y Modelado</h3>
+                        <p class="video-desc" data-es="Mira el proceso completo de corte de guardafangos, adaptación y acabado de un Kit Widebody." data-en="Watch the complete fender cutting, fitting, and finishing process of a Widebody Kit.">Mira el proceso completo de corte de guardafangos, adaptación y acabado de un Kit Widebody.</p>
+                        <div class="video-container">
+                            <iframe src="https://drive.google.com/file/d/1SkF6yhjfsUHFlhhw3M5lkwp-aIQ2OK3X/preview" title="Instalación Kit Widebody" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+                <div class="columna-info">
+                    <h1 class="producto-titulo"><span data-es="Kit Widebody" data-en="Widebody Kit">Kit Widebody</span> <span class="badge">Aggressive Fitment</span></h1>
+                    <p class="producto-descripcion" data-es="Conjunto completo de ensanche de carrocería. Permite montar rines y llantas de gran anchura (+50mm por lado), aumentando drásticamente la vía del vehículo y logrando una postura de exhibición impactante." data-en="Complete body widening kit. Allows mounting wide wheels and tires (+50mm per side), dramatically increasing the track width and achieving a striking stance.">
+                        Conjunto completo de ensanche de carrocería. Permite montar rines y llantas de gran anchura (+50mm por lado), aumentando drásticamente la vía del vehículo y logrando una postura de exhibición impactante.
+                    </p>
+                    <div class="caja-precio">
+                        <span class="precio-fuerte" data-es="$1,850.00 / Kit Completo" data-en="$1,850.00 / Full Kit">$1,850.00 / Kit Completo</span>
+                        <span class="envio-info" data-es="Precio referencial para tu proyecto." data-en="Reference price for your project.">Precio referencial para tu proyecto.</span>
+                    </div>
+                    <div class="seccion-specs">
+                        <h3 data-es="Compatibilidad Recomendada" data-en="Recommended Compatibility">Compatibilidad Recomendada</h3>
+                        <ul class="lista-compatibilidad">
+                            <li><strong data-es="Modelos Populares:" data-en="Popular Models:">Modelos Populares:</strong> Nissan Silvia S14 / S15, Mazda RX-7, Toyota Supra, Ford Mustang.</li>
+                            <li><strong data-es="Piezas Incluidas:" data-en="Included Parts:">Piezas Incluidas:</strong> <span data-es="4 Guardafangos ensanchados, labios de acople y remaches estéticos." data-en="4 Widened fenders, coupling lips, and aesthetic rivets.">4 Guardafangos ensanchados, labios de acople y remaches estéticos.</span></li>
+                            <li><strong data-es="Uso:" data-en="Usage:">Uso:</strong> <span data-es="Vehículos de Drift, Showcars y proyectos stance." data-en="Drift cars, Showcars, and stance projects.">Vehículos de Drift, Showcars y proyectos stance.</span></li>
+                        </ul>
+                    </div>
+                    <div class="seccion-specs">
+                        <h3 data-es="Especificaciones Técnicas" data-en="Technical Specifications">Especificaciones Técnicas</h3>
+                        <table class="tabla-especificaciones">
+                            <tbody>
+                                <tr><td><strong data-es="Material" data-en="Material">Material</strong></td><td data-es="Plástico ABS flexible de alta resistencia a impactos / FRP" data-en="Flexible high-impact ABS plastic / FRP">Plástico ABS flexible de alta resistencia a impactos / FRP</td></tr>
+                                <tr><td><strong data-es="Ancho Adicional" data-en="Additional Width">Ancho Adicional</strong></td><td data-es="+45 mm adelante / +65 mm atrás" data-en="+45 mm front / +65 mm rear">+45 mm adelante / +65 mm atrás</td></tr>
+                                <tr><td><strong data-es="Acabado" data-en="Finish">Acabado</strong></td><td data-es="Imprimación en negro listo para pintar" data-en="Black primer ready to paint">Imprimación en negro listo para pintar</td></tr>
+                                <tr><td><strong data-es="Flexibilidad" data-en="Flexibility">Flexibilidad</strong></td><td data-es="Alta tolerancia a torsión sin fisurarse" data-en="High torsion tolerance without cracking">Alta tolerancia a torsión sin fisurarse</td></tr>
+                                <tr><td><strong data-es="Garantía" data-en="Warranty">Garantía</strong></td><td data-es="1 Año de fábrica" data-en="1 Year factory warranty">1 Año de fábrica</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 3. DETALLE: Parachoques Delantero -->
+        <div id="detalle-parachoques-delantero" class="vista-detalle oculto">
+            <div class="detalle-header-top">
+                <button class="btn-volver" onclick="cambiarVista('vista-catalogo')" data-es="⬅ Volver al catálogo" data-en="⬅ Back to catalog">⬅ Volver al catálogo</button>
+            </div>
+            <div class="producto-layout">
+                <div class="columna-media">
+                    <div class="imagen-destacada">
+                        <img src="Multimedia/ale 3.png" alt="Parachoques Delantero">
+                    </div>
+                    <div class="seccion-video">
+                        <h3 data-es="Instalación y Ajuste de Tomas de Aire" data-en="Installation and Air Intake Fitting">Instalación y Ajuste de Tomas de Aire</h3>
+                        <p class="video-desc" data-es="Demostración del acople directo sobre puntos de fijación originales y conexión de ductos de freno." data-en="Demonstration of direct fitment on factory mounting points and brake duct connections.">Demostración del acople directo sobre puntos de fijación originales y conexión de ductos de freno.</p>
+                        <div class="video-container">
+                            <iframe src="https://drive.google.com/file/d/1SkF6yhjfsUHFlhhw3M5lkwp-aIQ2OK3X/preview" title="Instalación Parachoques Delantero" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+                <div class="columna-info">
+                    <h1 class="producto-titulo"><span data-es="Parachoques Delantero" data-en="Front Bumper">Parachoques Delantero</span> <span class="badge">Aero High-Flow</span></h1>
+                    <p class="producto-descripcion" data-es="Parachoques frontal con diseño aerodinámico optimizado. Sus tomas de aire sobredimensionadas canalizan mayor caudal de aire fresco directo hacia el intercooler, radiador y conductos de ventilación de frenos." data-en="Front bumper with optimized aerodynamic design. Oversized air intakes direct cool airflow straight to the intercooler, radiator, and brake cooling ducts.">
+                        Parachoques frontal con diseño aerodinámico optimizado. Sus tomas de aire sobredimensionadas canalizan mayor caudal de aire fresco directo hacia el intercooler, radiador y conductos de ventilación de frenos.
+                    </p>
+                    <div class="caja-precio">
+                        <span class="precio-fuerte" data-es="$520.00 / Unidad" data-en="$520.00 / Unit">$520.00 / Unidad</span>
+                        <span class="envio-info" data-es="Precio referencial para tu proyecto." data-en="Reference price for your project.">Precio referencial para tu proyecto.</span>
+                    </div>
+                    <div class="seccion-specs">
+                        <h3 data-es="Compatibilidad Recomendada" data-en="Recommended Compatibility">Compatibilidad Recomendada</h3>
+                        <ul class="lista-compatibilidad">
+                            <li><strong data-es="Modelos Populares:" data-en="Popular Models:">Modelos Populares:</strong> Mitsubishi Lancer Evo, VW Golf GTI, Honda Civic Type R, Subaru Impreza.</li>
+                            <li><strong data-es="Instalación:" data-en="Installation:">Instalación:</strong> <span data-es="Sustitución directa de la defensa OEM." data-en="Direct OEM bumper replacement.">Sustitución directa de la defensa OEM.</span></li>
+                            <li><strong data-es="Uso:" data-en="Usage:">Uso:</strong> <span data-es="Calibración de refrigeración para motores turbo alimentados." data-en="Cooling calibration for turbocharged engines.">Calibración de refrigeración para motores turbo alimentados.</span></li>
+                        </ul>
+                    </div>
+                    <div class="seccion-specs">
+                        <h3 data-es="Especificaciones Técnicas" data-en="Technical Specifications">Especificaciones Técnicas</h3>
+                        <table class="tabla-especificaciones">
+                            <tbody>
+                                <tr><td><strong data-es="Material" data-en="Material">Material</strong></td><td data-es="Polypropylene (PP) inyectado de grado automotriz OEM" data-en="OEM automotive grade injected Polypropylene (PP)">Polypropylene (PP) inyectado de grado automotriz OEM</td></tr>
+                                <tr><td><strong data-es="Rejillas" data-en="Grilles">Rejillas</strong></td><td data-es="Malla Panal de abeja metálica antioxidante incluida" data-en="Rustproof metal honeycomb mesh included">Malla Panal de abeja metálica antioxidante incluida</td></tr>
+                                <tr><td><strong data-es="Compatibilidad de Faros" data-en="Headlight Compatibility">Compatibilidad de Faros</strong></td><td data-es="Espacio para luces exploradoras / DRL de fábrica" data-en="Space for fog lights / factory DRL">Espacio para luces exploradoras / DRL de fábrica</td></tr>
+                                <tr><td><strong data-es="Peso" data-en="Weight">Peso</strong></td><td data-es="Grosor óptimo para máxima solidez y ligereza" data-en="Optimal thickness for maximum strength and lightness">Grosor óptimo para máxima solidez y ligereza</td></tr>
+                                <tr><td><strong data-es="Garantía" data-en="Warranty">Garantía</strong></td><td data-es="1 Año de fábrica" data-en="1 Year factory warranty">1 Año de fábrica</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 4. DETALLE: Difusor Trasero -->
+        <div id="detalle-difusor-trasero" class="vista-detalle oculto">
+            <div class="detalle-header-top">
+                <button class="btn-volver" onclick="cambiarVista('vista-catalogo')" data-es="⬅ Volver al catálogo" data-en="⬅ Back to catalog">⬅ Volver al catálogo</button>
+            </div>
+            <div class="producto-layout">
+                <div class="columna-media">
+                    <div class="imagen-destacada">
+                        <img src="Multimedia/ale 4.jpg" alt="Difusor Trasero">
+                    </div>
+                    <div class="seccion-video">
+                        <h3 data-es="Efecto Suelo y Extracción de Aire" data-en="Ground Effect and Air Extraction">Efecto Suelo y Extracción de Aire</h3>
+                        <p class="video-desc" data-es="Análisis gráfico del túnel de viento mostrando cómo el difusor acelera el flujo de aire bajo el auto." data-en="Wind tunnel graphical analysis showing how the diffuser accelerates underbody airflow.">Análisis gráfico del túnel de viento mostrando cómo el difusor acelera el flujo de aire bajo el auto.</p>
+                        <div class="video-container">
+                            <iframe src="https://drive.google.com/file/d/1SkF6yhjfsUHFlhhw3M5lkwp-aIQ2OK3X/preview" title="Funcionamiento Difusor Trasero" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+                <div class="columna-info">
+                    <h1 class="producto-titulo"><span data-es="Difusor Trasero" data-en="Rear Diffuser">Difusor Trasero</span> <span class="badge">Rear Aero Diffuser</span></h1>
+                    <p class="producto-descripcion" data-es="Componente aerodinámico inferior con aletas verticales integradas. Acelera la salida del aire por debajo del chasis reduciendo la elevación (lift) trasera y la turbulencia parásita a altas velocidades." data-en="Lower aerodynamic component with integrated vertical fins. Accelerates airflow exiting beneath the chassis, reducing rear lift and parasitic turbulence at high speeds.">
+                        Componente aerodinámico inferior con aletas verticales integradas. Acelera la salida del aire por debajo del chasis reduciendo la elevación (lift) trasera y la turbulencia parásita a altas velocidades.
+                    </p>
+                    <div class="caja-precio">
+                        <span class="precio-fuerte" data-es="$310.00 / Unidad" data-en="$310.00 / Unit">$310.00 / Unidad</span>
+                        <span class="envio-info" data-es="Precio referencial para tu proyecto." data-en="Reference price for your project.">Precio referencial para tu proyecto.</span>
+                    </div>
+                    <div class="seccion-specs">
+                        <h3 data-es="Compatibilidad Recomendada" data-en="Recommended Compatibility">Compatibilidad Recomendada</h3>
+                        <ul class="lista-compatibilidad">
+                            <li><strong data-es="Modelos Populares:" data-en="Popular Models:">Modelos Populares:</strong> Audi S3 / RS3, BMW M3 / M4, Ford Focus ST / RS, Hyundai i30N.</li>
+                            <li><strong data-es="Salidas de Escape:" data-en="Exhaust Outlets:">Salidas de Escape:</strong> <span data-es="Compatible con salidas dobles o cuádruples de escape deportivo." data-en="Compatible with dual or quad sports exhaust tips.">Compatible con salidas dobles o cuádruples de escape deportivo.</span></li>
+                            <li><strong data-es="Uso:" data-en="Usage:">Uso:</strong> <span data-es="Estabilidad en autopista y estética trasera agresiva." data-en="Highway stability and aggressive rear styling.">Estabilidad en autopista y estética trasera agresiva.</span></li>
+                        </ul>
+                    </div>
+                    <div class="seccion-specs">
+                        <h3 data-es="Especificaciones Técnicas" data-en="Technical Specifications">Especificaciones Técnicas</h3>
+                        <table class="tabla-especificaciones">
+                            <tbody>
+                                <tr><td><strong data-es="Material" data-en="Material">Material</strong></td><td data-es="ABS de alta densidad con recubrimiento de Fibra de Carbono o Negro Piano" data-en="High-density ABS with Carbon Fiber coating or Piano Black">ABS de alta densidad con recubrimiento de Fibra de Carbono o Negro Piano</td></tr>
+                                <tr><td><strong data-es="Aletas Aerodinámicas" data-en="Aero Fins">Aletas Aerodinámicas</strong></td><td data-es="4 a 6 Canales verticales de extracción" data-en="4 to 6 Vertical extraction channels">4 a 6 Canales verticales de extracción</td></tr>
+                                <tr><td><strong data-es="Luz LED opcional" data-en="Optional LED Light">Luz LED opcional</strong></td><td data-es="Freno central tipo F1 / Niebla integrado" data-en="F1-style center brake / integrated fog light">Freno central tipo F1 / Niebla integrado</td></tr>
+                                <tr><td><strong data-es="Resistencia Térmica" data-en="Thermal Resistance">Resistencia Térmica</strong></td><td data-es="Aislante del calor generado por el escape" data-en="Insulates from exhaust heat">Aislante del calor generado por el escape</td></tr>
+                                <tr><td><strong data-es="Garantía" data-en="Warranty">Garantía</strong></td><td data-es="1 Año de fábrica" data-en="1 Year factory warranty">1 Año de fábrica</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 5. DETALLE: Aletas Laterales -->
+        <div id="detalle-aletas-laterales" class="vista-detalle oculto">
+            <div class="detalle-header-top">
+                <button class="btn-volver" onclick="cambiarVista('vista-catalogo')" data-es="⬅ Volver al catálogo" data-en="⬅ Back to catalog">⬅ Volver al catálogo</button>
+            </div>
+            <div class="producto-layout">
+                <div class="columna-media">
+                    <div class="imagen-destacada">
+                        <img src="Multimedia/ale 5.png" alt="Aletas Laterales">
+                    </div>
+                    <div class="seccion-video">
+                        <h3 data-es="Montaje de Canards y Aletas Laterales" data-en="Mounting Canards and Side Winglets">Montaje de Canards y Aletas Laterales</h3>
+                        <p class="video-desc" data-es="Tutorial paso a paso para la fijación limpia de aletas aerodinámicas en laterales de la defensa." data-en="Step-by-step tutorial for clean installation of aero winglets on bumper sides.">Tutorial paso a paso para la fijación limpia de aletas aerodinámicas en laterales de la defensa.</p>
+                        <div class="video-container">
+                            <iframe src="https://drive.google.com/file/d/1SkF6yhjfsUHFlhhw3M5lkwp-aIQ2OK3X/preview" title="Montaje Aletas Laterales" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+                <div class="columna-info">
+                    <h1 class="producto-titulo"><span data-es="Aletas Laterales" data-en="Side Winglets">Aletas Laterales</span> <span class="badge">Side Winglets</span></h1>
+                    <p class="producto-descripcion" data-es="Pequeñas extensiones aerodinámicas que se montan en los extremos de los parachoques y faldones. Su función es suavizar el vórtice de aire generado por el giro de las ruedas delanteras." data-en="Small aerodynamic extensions mounted on bumper edges and skirts. Smooth out the air vortex generated by front wheel rotation.">
+                        Pequeñas extensiones aerodinámicas que se montan en los extremos de los parachoques y faldones. Su función es suavizar el vórtice de aire generado por el giro de las ruedas delanteras.
+                    </p>
+                    <div class="caja-precio">
+                        <span class="precio-fuerte" data-es="$120.00 / Par" data-en="$120.00 / Pair">$120.00 / Par</span>
+                        <span class="envio-info" data-es="Precio referencial para tu proyecto." data-en="Reference price for your project.">Precio referencial para tu proyecto.</span>
+                    </div>
+                    <div class="seccion-specs">
+                        <h3 data-es="Compatibilidad Recomendada" data-en="Recommended Compatibility">Compatibilidad Recomendada</h3>
+                        <ul class="lista-compatibilidad">
+                            <li><strong data-es="Modelos Populares:" data-en="Popular Models:">Modelos Populares:</strong> <span data-es="Universal (Adaptable a la mayoría de parachoques deportivos)." data-en="Universal (Adaptable to most sports bumpers).">Universal (Adaptable a la mayoría de parachoques deportivos).</span></li>
+                            <li><strong data-es="Posición:" data-en="Position:">Posición:</strong> <span data-es="Esquinas inferiores del parachoques delantero o trasero." data-en="Lower corners of front or rear bumper.">Esquinas inferiores del parachoques delantero o trasero.</span></li>
+                            <li><strong data-es="Uso:" data-en="Usage:">Uso:</strong> <span data-es="Detalle de personalización estética y ajuste fino de flujo." data-en="Aesthetic customization detail and fine airflow tuning.">Detalle de personalización estética y ajuste fino de flujo.</span></li>
+                        </ul>
+                    </div>
+                    <div class="seccion-specs">
+                        <h3 data-es="Especificaciones Técnicas" data-en="Technical Specifications">Especificaciones Técnicas</h3>
+                        <table class="tabla-especificaciones">
+                            <tbody>
+                                <tr><td><strong data-es="Material" data-en="Material">Material</strong></td><td data-es="Poliuretano Flexible / Acabado Fibra de Carbono 2x2 Twill" data-en="Flexible Polyurethane / 2x2 Twill Carbon Fiber Finish">Poliuretano Flexible / Acabado Fibra de Carbono 2x2 Twill</td></tr>
+                                <tr><td><strong data-es="Instalación" data-en="Installation">Instalación</strong></td><td data-es="Cinta de doble contacto 3M VHB + Tornillos de seguridad" data-en="3M VHB double-sided tape + Safety screws">Cinta de doble contacto 3M VHB + Tornillos de seguridad</td></tr>
+                                <tr><td><strong data-es="Resistencia UV" data-en="UV Resistance">Resistencia UV</strong></td><td data-es="Capa transparente con protección contra amarilleamiento" data-en="Clear coat with anti-yellowing protection">Capa transparente con protección contra amarilleamiento</td></tr>
+                                <tr><td><strong data-es="Garantía" data-en="Warranty">Garantía</strong></td><td data-es="1 Año de fábrica" data-en="1 Year factory warranty">1 Año de fábrica</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 6. DETALLE: Capó en Fibra de Carbono -->
+        <div id="detalle-capo-carbono" class="vista-detalle oculto">
+            <div class="detalle-header-top">
+                <button class="btn-volver" onclick="cambiarVista('vista-catalogo')" data-es="⬅ Volver al catálogo" data-en="⬅ Back to catalog">⬅ Volver al catálogo</button>
+            </div>
+            <div class="producto-layout">
+                <div class="columna-media">
+                    <div class="imagen-destacada">
+                        <img src="Multimedia/ale 6.jpg" alt="Capó en Fibra de Carbono">
+                    </div>
+                    <div class="seccion-video">
+                        <h3 data-es="Prueba de Peso e Instalación de Capó" data-en="Weight Test and Hood Installation">Prueba de Peso e Instalación de Capó</h3>
+                        <p class="video-desc" data-es="Demostración del pesaje comparativo entre el capó de acero original y la versión en carbono pura." data-en="Comparative weight demo between factory steel hood and pure carbon version.">Demostración del pesaje comparativo entre el capó de acero original y la versión en carbono pura.</p>
+                        <div class="video-container">
+                            <iframe src="https://drive.google.com/file/d/1SkF6yhjfsUHFlhhw3M5lkwp-aIQ2OK3X/preview" title="Instalación Capó Carbono" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+                <div class="columna-info">
+                    <h1 class="producto-titulo"><span data-es="Capó en Fibra de Carbono" data-en="Carbon Fiber Hood">Capó en Fibra de Carbono</span> <span class="badge">Vented Carbon Hood</span></h1>
+                    <p class="producto-descripcion" data-es="Capó de alto rendimiento con construcción en fibra de carbono infusionada al vacío. Reduce hasta un 60% el peso sobre el eje delantero y cuenta con branquias que extraen el aire caliente del vano motor." data-en="High-performance hood with vacuum-infused carbon fiber construction. Reduces front axle weight by up to 60% and features vents that extract hot air from the engine bay.">
+                        Capó de alto rendimiento con construcción en fibra de carbono infusionada al vacío. Reduce hasta un 60% el peso sobre el eje delantero y cuenta con branquias que extraen el aire caliente del vano motor.
+                    </p>
+                    <div class="caja-precio">
+                        <span class="precio-fuerte" data-es="$950.00 / Unidad" data-en="$950.00 / Unit">$950.00 / Unidad</span>
+                        <span class="envio-info" data-es="Precio referencial para tu proyecto." data-en="Reference price for your project.">Precio referencial para tu proyecto.</span>
+                    </div>
+                    <div class="seccion-specs">
+                        <h3 data-es="Compatibilidad Recomendada" data-en="Recommended Compatibility">Compatibilidad Recomendada</h3>
+                        <ul class="lista-compatibilidad">
+                            <li><strong data-es="Modelos Populares:" data-en="Popular Models:">Modelos Populares:</strong> Honda Civic Type R, Subaru WRX STI, Nissan 370Z, BMW M2 / M3.</li>
+                            <li><strong data-es="Montaje:" data-en="Mounting:">Montaje:</strong> <span data-es="Bisagras y enganche OEM original + opción de pestillos de seguridad." data-en="Original OEM hinges and latch + optional hood pins.">Bisagras y enganche OEM original + opción de pestillos de seguridad.</span></li>
+                            <li><strong data-es="Uso:" data-en="Usage:">Uso:</strong> <span data-es="Circuito y proyectos de reducción de peso extrema." data-en="Circuit and extreme weight-saving projects.">Circuito y proyectos de reducción de peso extrema.</span></li>
+                        </ul>
+                    </div>
+                    <div class="seccion-specs">
+                        <h3 data-es="Especificaciones Técnicas" data-en="Technical Specifications">Especificaciones Técnicas</h3>
+                        <table class="tabla-especificaciones">
+                            <tbody>
+                                <tr><td><strong data-es="Proceso de Fabricación" data-en="Manufacturing Process">Proceso de Fabricación</strong></td><td data-es="Infusión al vacío (Dry Carbon Spec)" data-en="Vacuum infusion (Dry Carbon Spec)">Infusión al vacío (Dry Carbon Spec)</td></tr>
+                                <tr><td><strong data-es="Reducción de Peso" data-en="Weight Reduction">Reducción de Peso</strong></td><td data-es="Ahorro promedio de 10 a 14 kg frente al capó de acero" data-en="Average savings of 10 to 14 kg compared to steel hood">Ahorro promedio de 10 a 14 kg frente al capó de acero</td></tr>
+                                <tr><td><strong data-es="Acabado" data-en="Finish">Acabado</strong></td><td data-es="Barniz transparente con protección UV de ultra alto brillo" data-en="Ultra-high gloss UV protection clear coat">Barniz transparente con protección UV de ultra alto brillo</td></tr>
+                                <tr><td><strong data-es="Ductos" data-en="Ducts">Ductos</strong></td><td data-es="Extractores térmicos con rejilla de aluminio desmontable" data-en="Heat extractors with removable aluminum mesh">Extractores térmicos con rejilla de aluminio desmontable</td></tr>
+                                <tr><td><strong data-es="Garantía" data-en="Warranty">Garantía</strong></td><td data-es="1 Año de fábrica" data-en="1 Year factory warranty">1 Año de fábrica</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 7. DETALLE: Canards Aerodinámicos -->
+        <div id="detalle-canards-aero" class="vista-detalle oculto">
+            <div class="detalle-header-top">
+                <button class="btn-volver" onclick="cambiarVista('vista-catalogo')" data-es="⬅ Volver al catálogo" data-en="⬅ Back to catalog">⬅ Volver al catálogo</button>
+            </div>
+            <div class="producto-layout">
+                <div class="columna-media">
+                    <div class="imagen-destacada">
+                        <img src="Multimedia/ale 7.jpg" alt="Canards Aerodinámicos">
+                    </div>
+                    <div class="seccion-video">
+                        <h3 data-es="Efecto Aerodinámico de los Canards" data-en="Aerodynamic Effect of Canards">Efecto Aerodinámico de los Canards</h3>
+                        <p class="video-desc" data-es="Simulación computacional (CFD) de la presión ejercida en el parachoques delantero a 160 km/h." data-en="CFD simulation of downforce exerted on the front bumper at 160 km/h.">Simulación computacional (CFD) de la presión ejercida en el parachoques delantero a 160 km/h.</p>
+                        <div class="video-container">
+                            <iframe src="https://drive.google.com/file/d/1SkF6yhjfsUHFlhhw3M5lkwp-aIQ2OK3X/preview" title="Funcionamiento Canards" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+                <div class="columna-info">
+                    <h1 class="producto-titulo"><span data-es="Canards Aerodinámicos" data-en="Aerodynamic Canards">Canards Aerodinámicos</span> <span class="badge">Front Dive Planes</span></h1>
+                    <p class="producto-descripcion" data-es="Aletas frontales de ángulo pronunciado (Dive Planes). Generan un incremento inmediato de la carga aerodinámica en las ruedas delanteras, mejorando el agarre al entrar frenando fuerte a las curvas." data-en="Steeply angled front dive planes. Generate an immediate increase in front wheel downforce, improving grip during heavy trail-braking into corners.">
+                        Aletas frontales de ángulo pronunciado (Dive Planes). Generan un incremento inmediato de la carga aerodinámica en las ruedas delanteras, mejorando el agarre al entrar frenando fuerte a las curvas.
+                    </p>
+                    <div class="caja-precio">
+                        <span class="precio-fuerte" data-es="$160.00 / Set de 4 piezas" data-en="$160.00 / 4-piece set">$160.00 / Set de 4 piezas</span>
+                        <span class="envio-info" data-es="Precio referencial para tu proyecto." data-en="Reference price for your project.">Precio referencial para tu proyecto.</span>
+                    </div>
+                    <div class="seccion-specs">
+                        <h3 data-es="Compatibilidad Recomendada" data-en="Recommended Compatibility">Compatibilidad Recomendada</h3>
+                        <ul class="lista-compatibilidad">
+                            <li><strong data-es="Modelos Populares:" data-en="Popular Models:">Modelos Populares:</strong> Porsche Cayman / 911, Toyota GR Yaris, VW Golf R, Renault Megane RS.</li>
+                            <li><strong data-es="Posición:" data-en="Position:">Posición:</strong> <span data-es="Montaje en parejas a cada lado de la defensa delantera." data-en="Paired mounting on each side of the front bumper.">Montaje en parejas a cada lado de la defensa delantera.</span></li>
+                            <li><strong data-es="Uso:" data-en="Usage:">Uso:</strong> <span data-es="Time Attack y alta competición en pista." data-en="Time Attack and high-level track racing.">Time Attack y alta competición en pista.</span></li>
+                        </ul>
+                    </div>
+                    <div class="seccion-specs">
+                        <h3 data-es="Especificaciones Técnicas" data-en="Technical Specifications">Especificaciones Técnicas</h3>
+                        <table class="tabla-especificaciones">
+                            <tbody>
+                                <tr><td><strong data-es="Material" data-en="Material">Material</strong></td><td data-es="Fibra de Carbono autoclavada rígida" data-en="Rigid autoclaved carbon fiber">Fibra de Carbono autoclavada rígida</td></tr>
+                                <tr><td><strong data-es="Piezas" data-en="Parts">Piezas</strong></td><td data-es="2 Canards superiores + 2 Canards inferiores con plantilla de montaje" data-en="2 Upper + 2 lower canards with mounting template">2 Canards superiores + 2 Canards inferiores con plantilla de montaje</td></tr>
+                                <tr><td><strong data-es="Fijación" data-en="Fastening">Fijación</strong></td><td data-es="Tornillería en acero inoxidable y cinta aerodinámica de alta adhesión" data-en="Stainless steel hardware and high-bond aero tape">Tornillería en acero inoxidable y cinta aerodinámica de alta adhesión</td></tr>
+                                <tr><td><strong data-es="Garantía" data-en="Warranty">Garantía</strong></td><td data-es="1 Año de fábrica" data-en="1 Year factory warranty">1 Año de fábrica</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 8. DETALLE: Faldones Laterales Pro -->
+        <div id="detalle-faldones-laterales" class="vista-detalle oculto">
+            <div class="detalle-header-top">
+                <button class="btn-volver" onclick="cambiarVista('vista-catalogo')" data-es="⬅ Volver al catálogo" data-en="⬅ Back to catalog">⬅ Volver al catálogo</button>
+            </div>
+            <div class="producto-layout">
+                <div class="columna-media">
+                    <div class="imagen-destacada">
+                        <img src="Multimedia/ale 8.jpg" alt="Faldones Laterales Pro">
+                    </div>
+                    <div class="seccion-video">
+                        <h3 data-es="Ajuste y Soplado bajo Chasis" data-en="Underbody Fitment and Airflow">Ajuste y Soplado bajo Chasis</h3>
+                        <p class="video-desc" data-es="Demostración de cómo los faldones evitan que el aire turbulento lateral ingrese debajo del vehículo." data-en="Demo showing how skirts prevent side turbulent air from spilling under the vehicle.">Demostración de cómo los faldones evitan que el aire turbulento lateral ingrese debajo del vehículo.</p>
+                        <div class="video-container">
+                            <iframe src="https://drive.google.com/file/d/1SkF6yhjfsUHFlhhw3M5lkwp-aIQ2OK3X/preview" title="Instalación Faldones Laterales" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+                <div class="columna-info">
+                    <h1 class="producto-titulo"><span data-es="Faldones Laterales Pro" data-en="Pro Side Skirts">Faldones Laterales Pro</span> <span class="badge">Side Skirt Extensions</span></h1>
+                    <p class="producto-descripcion" data-es="Extensiones de zócalo lateral de perfil bajo. Crean una barrera física que ayuda a sellar el flujo de aire por debajo del piso del auto, amplificando el rendimiento del difusor trasero." data-en="Low-profile side rocker extensions. Create a physical barrier that seals airflow underneath the car floor, boosting rear diffuser performance.">
+                        Extensiones de zócalo lateral de perfil bajo. Crean una barrera física que ayuda a sellar el flujo de aire por debajo del piso del auto, amplificando el rendimiento del difusor trasero.
+                    </p>
+                    <div class="caja-precio">
+                        <span class="precio-fuerte" data-es="$280.00 / Par" data-en="$280.00 / Pair">$280.00 / Par</span>
+                        <span class="envio-info" data-es="Precio referencial para tu proyecto." data-en="Reference price for your project.">Precio referencial para tu proyecto.</span>
+                    </div>
+                    <div class="seccion-specs">
+                        <h3 data-es="Compatibilidad Recomendada" data-en="Recommended Compatibility">Compatibilidad Recomendada</h3>
+                        <ul class="lista-compatibilidad">
+                            <li><strong data-es="Modelos Populares:" data-en="Popular Models:">Modelos Populares:</strong> BMW Serie 3 / 4 M-Sport, Ford Mustang, Audi A4 / S4, Hyundai Veloster N.</li>
+                            <li><strong data-es="Longitud:" data-en="Length:">Longitud:</strong> <span data-es="Universales recortables o especificación directa por modelo." data-en="Trimmable universal or direct model fitment.">Universales recortables o especificación directa por modelo.</span></li>
+                            <li><strong data-es="Uso:" data-en="Usage:">Uso:</strong> <span data-es="Apariencia más pegada al suelo y mejora aerodinámica lateral." data-en="Lowered appearance and side aerodynamic enhancement.">Apariencia más pegada al suelo y mejora aerodinámica lateral.</span></li>
+                        </ul>
+                    </div>
+                    <div class="seccion-specs">
+                        <h3 data-es="Especificaciones Técnicas" data-en="Technical Specifications">Especificaciones Técnicas</h3>
+                        <table class="tabla-especificaciones">
+                            <tbody>
+                                <tr><td><strong data-es="Material" data-en="Material">Material</strong></td><td data-es="Plástico ABS ultra resistente o Fibra de Carbono Real" data-en="Ultra-resistant ABS plastic or Real Carbon Fiber">Plástico ABS ultra resistente o Fibra de Carbono Real</td></tr>
+                                <tr><td><strong data-es="Longitud Estándar" data-en="Standard Length">Longitud Estándar</strong></td><td data-es="200 cm (fácilmente adaptable)" data-en="200 cm (easily adaptable)">200 cm (fácilmente adaptable)</td></tr>
+                                <tr><td><strong data-es="Perfil" data-en="Profile">Perfil</strong></td><td data-es="Diseño con aleta estabilizadora vertical trasera (Winglet)" data-en="Design with rear vertical stabilizing winglet">Diseño con aleta estabilizadora vertical trasera (Winglet)</td></tr>
+                                <tr><td><strong data-es="Garantía" data-en="Warranty">Garantía</strong></td><td data-es="1 Año de fábrica" data-en="1 Year factory warranty">1 Año de fábrica</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 9. DETALLE: Espejos Retrovisores Aero Fibra -->
+        <div id="detalle-espejos-aero" class="vista-detalle oculto">
+            <div class="detalle-header-top">
+                <button class="btn-volver" onclick="cambiarVista('vista-catalogo')" data-es="⬅ Volver al catálogo" data-en="⬅ Back to catalog">⬅ Volver al catálogo</button>
+            </div>
+            <div class="producto-layout">
+                <div class="columna-media">
+                    <div class="imagen-destacada">
+                        <img src="Multimedia/ale 9.jpg" alt="Espejos Retrovisores Aero Fibra">
+                    </div>
+                    <div class="seccion-video">
+                        <h3 data-es="Prueba de Visibilidad y Resistencia al Viento" data-en="Visibility and Wind Resistance Test">Prueba de Visibilidad y Resistencia al Viento</h3>
+                        <p class="video-desc" data-es="Revisión de la carcasa en forma de lágrima y el cristal azul antirreflejo de gran ángulo." data-en="Review of the teardrop housing and wide-angle anti-glare blue glass.">Revisión de la carcasa en forma de lágrima y el cristal azul antirreflejo de gran ángulo.</p>
+                        <div class="video-container">
+                            <iframe src="https://drive.google.com/file/d/1SkF6yhjfsUHFlhhw3M5lkwp-aIQ2OK3X/preview" title="Espejos Retrovisores Aero" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+                <div class="columna-info">
+                    <h1 class="producto-titulo"><span data-es="Espejos Retrovisores Aero" data-en="Aero Side Mirrors">Espejos Aero Carbon</span> <span class="badge">GT3 Style Mirrors</span></h1>
+                    <p class="producto-descripcion" data-es="Retrovisores de carreras con perfil estilizado en gota de agua. Reducen el área frontal de arrastre y la turbulencia sonora producida en las ventanillas a altas velocidades." data-en="Racing side mirrors with a streamlined teardrop profile. Reduce frontal drag area and window wind noise at high speeds.">
+                        Retrovisores de carreras con perfil estilizado en gota de agua. Reducen el área frontal de arrastre y la turbulencia sonora producida en las ventanillas a altas velocidades.
+                    </p>
+                    <div class="caja-precio">
+                        <span class="precio-fuerte" data-es="$210.00 / Par" data-en="$210.00 / Pair">$210.00 / Par</span>
+                        <span class="envio-info" data-es="Precio referencial para tu proyecto." data-en="Reference price for your project.">Precio referencial para tu proyecto.</span>
+                    </div>
+                    <div class="seccion-specs">
+                        <h3 data-es="Compatibilidad Recomendada" data-en="Recommended Compatibility">Compatibilidad Recomendada</h3>
+                        <ul class="lista-compatibilidad">
+                            <li><strong data-es="Modelos Populares:" data-en="Popular Models:">Modelos Populares:</strong> BMW E36 / E46 / E92, Nissan Silvia, Honda Integra / Civic, Mazda Miata.</li>
+                            <li><strong data-es="Cristal:" data-en="Glass:">Cristal:</strong> <span data-es="Espejo con tintado azul antirreflejos de amplio espectro." data-en="Wide-angle anti-glare blue tinted mirror.">Espejo con tintado azul antirreflejos de amplio espectro.</span></li>
+                            <li><strong data-es="Uso:" data-en="Usage:">Uso:</strong> <span data-es="Autos de pista, drift y proyectos tuning GT." data-en="Track, drift, and GT tuning projects.">Autos de pista, drift y proyectos tuning GT.</span></li>
+                        </ul>
+                    </div>
+                    <div class="seccion-specs">
+                        <h3 data-es="Especificaciones Técnicas" data-en="Technical Specifications">Especificaciones Técnicas</h3>
+                        <table class="tabla-especificaciones">
+                            <tbody>
+                                <tr><td><strong data-es="Carcasa" data-en="Housing">Carcasa</strong></td><td data-es="100% Fibra de carbono pulida" data-en="100% Polished carbon fiber">100% Fibra de carbono pulida</td></tr>
+                                <tr><td><strong data-es="Ajuste" data-en="Adjustment">Ajuste</strong></td><td data-es="Manual interno con rótula de precisión articulada" data-en="Internal manual with articulated precision joint">Manual interno con rótula de precisión articulada</td></tr>
+                                <tr><td><strong data-es="Bases" data-en="Bases">Bases</strong></td><td data-es="Bases adaptadoras de puerta específicas por marca integradas" data-en="Integrated brand-specific door adapter bases">Bases adaptadoras de puerta específicas por marca integradas</td></tr>
+                                <tr><td><strong data-es="Garantía" data-en="Warranty">Garantía</strong></td><td data-es="1 Año de fábrica" data-en="1 Year factory warranty">1 Año de fábrica</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 10. DETALLE: Splitter Delantero con Tirantes -->
+        <div id="detalle-splitter-delantero" class="vista-detalle oculto">
+            <div class="detalle-header-top">
+                <button class="btn-volver" onclick="cambiarVista('vista-catalogo')" data-es="⬅ Volver al catálogo" data-en="⬅ Back to catalog"> Volver al catálogo</button>
+            </div>
+            <div class="producto-layout">
+                <div class="columna-media">
+                    <div class="imagen-destacada">
+                        <img src="Multimedia/ale 10.jpg" alt="Splitter Delantero con Tirantes">
+                    </div>
+                    <div class="seccion-video">
+                        <h3 data-es="Instalación de Splitter y Tirantes Tensor" data-en="Splitter and Support Rods Installation">Instalación de Splitter y Tirantes Tensor</h3>
+                        <p class="video-desc" data-es="Demostración de cómo anclar los tirantes metálicos al chasis delantero para soportar altas cargas." data-en="Demonstration of anchoring metal struts to the front chassis to handle heavy loads.">Demostración de cómo anclar los tirantes metálicos al chasis delantero para soportar altas cargas.</p>
+                        <div class="video-container">
+                            <iframe src="https://drive.google.com/file/d/1SkF6yhjfsUHFlhhw3M5lkwp-aIQ2OK3X/preview" title="Instalación Splitter Delantero" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+                <div class="columna-info">
+                    <h1 class="producto-titulo"><span data-es="Splitter Delantero" data-en="Front Splitter">Splitter Delantero</span> <span class="badge">Track Downforce Lip</span></h1>
+                    <p class="producto-descripcion" data-es="Faldón plano delantero extendido que se proyecta hacia adelante. Separa el aire de alta presión que choca contra el parachoques del aire de baja presión que pasa por debajo, generando fuerza descendente (downforce) inmediata." data-en="Extended front flat lip projecting forward. Separates high-pressure air hitting the bumper from low-pressure air beneath, generating instant downforce.">
+                        Faldón plano delantero extendido que se proyecta hacia adelante. Separa el aire de alta presión que choca contra el parachoques del aire de baja presión que pasa por debajo, generando fuerza descendente (downforce) inmediata.
+                    </p>
+                    <div class="caja-precio">
+                        <span class="precio-fuerte" data-es="$295.00 / Kit con Tirantes" data-en="$295.00 / Kit with Rods">$295.00 / Kit con Tirantes</span>
+                        <span class="envio-info" data-es="Precio referencial para tu proyecto." data-en="Reference price for your project.">Precio referencial para tu proyecto.</span>
+                    </div>
+                    <div class="seccion-specs">
+                        <h3 data-es="Compatibilidad Recomendada" data-en="Recommended Compatibility">Compatibilidad Recomendada</h3>
+                        <ul class="lista-compatibilidad">
+                            <li><strong data-es="Modelos Populares:" data-en="Popular Models:">Modelos Populares:</strong> Dodge Challenger / Charger, Ford Mustang GT, VW Golf GTI, Dodge Viper.</li>
+                            <li><strong data-es="Accesorios Incluidos:" data-en="Included Accessories:">Accesorios Incluidos:</strong> <span data-es="2 Tirantes de soporte regulables en acero inoxidable." data-en="2 Adjustable stainless steel support rods.">2 Tirantes de soporte regulables en acero inoxidable.</span></li>
+                            <li><strong data-es="Uso:" data-en="Usage:">Uso:</strong> <span data-es="Conducción a alta velocidad en pista y circuitos cerrados." data-en="High-speed track and closed circuit driving.">Conducción a alta velocidad en pista y circuitos cerrados.</span></li>
+                        </ul>
+                    </div>
+                    <div class="seccion-specs">
+                        <h3 data-es="Especificaciones Técnicas" data-en="Technical Specifications">Especificaciones Técnicas</h3>
+                        <table class="tabla-especificaciones">
+                            <tbody>
+                                <tr><td><strong data-es="Material" data-en="Material">Material</strong></td><td data-es="Laminado de Carbono denso o Alumilite rígido anti-flexión" data-en="Dense Carbon laminate or anti-flex rigid Alumilite">Laminado de Carbono denso o Alumilite rígido anti-flexión</td></tr>
+                                <tr><td><strong data-es="Tirantes (Support Rods)" data-en="Support Rods">Tirantes (Support Rods)</strong></td><td data-es="Ajustables de 15 a 22 cm en aluminio anodizado CNC" data-en="Adjustable from 15 to 22 cm in CNC anodized aluminum">Ajustables de 15 a 22 cm en aluminio anodizado CNC</td></tr>
+                                <tr><td><strong data-es="Borde de Protección" data-en="Protective Edge">Borde de Protección</strong></td><td data-es="Protector de caucho inferior anti-raspones opcional" data-en="Optional lower anti-scrape rubber guard">Protector de caucho inferior anti-raspones opcional</td></tr>
+                                <tr><td><strong data-es="Garantía" data-en="Warranty">Garantía</strong></td><td data-es="1 Año de fábrica" data-en="1 Year factory warranty">1 Año de fábrica</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+<footer class="footer-legacy">
+    <div class="footer-container">
+        <!-- Columna 1: Logo de la marca, lema y redes -->
+        <div class="footer-col brand-col">
+            <img src="Multimedia/Letters_Logo1.png" alt="Legacy Motors" class="footer-logo">
+            <p class="brand-tagline" data-es="Tu portal definitivo de piezas de alto rendimiento y tuning." data-en="Your ultimate portal for high performance and tuning parts.">Tu portal definitivo de piezas de alto rendimiento y tuning.</p>
+            <div class="social-links">
+                <a href="https://www.instagram.com/" target="_blank" rel="noopener">Instagram</a>
+                <a href="https://www.tiktok.com/es-419/" target="_blank" rel="noopener">TikTok</a>
+            </div>
+        </div>
+
+        <!-- Columna 2: Navegación principal -->
+        <div class="footer-col">
+            <h4 data-es="NOSOTROS" data-en="ABOUT US">NOSOTROS</h4>
+            <ul>
+                <li><a href="sobre_nosotros.html" data-es="Sobre Nosotros" data-en="About Us">Sobre Nosotros</a></li>
+                <li><a href="sobre_nosotros.html#mision" data-es="Misión y Visión" data-en="Mission & Vision">Misión y Visión</a></li>
+                <li><a href="contactos.html" data-es="Contactos" data-en="Contact">Contactos</a></li>
+                <li><a href="login.html" data-es="Mi Cuenta" data-en="My Account">Mi Cuenta</a></li>
+            </ul>
+        </div>
+
+        <!-- Columna 3: Atención y Legal -->
+        <div class="footer-col">
+            <h4 data-es="SOPORTE" data-en="SUPPORT">SOPORTE</h4>
+            <ul>
+               <li><a href="contactos.html" data-es="Atención al Cliente" data-en="Customer Support">Atención al Cliente</a></li>
+                <li><a href="sobre_nosotros.html" data-es="Preguntas Frecuentes" data-en="FAQ">Preguntas Frecuentes</a></li>
+                <li><a href="sobre_nosotros.html" data-es="Política de Privacidad" data-en="Privacy Policy">Política de Privacidad</a></li>
+                <li><a href="sobre_nosotros.html" data-es="Términos del Servicio" data-en="Terms of Service">Términos del Servicio</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Barra Inferior -->
+    <div class="footer-bottom">
+        <p data-es="© 2026 Legacy Motors | Todos los derechos reservados | Hecho con pasión por el rendimiento." data-en="© 2026 Legacy Motors | All rights reserved | Made with passion for performance.">© 2026 Legacy Motors | Todos los derechos reservados | Hecho con pasión por el rendimiento.</p>
+    </div>
+</footer>
+
+    <!-- Script para controlar la navegación interactiva entre catálogo y fichas técnicas -->
+    <script>
+        function cambiarVista(idVista) {
+            // 1. Ocultar la vista principal del catálogo
+            document.getElementById('vista-catalogo').style.display = 'none';
+
+            // 2. Ocultar todas las vistas de detalles
+            const vistasDetalle = document.querySelectorAll('.vista-detalle');
+            vistasDetalle.forEach(vista => {
+                vista.classList.add('oculto');
+            });
+
+            // 3. Mostrar la vista seleccionada
+            if (idVista === 'vista-catalogo') {
+                document.getElementById('vista-catalogo').style.display = 'block';
+            } else {
+                const vistaSeleccionada = document.getElementById(idVista);
+                if (vistaSeleccionada) {
+                    vistaSeleccionada.classList.remove('oculto');
+                }
+            }
+
+            // 4. Desplazar la pantalla arriba suavemente
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    </script>
+    <script src="JS/funciones.js"></script>
+    <script src="JS/Traducciones.js"></script>
+</body>
+</html>

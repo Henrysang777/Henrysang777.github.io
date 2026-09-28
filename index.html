@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Legacy Motors</title>
+    <link rel="stylesheet" href="CSS/estilo.css">
+    <link rel="shortcut icon" href="Imagenes_EXTRA/Isologo.png" type="image/x-icon">
+    <script>
+        (function() {
+            const savedTheme = localStorage.getItem("theme") || "dark";
+            document.documentElement.setAttribute("data-theme", savedTheme);
+        })();
+    </script>
+</head>
+<body>
+    <header>
+        <nav class="nav-container">
+            <a href="index.html">
+                <picture class="logo-wrapper">
+                    <source srcset="Imagenes_EXTRA/Letters_Logo2.png" media="(prefers-color-scheme: light)" data-theme-logo>
+                    <img src="Multimedia/Letters_Logo1.png" alt="Logo" class="logo-img">
+                    <div class="rgb-line"></div>
+                </picture>
+            </a>
+            
+            <div class="search-wrapper">
+                <input type="text" placeholder="Buscar..." data-es-placeholder="Buscar..." data-en-placeholder="Search..." onkeydown="ejecutarBusqueda(event)" autocomplete="off">
+            </div>
+
+            <div class="nav-links">
+                <div class="dropdown-container">
+                    <button type="button" class="dropdown-btn" id="dropdownBtn">
+                        <span data-i18n="nav_productos" data-es="PRODUCTOS" data-en="PRODUCTS">PRODUCTOS</span> <span class="arrow">▾</span>
+                    </button>
+                    <div class="dropdown-menu" id="dropdownMenu">
+                        <span class="dropdown-header" data-i18n="nav_categorias" data-es="Categorías" data-en="Categories">Categorías</span>
+                        <a href="turbos.html" data-i18n="cat_turbos" data-es="Turbos" data-en="Turbos">Turbos</a>
+                        <a href="NOS.html" data-i18n="cat_nos" data-es="Óxido Nitroso (NOS)" data-en="Nitrous Oxide (NOS)">Óxido Nitroso (NOS)</a>
+                        <a href="discos.html" data-i18n="cat_discos" data-es="Discos de Freno" data-en="Brake Discs">Discos de Freno</a>
+                        <a href="suspen.html" data-i18n="cat_suspen" data-es="Suspensiones" data-en="Suspensions">Suspensiones</a>
+                        <a href="carroceria.html" data-i18n="cat_carroceria" data-es="Carrocería" data-en="Bodywork">Carrocería</a>
+                    </div>
+                </div>
+
+                <a href="index.html" class="active" data-i18n="nav_inicio" data-es="Inicio" data-en="Home">Inicio</a>
+                <a href="sobre_nosotros.html" data-i18n="nav_nosotros" data-es="Sobre Nosotros" data-en="About Us">Sobre Nosotros</a>
+                <a href="contactos.html" data-i18n="nav_contactos" data-es="Contactos" data-en="Contact Us">Contactos</a>
+                <a href="login.html" id="btn-sesion" class="btn-login active" data-i18n="nav_login" data-es="Iniciar sesión" data-en="Sign In">Iniciar sesión</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="banner-container">
+            <img src="Imagenes_EXTRA/Legacy_Banner02.png" alt="Logo Legacy Motors" class="banner">
+        </div>
+        
+        <hr>
+        <h1 class="h1-title" data-i18n="title_modificaciones" data-es="Tipos de modificaciones" data-en="Modification Types">Tipos de modificaciones</h1>
+        
+        <section class="modificaciones-grid">
+            <a href="turbos.html" class="card-link">
+                <div class="compt">
+                    <div class="img-container">
+                        <img src="multimedia/turbo_1.png" alt="Turbo">
+                    </div>
+                    <h2 data-i18n="cat_turbos" data-es="Turbos" data-en="Turbos">Turbos</h2>
+                </div>
+            </a>
+            
+            <a href="NOS.html" class="card-link">
+                <div class="compt">
+                    <div class="img-container">
+                        <img src="multimedia/nos_1.png" alt="NOS">
+                    </div>
+                    <h2 data-i18n="cat_nos" data-es="Óxido Nitroso" data-en="Nitrous Oxide">Óxido Nitroso</h2>            
+                </div>
+            </a>
+            
+            <a href="discos.html" class="card-link">
+                <div class="compt">
+                    <div class="img-container">
+                        <img src="multimedia/freno_1.png" alt="Discos">
+                    </div>
+                    <h2 data-i18n="cat_discos" data-es="Discos de freno" data-en="Brake Discs">Discos de freno</h2>
+                </div>
+            </a>
+            
+            <a href="suspen.html" class="card-link">
+                <div class="compt">
+                    <div class="img-container">
+                        <img src="multimedia/suspension_1.png" alt="Suspension">
+                    </div>
+                    <h2 data-i18n="cat_suspen" data-es="Suspensiones" data-en="Suspensions">Suspensiones</h2>
+                </div>
+            </a>
+            
+            <a href="carroceria.html" class="card-link">
+                <div class="compt">
+                    <div class="img-container">
+                        <img src="multimedia/carroceria_1.png" alt="Widebody">
+                    </div>
+                    <h2 data-i18n="cat_carroceria" data-es="Carrocería" data-en="Bodywork">Carrocería</h2>        
+                </div>
+            </a>
+        </section>
+        <hr>
+    </main>
+
+    <main>
+        <section class="about-section">
+            <img src="Multimedia/Letters_Logo1.png" alt="Legacy Motors" class="footer-logo" width="300px">
+            <p class="about-subtitle" data-i18n="home_que_es_title" data-es="¿QUÉ ES?" data-en="WHAT IS IT?">¿QUÉ ES?</p>
+            <p data-i18n="home_que_es_desc" 
+                data-es='"Legacy Motors", diseñado para centralizar y funcionar como un sitio web informativo para el entusiasta del tuning en El Salvador. Aquí se promueven accesorios y piezas para personalización de vehículos. El proyecto solventa el problema a un nivel de respuesta técnico-informativo y comercial, eliminando la necesidad de recurrir a mecánicos costosos o enfrentar estafas en aplicaciones de piezas no verificadas. A diferencia de otras alternativas genéricas de comercio electrónico, este sitio web se enfoca en reducir la dependencia de proveedores externos y en mitigar la "desconfianza del entusiasta tuning" mediante asesoría especializada.'
+                data-en='"Legacy Motors" is designed to centralize and function as an informative website for tuning enthusiasts in El Salvador. Accessories and performance parts for vehicle customization are promoted here. The project solves problems through technical-informative and commercial support, eliminating the need to rely on expensive mechanics or risk scams on unverified parts platforms. Unlike generic e-commerce platforms, this website focuses on reducing reliance on external suppliers and building trust with tuning enthusiasts through specialized guidance.'>
+                "Legacy Motors", diseñado para centralizar y funcionar como un sitio web informativo para el entusiasta del tuning en El Salvador. Aquí se promueven accesorios y piezas para personalización de vehículos.
+                El proyecto solventa el problema a un nivel de respuesta técnico-informativo y comercial, eliminando la necesidad de recurrir a mecánicos costosos o enfrentar estafas en aplicaciones de piezas no verificadas. A diferencia de otras alternativas genéricas de comercio electrónico, este sitio web se enfoca en reducir la dependencia de proveedores externos y en mitigar la "desconfianza del entusiasta tuning" mediante asesoría especializada.
+            </p>
+
+            <!-- Sección de Video e Imagen integrados lado a lado -->
+            <div class="home-media-grid" style="display: flex; flex-wrap: wrap; gap: 30px; margin-top: 35px; align-items: center;">
+                <div class="columna-media" style="flex: 1 1 45%; min-width: 300px;">
+                    <div class="seccion-video" style="margin-top: 0;">
+                        <h3 data-i18n="video_title_1" data-es="Video Informativo" data-en="Informative Video">Video Informativo</h3>
+                        <p class="video-desc" data-i18n="video_desc_1" data-es="Conoce más sobre nuestras piezas y proyectos de alto rendimiento." data-en="Learn more about our high-performance parts and projects.">Conoce más sobre nuestras piezas y proyectos de alto rendimiento.</p>
+                        <div class="video-container">
+                        <iframe src="https://drive.google.com/file/d/1njOBMdJuhA9WJmVY-hU4_N-3chiL8rN3/preview" title="Video Legacy Motors" frameborder="0" width="100%" height="360" allow="autoplay" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+                <div class="columna-imagen" style="flex: 1 1 45%; min-width: 300px;">
+                    <div class="imagen-destacada">
+                        <img src="Imagenes_EXTRA/Banner01.png" alt="Tuning Preview Legacy Motors" style="width: 100%; border-radius: 8px; border: 1px solid #3d475a; box-shadow: 0 4px 12px rgba(0,0,0,0.25);">
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <p class="about-subtitle" data-i18n="home_especialidad_title" data-es="Nuestra especialidad" data-en="Our Specialty">Nuestra especialidad</p>
+            <p data-i18n="home_especialidad_desc"
+                data-es="En Legacy Motors priorizamos la experiencia del usuario al momento de buscar información referente a partes de vehículos, tutoriales o instrucciones de compatibilidad; con estas secciones logramos una navegación fácil y limpia."
+                data-en="At Legacy Motors, we prioritize user experience when searching for vehicle part details, tutorials, or compatibility guides; these structured sections provide clean and effortless navigation.">
+                En Legacy Motors priorizamos la experiencia del usuario al momento de buscar información referente a partes de vehículos, tutoriales o instrucciones de compatibilidad; con estas secciones logramos una navegación fácil y limpia.
+            </p>
+            <div class="home-media-grid" style="display: flex; flex-wrap: wrap; gap: 30px; margin-top: 35px; align-items: center;">
+                <div class="columna-imagen" style="flex: 1 1 45%; min-width: 300px;">
+                    <div class="imagen-destacada">
+                        <img src="Imagenes_EXTRA/Banner02.png" alt="Tuning Preview Legacy Motors" style="width: 100%; border-radius: 8px; border: 1px solid #3d475a; box-shadow: 0 4px 12px rgba(0,0,0,0.25);">
+                    </div>
+                </div>
+                <div class="columna-media" style="flex: 1 1 45%; min-width: 300px;">
+                    <div class="seccion-video" style="margin-top: 0;">
+                        <h3 data-i18n="video_title_2" data-es="Video Informativo" data-en="Informative Video">Video Informativo</h3>
+                        <p class="video-desc" data-i18n="video_desc_2" data-es="Conoce más sobre nuestras piezas y proyectos de alto rendimiento." data-en="Learn more about our high-performance parts and projects.">Conoce más sobre nuestras piezas y proyectos de alto rendimiento.</p>
+                        <div class="video-container">
+                            <iframe src="https://drive.google.com/file/d/1mWdZ6CgzVbSx4G9oD_bfu0wsQAnocht3/preview" title="Video Legacy Motors" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer-legacy">
+        <div class="footer-container">
+            <!-- Columna 1: Logo de la marca, lema y redes -->
+            <div class="footer-col brand-col">
+                <img src="Multimedia/Letters_Logo1.png" alt="Legacy Motors" class="footer-logo">
+                <p class="brand-tagline" data-i18n="footer_tagline" data-es="Tu portal definitivo de piezas de alto rendimiento y tuning." data-en="Your ultimate hub for performance parts and tuning.">Tu portal definitivo de piezas de alto rendimiento y tuning.</p>
+                <div class="social-links">
+                    <a href="https://www.instagram.com/" target="_blank" rel="noopener">Instagram</a>
+                    <a href="https://www.tiktok.com/es-419/" target="_blank" rel="noopener">TikTok</a>
+                </div>
+            </div>
+
+            <!-- Columna 2: Navegación principal -->
+            <div class="footer-col">
+                <h4 data-i18n="footer_nosotros_header" data-es="NOSOTROS" data-en="ABOUT US">NOSOTROS</h4>
+                <ul>
+                    <li><a href="sobre_nosotros.html" data-i18n="nav_nosotros" data-es="Sobre Nosotros" data-en="About Us">Sobre Nosotros</a></li>
+                    <li><a href="sobre_nosotros.html#mision" data-i18n="footer_mision" data-es="Misión y Visión" data-en="Mission & Vision">Misión y Visión</a></li>
+                    <li><a href="contactos.html" data-i18n="nav_contactos" data-es="Contactos" data-en="Contact Us">Contactos</a></li>
+                    <li><a href="login.html" data-i18n="footer_cuenta" data-es="Mi Cuenta" data-en="My Account">Mi Cuenta</a></li>
+                </ul>
+            </div>
+
+            <!-- Columna 3: Atención y Legal -->
+            <div class="footer-col">
+                <h4 data-i18n="footer_soporte_header" data-es="SOPORTE" data-en="SUPPORT">SOPORTE</h4>
+                <ul>
+                    <li><a href="contactos.html" data-i18n="footer_atencion" data-es="Atención al Cliente" data-en="Customer Support">Atención al Cliente</a></li>
+                    <li><a href="sobre_nosotros.html" data-i18n="footer_faq" data-es="Preguntas Frecuentes" data-en="FAQs">Preguntas Frecuentes</a></li>
+                    <li><a href="sobre_nosotros.html" data-i18n="footer_privacidad" data-es="Política de Privacidad" data-en="Privacy Policy">Política de Privacidad</a></li>
+                    <li><a href="sobre_nosotros.html" data-i18n="footer_terminos" data-es="Términos del Servicio" data-en="Terms of Service">Términos del Servicio</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Barra Inferior -->
+        <div class="footer-bottom">
+            <p data-i18n="footer_copyright" data-es="© 2026 Legacy Motors | Todos los derechos reservados | Hecho con pasión por el rendimiento." data-en="© 2026 Legacy Motors | All rights reserved | Built with passion for performance.">© 2026 Legacy Motors | Todos los derechos reservados | Hecho con pasión por el rendimiento.</p>
+        </div>
+    </footer>
+
+    <script src="JS/funciones.js"></script>
+    <script src="JS/Traducciones.js"></script>
+</body>
+</html>

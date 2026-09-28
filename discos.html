@@ -1,0 +1,750 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo de Discos de Freno - Legacy Motors</title>
+    <link rel="stylesheet" href="CSS/estilo.css">
+        <script>
+        (function() {
+            const savedTheme = localStorage.getItem("theme") || "dark";
+            document.documentElement.setAttribute("data-theme", savedTheme);
+        })();
+    </script>
+        <link rel="shortcut icon" href="Imagenes_EXTRA/Isologo.png" type="image/x-icon">
+<body>
+    <header>
+        <nav class="nav-container">
+    <a href="index.html">
+<picture class="logo-wrapper">
+    <source srcset="Imagenes_EXTRA/Letters_Logo2.png" media="(prefers-color-scheme: light)" data-theme-logo>
+    <img src="Multimedia/Letters_Logo1.png" alt="Logo" class="logo-img">
+                    <div class="rgb-line"></div>
+</picture>
+</a>
+            <div class="search-wrapper">
+                <input type="search" placeholder="Buscar..." data-es="Buscar..." data-en="Search...">
+            </div>
+            <div class="nav-links">
+                                <div class="dropdown-container">
+                    <button type="button" class="dropdown-btn" id="dropdownBtn">
+                        <span data-es="PRODUCTOS" data-en="PRODUCTS">PRODUCTOS</span> <span class="arrow">▾</span>
+                    </button>
+                    <div class="dropdown-menu" id="dropdownMenu">
+                        <span class="dropdown-header" data-es="Categorías" data-en="Categories">Categorías</span>
+                        <a href="turbos.html" data-es="Turbos" data-en="Turbos">Turbos</a>
+                        <a href="NOS.html" data-es="Óxido Nitroso (NOS)" data-en="Nitrous Oxide (NOS)">Óxido Nitroso (NOS)</a>
+                        <a href="discos.html" data-es="Discos de Freno" data-en="Brake Discs">Discos de Freno</a>
+                        <a href="suspen.html" data-es="Suspensiones" data-en="Suspensions">Suspensiones</a>
+                        <a href="carroceria.html" data-es="Carrocería" data-en="Bodywork">Carrocería</a>
+                    </div>
+                </div>
+                <a href="index.html" data-es="Inicio" data-en="Home">Inicio</a>
+                <a href="sobre_nosotros.html" data-es="Sobre Nosotros" data-en="About Us">Sobre Nosotros</a>
+                <a href="contactos.html" data-es="Contactos" data-en="Contact">Contactos</a>
+                <a href="login.html" id="btn-sesion" class="btn-login active" data-es="Iniciar sesión" data-en="Log In">Iniciar sesión</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- ==========================================
+            VISTA 1: CATÁLOGO PRINCIPAL (10 PRODUCTOS)
+            ========================================== -->
+        <div id="vista-catalogo">
+            <div class="banner-container">
+                <img src="Imagenes_EXTRA/Legacy_Banner02.png" alt="Logo Legacy Motors" class="banner">
+            </div>
+            <hr>
+        <a href="index.html" class="btn-volver-inicio" data-es="⬅ Volver al inicio" data-en="⬅ Back to home">
+        ⬅ Volver al inicio
+</a>
+            <h1 class="h1-title" data-es="Catálogo de Discos de Freno" data-en="Brake Discs Catalog">Catálogo de Discos de Freno</h1>
+            <section class="about-section">
+                <p class="about-subtitle" data-es="Descubre discos de freno para mayor control y seguridad en cada frenada." data-en="Discover brake discs for better control and safety with every braking.">Descubre discos de freno para mayor control y seguridad en cada frenada.</p>
+            </section>
+            
+            <section class="modificaciones-grid">
+                <!-- 1. Disco Ventilado -->
+                <div class="compt" onclick="cambiarVista('detalle-freno-ventilado')">
+                    <div class="img-container">
+                        <img src="multimedia/freno_1.png" alt="Disco ventilado">
+                    </div>
+                    <h2 data-es="Disco Ventilado" data-en="Vented Disc">Disco Ventilado</h2>
+                    <p data-es="Refrigeración mejorada para frenadas intensas." data-en="Improved cooling for hard braking.">Refrigeración mejorada para frenadas intensas.</p>
+                </div>
+
+                <!-- 2. Disco Perforado -->
+                <div class="compt" onclick="cambiarVista('detalle-freno-perforado')">
+                    <div class="img-container">
+                        <img src="Multimedia/disc 2.jpg" alt="Disco perforado">
+                    </div>
+                    <h2 data-es="Disco Perforado" data-en="Drilled Disc">Disco Perforado</h2>
+                    <p data-es="Máxima disipación de calor en condiciones exigentes." data-en="Maximum heat dissipation under demanding conditions.">Máxima disipación de calor en condiciones exigentes.</p>
+                </div>
+
+                <!-- 3. Disco Ranurado -->
+                <div class="compt" onclick="cambiarVista('detalle-freno-ranurado')">
+                    <div class="img-container">
+                        <img src="Multimedia/disc 3.jpg" alt="Disco ranurado">
+                    </div>
+                    <h2 data-es="Disco Ranurado" data-en="Slotted Disc">Disco Ranurado</h2>
+                    <p data-es="Mejor agarre entre pastilla y disco en cada curva." data-en="Better pad-to-disc grip in every corner.">Mejor agarre entre pastilla y disco en cada curva.</p>
+                </div>
+
+                <!-- 4. Kit Alto Rendimiento -->
+                <div class="compt" onclick="cambiarVista('detalle-freno-alto-rendimiento')">
+                    <div class="img-container">
+                        <img src="Multimedia/disc 4.jpg" alt="Kit de alto rendimiento">
+                    </div>
+                    <h2 data-es="Kit Alto Rendimiento" data-en="High Performance Kit">Kit Alto Rendimiento</h2>
+                    <p data-es="Perfecto para trackdays y conducción deportiva." data-en="Perfect for trackdays and performance driving.">Perfecto para trackdays y conducción deportiva.</p>
+                </div>
+
+                <!-- 5. Disco Deportivo -->
+                <div class="compt" onclick="cambiarVista('detalle-freno-deportivo')">
+                    <div class="img-container">
+                        <img src="Multimedia/disc 5.jpg" alt="Disco deportivos premium">
+                    </div>
+                    <h2 data-es="Disco Deportivo" data-en="Sports Disc">Disco Deportivo</h2>
+                    <p data-es="Diseño con materiales reforzados y acabado premium." data-en="Reinforced materials design and premium finish.">Diseño con materiales reinforced y acabado premium.</p>
+                </div>
+
+                <!-- 6. Disco Cerámico Pro (NUEVO) -->
+                <div class="compt" onclick="cambiarVista('detalle-freno-ceramico-pro')">
+                    <div class="img-container">
+                        <img src="Multimedia/disc 6.jpg" alt="Disco Cerámico Pro">
+                    </div>
+                    <h2 data-es="Disco Cerámico Pro" data-en="Pro Ceramic Disc">Disco Cerámico Pro</h2>
+                    <p data-es="Ligereza extrema y tolerancia térmica superior sin fatiga." data-en="Extreme lightness and superior thermal tolerance without fade.">Ligereza extrema y tolerancia térmica superior sin fatiga.</p>
+                </div>
+
+                <!-- 7. Disco Flotante Bi-Material (NUEVO) -->
+                <div class="compt" onclick="cambiarVista('detalle-freno-flotante')">
+                    <div class="img-container">
+                        <img src="Multimedia/disc 7.jpg" alt="Disco Flotante Bi-Material">
+                    </div>
+                    <h2 data-es="Disco Flotante Bi-Material" data-en="Bi-Material Floating Disc">Disco Flotante Bi-Material</h2>
+                    <p data-es="Núcleo de aluminio para reducir la masa no suspendida." data-en="Aluminum hat to reduce unsprung mass.">Núcleo de aluminio para reducir la masa no suspendida.</p>
+                </div>
+
+                <!-- 8. Kit Freno Carbón-Cerámico (NUEVO) -->
+                <div class="compt" onclick="cambiarVista('detalle-freno-carbon-ceramico')">
+                    <div class="img-container">
+                        <img src="Multimedia/disc 8.jpg" alt="Kit Freno Carbón-Cerámico">
+                    </div>
+                    <h2 data-es="Kit Carbón-Cerámico" data-en="Carbon-Ceramic Kit">Kit Carbón-Cerámico</h2>
+                    <p data-es="Rendimiento extremo de nivel hiperdeportivo para pista." data-en="Extreme hypercar-level track performance.">Rendimiento extremo de nivel hiperdeportivo para pista.</p>
+                </div>
+
+                <!-- 9. Disco Ranurado & Perforado X-Spec (NUEVO) -->
+                <div class="compt" onclick="cambiarVista('detalle-freno-xspec')">
+                    <div class="img-container">
+                        <img src="Multimedia/disc 9.jpg" alt="Disco Ranurado & Perforado X-Spec">
+                    </div>
+                    <h2 data-es="Disco X-Spec Híbrido" data-en="X-Spec Hybrid Disc">Disco X-Spec Híbrido</h2>
+                    <p data-es="Evacuación constante de gases y enfriamiento rápido." data-en="Constant gas evacuation and rapid cooling.">Evacuación constante de gases y enfriamiento rápido.</p>
+                </div>
+
+                <!-- 10. Kit Big Brake Street-Pro (NUEVO) -->
+                <div class="compt" onclick="cambiarVista('detalle-freno-big-brake')">
+                    <div class="img-container">
+                        <img src="Multimedia/disc 10.jpg" alt="Kit Big Brake Street-Pro">
+                    </div>
+                    <h2 data-es="Kit Big Brake Street-Pro" data-en="Big Brake Street-Pro Kit">Kit Big Brake Street-Pro</h2>
+                    <p data-es="Superficie sobredimensionada para una potencia de frenado absoluta." data-en="Oversized surface area for absolute stopping power.">Superficie sobredimensionada para una potencia de frenado absoluta.</p>
+                </div>
+            </section>
+            <hr>
+            <section class="about-section">
+                <p class="about-subtitle" data-es="Elige el disco adecuado y dale a tu auto un frenado más seguro y preciso." data-en="Choose the right disc and give your car safer, more precise braking.">Elige el disco adecuado y dale a tu auto un frenado más seguro y preciso.</p>
+            </section>
+        </div>
+
+        <!-- ==========================================
+             VISTAS DE DETALLES (10 SECCIONES DETALLADAS)
+             ========================================== -->
+
+        <!-- 1. DETALLE: Disco Ventilado -->
+        <div id="detalle-freno-ventilado" class="vista-detalle oculto">
+            <div class="detalle-header-top">
+                <button class="btn-volver" onclick="cambiarVista('vista-catalogo')" data-es="⬅ Volver al catálogo" data-en="⬅ Back to catalog">⬅ Volver al catálogo</button>
+            </div>
+            <div class="producto-layout">
+                <div class="columna-media">
+                    <div class="imagen-destacada">
+                        <img src="multimedia/freno_1.png" alt="Disco Ventilado">
+                    </div>
+                    <div class="seccion-video">
+                        <h3 data-es="Guía de Instalación y Asentamiento" data-en="Installation and Bedding Guide">Guía de Instalación y Asentamiento</h3>
+                        <p class="video-desc" data-es="Aprende a instalar tus discos ventilados y realizar el proceso correcto de asentamiento de pastillas." data-en="Learn how to install your vented discs and properly bed in the brake pads.">Aprende a instalar tus discos ventilados y realizar el proceso correcto de asentamiento de pastillas.</p>
+                        <div class="video-container">
+                            <iframe src="https://drive.google.com/file/d/1Q9hsLxvR5FwM8497X4Ooo-WmBpkrEOPD/preview" title="Instalación Disco Ventilado" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+                <div class="columna-info">
+                    <h1 class="producto-titulo"><span data-es="Disco Ventilado" data-en="Vented Disc">Disco Ventilado</span> <span class="badge">OEM Replacement</span></h1>
+                    <p class="producto-descripcion" data-es="Diseñado para sustituir el equipo original del vehículo mejorando la disipación del calor. Sus aletas internas crean un flujo constante de aire que evita el fatídico desvanecimiento por sobrecalentamiento." data-en="Designed to replace factory equipment while improving heat dissipation. Internal vanes create constant airflow preventing brake fade from overheating.">
+                        Diseñado para sustituir el equipo original del vehículo mejorando la disipación del calor. Sus aletas internas crean un flujo constante de aire que evita el fatídico desvanecimiento por sobrecalentamiento.
+                    </p>
+                    <div class="caja-precio">
+                        <span class="precio-fuerte" data-es="$180.00 / Par" data-en="$180.00 / Pair">$180.00 / Par</span>
+                        <span class="envio-info" data-es="Precio referencial para tu proyecto." data-en="Reference price for your project.">Precio referencial para tu proyecto.</span>
+                    </div>
+                    <div class="seccion-specs">
+                        <h3 data-es="Compatibilidad Recomendada" data-en="Recommended Compatibility">Compatibilidad Recomendada</h3>
+                        <ul class="lista-compatibilidad">
+                            <li><strong data-es="Modelos Populares:" data-en="Popular Models:">Modelos Populares:</strong> Toyota Corolla, Honda Civic, Volkswagen Golf, Nissan Sentra.</li>
+                            <li><strong data-es="Posición:" data-en="Position:">Posición:</strong> <span data-es="Eje Delantero / Eje Trasero." data-en="Front Axle / Rear Axle.">Eje Delantero / Eje Trasero.</span></li>
+                            <li><strong data-es="Uso:" data-en="Usage:">Uso:</strong> <span data-es="Conducción urbana diaria y viajes en carretera." data-en="Daily urban driving and highway trips.">Conducción urbana diaria y viajes en carretera.</span></li>
+                        </ul>
+                    </div>
+                    <div class="seccion-specs">
+                        <h3 data-es="Especificaciones Técnicas" data-en="Technical Specifications">Especificaciones Técnicas</h3>
+                        <table class="tabla-especificaciones">
+                            <tbody>
+                                <tr><td><strong data-es="Material" data-en="Material">Material</strong></td><td data-es="Hierro Fundido Nodular G3000" data-en="G3000 Nodular Cast Iron">Hierro Fundido Nodular G3000</td></tr>
+                                <tr><td><strong data-es="Diámetro Exterior" data-en="Outer Diameter">Diámetro Exterior</strong></td><td data-es="280 mm - 300 mm (según aplicación)" data-en="280 mm - 300 mm (depending on application)">280 mm - 300 mm (según aplicación)</td></tr>
+                                <tr><td><strong data-es="Diseño de Enfriamiento" data-en="Cooling Design">Diseño de Enfriamiento</strong></td><td data-es="Aletas de ventilación direccionales" data-en="Directional cooling vanes">Aletas de ventilación direccionales</td></tr>
+                                <tr><td><strong data-es="Tolerancia Térmica" data-en="Thermal Tolerance">Tolerancia Térmica</strong></td><td data-es="Hasta 500 °C" data-en="Up to 500 °C">Hasta 500 °C</td></tr>
+                                <tr><td><strong data-es="Garantía" data-en="Warranty">Garantía</strong></td><td data-es="1 Año de fábrica" data-en="1 Year factory warranty">1 Año de fábrica</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 2. DETALLE: Disco Perforado -->
+        <div id="detalle-freno-perforado" class="vista-detalle oculto">
+            <div class="detalle-header-top">
+                <button class="btn-volver" onclick="cambiarVista('vista-catalogo')" data-es="⬅ Volver al catálogo" data-en="⬅ Back to catalog">⬅ Volver al catálogo</button>
+            </div>
+            <div class="producto-layout">
+                <div class="columna-media">
+                    <div class="imagen-destacada">
+                        <img src="Multimedia/disc 2.jpg" alt="Disco Perforado">
+                    </div>
+                    <div class="seccion-video">
+                        <h3 data-es="Inspección y Cuidado de Discos Perforados" data-en="Drilled Discs Inspection and Care">Inspección y Cuidado de Discos Perforados</h3>
+                        <p class="video-desc" data-es="Consejos para el mantenimiento de discos perforados y prevención de fisuras por temperatura." data-en="Tips for drilled disc maintenance and heat cracking prevention.">Consejos para el mantenimiento de discos perforados y prevención de fisuras por temperatura.</p>
+                        <div class="video-container">
+                            <iframe src="https://drive.google.com/file/d/1Q9hsLxvR5FwM8497X4Ooo-WmBpkrEOPD/preview" title="Mantenimiento Disco Perforado" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+                <div class="columna-info">
+                    <h1 class="producto-titulo"><span data-es="Disco Perforado" data-en="Drilled Disc">Disco Perforado</span> <span class="badge">Street Performance</span></h1>
+                    <p class="producto-descripcion" data-es="Las perforaciones biseladas permiten que los gases supercalentados y el agua escapen instantáneamente del área de contacto con la pastilla, garantizando una respuesta inmediata del pedal." data-en="Beveled cross-drilled holes allow superheated gases and water to escape pad contact area instantly, ensuring immediate pedal bite.">
+                        Las perforaciones biseladas permiten que los gases supercalentados y el agua escapen instantáneamente del área de contacto con la pastilla, garantizando una respuesta inmediata del pedal.
+                    </p>
+                    <div class="caja-precio">
+                        <span class="precio-fuerte" data-es="$260.00 / Par" data-en="$260.00 / Pair">$260.00 / Par</span>
+                        <span class="envio-info" data-es="Precio referencial para tu proyecto." data-en="Reference price for your project.">Precio referencial para tu proyecto.</span>
+                    </div>
+                    <div class="seccion-specs">
+                        <h3 data-es="Compatibilidad Recomendada" data-en="Recommended Compatibility">Compatibilidad Recomendada</h3>
+                        <ul class="lista-compatibilidad">
+                            <li><strong data-es="Modelos Populares:" data-en="Popular Models:">Modelos Populares:</strong> Subaru BRZ, Mazda MX-5, Ford Focus ST, BMW 320i/328i.</li>
+                            <li><strong data-es="Posición:" data-en="Position:">Posición:</strong> <span data-es="Eje Delantero." data-en="Front Axle.">Eje Delantero.</span></li>
+                            <li><strong data-es="Uso:" data-en="Usage:">Uso:</strong> <span data-es="Conducción deportiva urbana y carreteras reviradas." data-en="Spirited urban driving and twisty backroads.">Conducción deportiva urbana y carreteras reviradas.</span></li>
+                        </ul>
+                    </div>
+                    <div class="seccion-specs">
+                        <h3 data-es="Especificaciones Técnicas" data-en="Technical Specifications">Especificaciones Técnicas</h3>
+                        <table class="tabla-especificaciones">
+                            <tbody>
+                                <tr><td><strong data-es="Perforación" data-en="Drilling">Perforación</strong></td><td data-es="Patrón cruzado biselado anti-grietas" data-en="Anti-crack beveled cross-drilled pattern">Patrón cruzado biselado anti-grietas</td></tr>
+                                <tr><td><strong data-es="Tratamiento Superficial" data-en="Surface Treatment">Tratamiento Superficial</strong></td><td data-es="Recubrimiento en Zinc antioxidante" data-en="Anti-rust Zinc coating">Recubrimiento en Zinc antioxidante</td></tr>
+                                <tr><td><strong data-es="Diámetro Exterior" data-en="Outer Diameter">Diámetro Exterior</strong></td><td data-es="312 mm - 330 mm" data-en="312 mm - 330 mm">312 mm - 330 mm</td></tr>
+                                <tr><td><strong data-es="Tolerancia Térmica" data-en="Thermal Tolerance">Tolerancia Térmica</strong></td><td data-es="Hasta 650 °C" data-en="Up to 650 °C">Hasta 650 °C</td></tr>
+                                <tr><td><strong data-es="Garantía" data-en="Warranty">Garantía</strong></td><td data-es="1 Año de fábrica" data-en="1 Year factory warranty">1 Año de fábrica</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 3. DETALLE: Disco Ranurado -->
+        <div id="detalle-freno-ranurado" class="vista-detalle oculto">
+            <div class="detalle-header-top">
+                <button class="btn-volver" onclick="cambiarVista('vista-catalogo')" data-es="⬅ Volver al catálogo" data-en="⬅ Back to catalog">⬅ Volver al catálogo</button>
+            </div>
+            <div class="producto-layout">
+                <div class="columna-media">
+                    <div class="imagen-destacada">
+                        <img src="Multimedia/disc 3.jpg" alt="Disco Ranurado">
+                    </div>
+                    <div class="seccion-video">
+                        <h3 data-es="Ventajas del Ranurado Slotted" data-en="Slotted Groove Advantages">Ventajas del Ranurado Slotted</h3>
+                        <p class="video-desc" data-es="Demostración técnica sobre cómo las ranuras limpian el residuo de pastilla en uso intensivo." data-en="Technical demo on how slots wipe pad debris clean during heavy use.">Demostración técnica sobre cómo las ranuras limpian el residuo de pastilla en uso intensivo.</p>
+                        <div class="video-container">
+                            <iframe src="https://drive.google.com/file/d/1Q9hsLxvR5FwM8497X4Ooo-WmBpkrEOPD/preview" title="Demostración Disco Ranurado" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+                <div class="columna-info">
+                    <h1 class="producto-titulo"><span data-es="Disco Ranurado" data-en="Slotted Disc">Disco Ranurado</span> <span class="badge">Track & Street</span></h1>
+                    <p class="producto-descripcion" data-es="Mecanizado con canales curvos que barren la superficie de la pastilla de freno en cada vuelta, eliminando la capa de cristalización y aumentando el mordiente (&quot;bite&quot;) en el frenado." data-en="Machined with curved slots that sweep the pad face every rotation, removing glaze and increasing initial brake bite.">
+                        Mecanizado con canales curvos que barren la superficie de la pastilla de freno en cada vuelta, eliminando la capa de cristalización y aumentando el mordiente ("bite") en el frenado.
+                    </p>
+                    <div class="caja-precio">
+                        <span class="precio-fuerte" data-es="$290.00 / Par" data-en="$290.00 / Pair">$290.00 / Par</span>
+                        <span class="envio-info" data-es="Precio referencial para tu proyecto." data-en="Reference price for your project.">Precio referencial para tu proyecto.</span>
+                    </div>
+                    <div class="seccion-specs">
+                        <h3 data-es="Compatibilidad Recomendada" data-en="Recommended Compatibility">Compatibilidad Recomendada</h3>
+                        <ul class="lista-compatibilidad">
+                            <li><strong data-es="Modelos Populares:" data-en="Popular Models:">Modelos Populares:</strong> VW Golf GTI, Subaru WRX, Honda Civic Type R, Audi S3.</li>
+                            <li><strong data-es="Posición:" data-en="Position:">Posición:</strong> <span data-es="Eje Delantero / Trasero." data-en="Front / Rear Axle.">Eje Delantero / Trasero.</span></li>
+                            <li><strong data-es="Uso:" data-en="Usage:">Uso:</strong> <span data-es="Track Days y conducción entusiasta." data-en="Track Days and enthusiastic driving.">Track Days y conducción entusiasta.</span></li>
+                        </ul>
+                    </div>
+                    <div class="seccion-specs">
+                        <h3 data-es="Especificaciones Técnicas" data-en="Technical Specifications">Especificaciones Técnicas</h3>
+                        <table class="tabla-especificaciones">
+                            <tbody>
+                                <tr><td><strong data-es="Ranurado" data-en="Slotting">Ranurado</strong></td><td data-es="Slotted helicoidal de alta precisión" data-en="High-precision helical slotting">Slotted helicoidal de alta precisión</td></tr>
+                                <tr><td><strong data-es="Balanceo" data-en="Balancing">Balanceo</strong></td><td data-es="100% Calibrado por computadora" data-en="100% Computer balanced">100% Calibrado por computadora</td></tr>
+                                <tr><td><strong data-es="Diámetro Exterior" data-en="Outer Diameter">Diámetro Exterior</strong></td><td data-es="320 mm - 345 mm" data-en="320 mm - 345 mm">320 mm - 345 mm</td></tr>
+                                <tr><td><strong data-es="Tolerancia Térmica" data-en="Thermal Tolerance">Tolerancia Térmica</strong></td><td data-es="Hasta 700 °C" data-en="Up to 700 °C">Hasta 700 °C</td></tr>
+                                <tr><td><strong data-es="Garantía" data-en="Warranty">Garantía</strong></td><td data-es="1 Año de fábrica" data-en="1 Year factory warranty">1 Año de fábrica</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 4. DETALLE: Kit Alto Rendimiento -->
+        <div id="detalle-freno-alto-rendimiento" class="vista-detalle oculto">
+            <div class="detalle-header-top">
+                <button class="btn-volver" onclick="cambiarVista('vista-catalogo')" data-es="⬅ Volver al catálogo" data-en="⬅ Back to catalog">⬅ Volver al catálogo</button>
+            </div>
+            <div class="producto-layout">
+                <div class="columna-media">
+                    <div class="imagen-destacada">
+                        <img src="Multimedia/disc 4.jpg" alt="Kit Alto Rendimiento">
+                    </div>
+                    <div class="seccion-video">
+                        <h3 data-es="Instalación del Kit Completo" data-en="Full Kit Installation">Instalación del Kit Completo</h3>
+                        <p class="video-desc" data-es="Proceso de cambio de discos, pastillas de alto coeficiente y purgado del sistema de líquido de frenos." data-en="Full process of replacing discs, high-friction pads, and bleeding the brake fluid system.">Proceso de cambio de discos, pastillas de alto coeficiente y purgado del sistema de líquido de frenos.</p>
+                        <div class="video-container">
+                            <iframe src="https://drive.google.com/file/d/1Q9hsLxvR5FwM8497X4Ooo-WmBpkrEOPD/preview" title="Instalación Kit Alto Rendimiento" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+                <div class="columna-info">
+                    <h1 class="producto-titulo"><span data-es="Kit Alto Rendimiento" data-en="High Performance Kit">Kit Alto Rendimiento</span> <span class="badge">Track Spec</span></h1>
+                    <p class="producto-descripcion" data-es="Paquete integral de frenado que incluye discos hiper-ventilados, pastillas cerámicas de fricción mejorada y mangueras blindadas en acero inoxidable." data-en="Comprehensive braking package including hyper-vented discs, high-friction ceramic pads, and stainless steel braided brake lines.">
+                        Paquete integral de frenado que incluye discos hiper-ventilados, pastillas cerámicas de fricción mejorada y mangueras blindadas en acero inoxidable.
+                    </p>
+                    <div class="caja-precio">
+                        <span class="precio-fuerte" data-es="$650.00 / Kit Completo" data-en="$650.00 / Full Kit">$650.00 / Kit Completo</span>
+                        <span class="envio-info" data-es="Precio referencial para tu proyecto." data-en="Reference price for your project.">Precio referencial para tu proyecto.</span>
+                    </div>
+                    <div class="seccion-specs">
+                        <h3 data-es="Compatibilidad Recomendada" data-en="Recommended Compatibility">Compatibilidad Recomendada</h3>
+                        <ul class="lista-compatibilidad">
+                            <li><strong data-es="Modelos Populares:" data-en="Popular Models:">Modelos Populares:</strong> Nissan 350Z / 370Z, BMW M3 E46/E92, Mitsubishi Lancer Evo, Ford Mustang GT.</li>
+                            <li><strong data-es="Posición:" data-en="Position:">Posición:</strong> <span data-es="Kit Delantero + Trasero." data-en="Front + Rear Kit.">Kit Delantero + Trasero.</span></li>
+                            <li><strong data-es="Uso:" data-en="Usage:">Uso:</strong> <span data-es="Competencias de tiempo (Time Attack) y circuitos." data-en="Time Attack competitions and circuits.">Competencias de tiempo (Time Attack) y circuitos.</span></li>
+                        </ul>
+                    </div>
+                    <div class="seccion-specs">
+                        <h3 data-es="Especificaciones Técnicas" data-en="Technical Specifications">Especificaciones Técnicas</h3>
+                        <table class="tabla-especificaciones">
+                            <tbody>
+                                <tr><td><strong data-es="Componentes" data-en="Components">Componentes</strong></td><td data-es="2 Discos + Pastillas Cerámicas + Mangueras Inox" data-en="2 Discs + Ceramic Pads + Stainless Lines">2 Discos + Pastillas Cerámicas + Mangueras Inox</td></tr>
+                                <tr><td><strong data-es="Composición del Disco" data-en="Disc Composition">Composición del Disco</strong></td><td data-es="Aleación Cromo-Molibdeno refinada" data-en="Refined Chrome-Moly alloy">Aleación Cromo-Molibdeno refinada</td></tr>
+                                <tr><td><strong data-es="Mangueras" data-en="Brake Lines">Mangueras</strong></td><td data-es="Teflón reforzado con malla de acero AN3" data-en="Teflon reinforced with AN3 steel braid">Teflón reforzado con malla de acero AN3</td></tr>
+                                <tr><td><strong data-es="Tolerancia Térmica" data-en="Thermal Tolerance">Tolerancia Térmica</strong></td><td data-es="Hasta 800 °C" data-en="Up to 800 °C">Hasta 800 °C</td></tr>
+                                <tr><td><strong data-es="Garantía" data-en="Warranty">Garantía</strong></td><td data-es="1 Año de fábrica" data-en="1 Year factory warranty">1 Año de fábrica</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 5. DETALLE: Disco Deportivo -->
+        <div id="detalle-freno-deportivo" class="vista-detalle oculto">
+            <div class="detalle-header-top">
+                <button class="btn-volver" onclick="cambiarVista('vista-catalogo')" data-es="⬅ Volver al catálogo" data-en="⬅ Back to catalog">⬅ Volver al catálogo</button>
+            </div>
+            <div class="producto-layout">
+                <div class="columna-media">
+                    <div class="imagen-destacada">
+                        <img src="Multimedia/disc 5.jpg" alt="Disco Deportivo">
+                    </div>
+                    <div class="seccion-video">
+                        <h3 data-es="Test Térmico de Discos Deportivos" data-en="Sports Discs Thermal Test">Test Térmico de Discos Deportivos</h3>
+                        <p class="video-desc" data-es="Prueba de resistencia a cambios bruscos de temperatura sin sufrir deformaciones ni alabeo." data-en="Resistance test against abrupt temperature shifts without warping or deformation.">Prueba de resistencia a cambios bruscos de temperatura sin sufrir deformaciones ni alabeo.</p>
+                        <div class="video-container">
+                            <iframe src="https://drive.google.com/file/d/1Q9hsLxvR5FwM8497X4Ooo-WmBpkrEOPD/preview" title="Test Térmico Disco Deportivo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+                <div class="columna-info">
+                    <h1 class="producto-titulo"><span data-es="Disco Deportivo" data-en="Sports Disc">Disco Deportivo</span> <span class="badge">Premium Tuning</span></h1>
+                    <p class="producto-descripcion" data-es="Construidos con aleación enriquecida en carbono y sometidos a tratamiento térmico de alivio de tensiones. Combina estética agresiva con una solidez estructural superior." data-en="Built with high-carbon alloy and stress-relief heat treatment. Combines aggressive styling with superior structural strength.">
+                        Construidos con aleación enriquecida en carbono y sometidos a tratamiento térmico de alivio de tensiones. Combina estética agresiva con una solidez estructural superior.
+                    </p>
+                    <div class="caja-precio">
+                        <span class="precio-fuerte" data-es="$340.00 / Par" data-en="$340.00 / Pair">$340.00 / Par</span>
+                        <span class="envio-info" data-es="Precio referencial para tu proyecto." data-en="Reference price for your project.">Precio referencial para tu proyecto.</span>
+                    </div>
+                    <div class="seccion-specs">
+                        <h3 data-es="Compatibilidad Recomendada" data-en="Recommended Compatibility">Compatibilidad Recomendada</h3>
+                        <ul class="lista-compatibilidad">
+                            <li><strong data-es="Modelos Populares:" data-en="Popular Models:">Modelos Populares:</strong> Audi A4 / A5, Mercedes-Benz Clase C, BMW Serie 4, Infiniti Q50.</li>
+                            <li><strong data-es="Posición:" data-en="Position:">Posición:</strong> <span data-es="Eje Delantero." data-en="Front Axle.">Eje Delantero.</span></li>
+                            <li><strong data-es="Uso:" data-en="Usage:">Uso:</strong> <span data-es="Conducción rápida en autopista y tuning de exhibición." data-en="Fast highway driving and show tuning.">Conducción rápida en autopista y tuning de exhibición.</span></li>
+                        </ul>
+                    </div>
+                    <div class="seccion-specs">
+                        <h3 data-es="Especificaciones Técnicas" data-en="Technical Specifications">Especificaciones Técnicas</h3>
+                        <table class="tabla-especificaciones">
+                            <tbody>
+                                <tr><td><strong data-es="Tratamiento" data-en="Treatment">Tratamiento</strong></td><td data-es="Criogénico anti-alabeo" data-en="Cryogenic anti-warp treatment">Criogénico anti-alabeo</td></tr>
+                                <tr><td><strong data-es="Acabado" data-en="Finish">Acabado</strong></td><td data-es="Negro electro-coat en masa no friccionante" data-en="E-coated black on non-friction areas">Negro electro-coat en masa no friccionante</td></tr>
+                                <tr><td><strong data-es="Diámetro Exterior" data-en="Outer Diameter">Diámetro Exterior</strong></td><td data-es="330 mm" data-en="330 mm">330 mm</td></tr>
+                                <tr><td><strong data-es="Tolerancia Térmica" data-en="Thermal Tolerance">Tolerancia Térmica</strong></td><td data-es="Hasta 720 °C" data-en="Up to 720 °C">Hasta 720 °C</td></tr>
+                                <tr><td><strong data-es="Garantía" data-en="Warranty">Garantía</strong></td><td data-es="1 Año de fábrica" data-en="1 Year factory warranty">1 Año de fábrica</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 6. DETALLE: Disco Cerámico Pro -->
+        <div id="detalle-freno-ceramico-pro" class="vista-detalle oculto">
+            <div class="detalle-header-top">
+                <button class="btn-volver" onclick="cambiarVista('vista-catalogo')" data-es="⬅ Volver al catálogo" data-en="⬅ Back to catalog">⬅ Volver al catálogo</button>
+            </div>
+            <div class="producto-layout">
+                <div class="columna-media">
+                    <div class="imagen-destacada">
+                        <img src="Multimedia/disc 6.jpg" alt="Disco Cerámico Pro">
+                    </div>
+                    <div class="seccion-video">
+                        <h3 data-es="Prueba de Fricción Cerámica" data-en="Ceramic Friction Test">Prueba de Fricción Cerámica</h3>
+                        <p class="video-desc" data-es="Demostración de frenado inmediato y cero generación de polvo negro en rines." data-en="Immediate braking demo with zero black dust accumulation on wheels.">Demostración de frenado inmediato y cero generación de polvo negro en rines.</p>
+                        <div class="video-container">
+                            <iframe src="https://drive.google.com/file/d/1Q9hsLxvR5FwM8497X4Ooo-WmBpkrEOPD/preview" title="Prueba Disco Cerámico Pro" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+                <div class="columna-info">
+                    <h1 class="producto-titulo"><span data-es="Disco Cerámico Pro" data-en="Pro Ceramic Disc">Disco Cerámico Pro</span> <span class="badge">Ultra-Light Spec</span></h1>
+                    <p class="producto-descripcion" data-es="Formulado con matriz metálica enriquecida con compuesto cerámico. Ofrece una reducción drástica en el peso de cada disco y una resistencia excepcional a la fatiga." data-en="Formulated with metallic matrix enriched with ceramic compound. Offers drastic weight reduction per rotor and exceptional fatigue resistance.">
+                        Formulado con matriz metálica enriquecida con compuesto cerámico. Ofrece una reducción drástica en el peso de cada disco y una resistencia excepcional a la fatiga.
+                    </p>
+                    <div class="caja-precio">
+                        <span class="precio-fuerte" data-es="$890.00 / Par" data-en="$890.00 / Pair">$890.00 / Par</span>
+                        <span class="envio-info" data-es="Precio referencial para tu proyecto." data-en="Reference price for your project.">Precio referencial para tu proyecto.</span>
+                    </div>
+                    <div class="seccion-specs">
+                        <h3 data-es="Compatibilidad Recomendada" data-en="Recommended Compatibility">Compatibilidad Recomendada</h3>
+                        <ul class="lista-compatibilidad">
+                            <li><strong data-es="Modelos Populares:" data-en="Popular Models:">Modelos Populares:</strong> Porsche Cayman / 911, Corvette C7, BMW M2 / M4, Audi RS3.</li>
+                            <li><strong data-es="Posición:" data-en="Position:">Posición:</strong> <span data-es="Eje Delantero." data-en="Front Axle.">Eje Delantero.</span></li>
+                            <li><strong data-es="Uso:" data-en="Usage:">Uso:</strong> <span data-es="Track Days exigentes y alta velocidad." data-en="Demanding Track Days and high speeds.">Track Days exigentes y alta velocidad.</span></li>
+                        </ul>
+                    </div>
+                    <div class="seccion-specs">
+                        <h3 data-es="Especificaciones Técnicas" data-en="Technical Specifications">Especificaciones Técnicas</h3>
+                        <table class="tabla-especificaciones">
+                            <tbody>
+                                <tr><td><strong data-es="Reducción de Peso" data-en="Weight Reduction">Reducción de Peso</strong></td><td data-es="-40% respecto a discos de hierro tradicionales" data-en="-40% compared to traditional iron discs">-40% respecto a discos de hierro tradicionales</td></tr>
+                                <tr><td><strong data-es="Emisión de Polvo" data-en="Dust Emission">Emisión de Polvo</strong></td><td data-es="Prácticamente nula (Polvo claro no adherente)" data-en="Virtually zero (Light non-stick dust)">Prácticamente nula (Polvo claro no adherente)</td></tr>
+                                <tr><td><strong data-es="Tolerancia Térmica" data-en="Thermal Tolerance">Tolerancia Térmica</strong></td><td data-es="Hasta 900 °C" data-en="Up to 900 °C">Hasta 900 °C</td></tr>
+                                <tr><td><strong data-es="Resistencia a Corrosión" data-en="Corrosion Resistance">Resistencia a Corrosión</strong></td><td data-es="100% Inmune a la oxidación" data-en="100% Rustproof">100% Inmune a la oxidación</td></tr>
+                                <tr><td><strong data-es="Garantía" data-en="Warranty">Garantía</strong></td><td data-es="2 Años de fábrica" data-en="2 Years factory warranty">2 Años de fábrica</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 7. DETALLE: Disco Flotante Bi-Material -->
+        <div id="detalle-freno-flotante" class="vista-detalle oculto">
+            <div class="detalle-header-top">
+                <button class="btn-volver" onclick="cambiarVista('vista-catalogo')" data-es="⬅ Volver al catálogo" data-en="⬅ Back to catalog">⬅ Volver al catálogo</button>
+            </div>
+            <div class="producto-layout">
+                <div class="columna-media">
+                    <div class="imagen-destacada">
+                        <img src="Multimedia/disc 7.jpg" alt="Disco Flotante Bi-Material">
+                    </div>
+                    <div class="seccion-video">
+                        <h3 data-es="Funcionamiento del Sistema Flotante" data-en="Floating System Operation">Funcionamiento del Sistema Flotante</h3>
+                        <p class="video-desc" data-es="Cómo los casquillos flotantes absorben la expansión radial del disco sin deformar el buje de la rueda." data-en="How floating hardware absorbs radial disc expansion without distorting the wheel hub.">Cómo los casquillos flotantes absorben la expansión radial del disco sin deformar el buje de la rueda.</p>
+                        <div class="video-container">
+                            <iframe src="https://drive.google.com/file/d/1Q9hsLxvR5FwM8497X4Ooo-WmBpkrEOPD/preview" title="Sistema Disco Flotante" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+                <div class="columna-info">
+                    <h1 class="producto-titulo"><span data-es="Disco Flotante Bi-Material" data-en="Bi-Material Floating Disc">Disco Flotante Bi-Material</span> <span class="badge">2-Piece Floating</span></h1>
+                    <p class="producto-descripcion" data-es="Disco en 2 piezas separado con sombrero de aluminio forjado T6-6061 y pista de fricción flotante. Evita vibraciones por dilatación térmica bajo uso extremo." data-en="2-piece separate rotor with T6-6061 forged aluminum hat and floating friction ring. Prevents thermal expansion vibrations under hard use.">
+                        Disco en 2 piezas separado con sombrero de aluminio forjado T6-6061 y pista de fricción flotante. Evita vibraciones por dilatación térmica bajo uso extremo.
+                    </p>
+                    <div class="caja-precio">
+                        <span class="precio-fuerte" data-es="$1,150.00 / Par" data-en="$1,150.00 / Pair">$1,150.00 / Par</span>
+                        <span class="envio-info" data-es="Precio referencial para tu proyecto." data-en="Reference price for your project.">Precio referencial para tu proyecto.</span>
+                    </div>
+                    <div class="seccion-specs">
+                        <h3 data-es="Compatibilidad Recomendada" data-en="Recommended Compatibility">Compatibilidad Recomendada</h3>
+                        <ul class="lista-compatibilidad">
+                            <li><strong data-es="Modelos Populares:" data-en="Popular Models:">Modelos Populares:</strong> Toyota Supra GR, Nissan GT-R R35, Porsche GT3, Ford Mustang Shelby GT350.</li>
+                            <li><strong data-es="Posición:" data-en="Position:">Posición:</strong> <span data-es="Eje Delantero." data-en="Front Axle.">Eje Delantero.</span></li>
+                            <li><strong data-es="Uso:" data-en="Usage:">Uso:</strong> <span data-es="Competición en circuito cerrado y endurance." data-en="Closed-circuit competition and endurance racing.">Competición en circuito cerrado y endurance.</span></li>
+                        </ul>
+                    </div>
+                    <div class="seccion-specs">
+                        <h3 data-es="Especificaciones Técnicas" data-en="Technical Specifications">Especificaciones Técnicas</h3>
+                        <table class="tabla-especificaciones">
+                            <tbody>
+                                <tr><td><strong data-es="Sombrero (Center Bell)" data-en="Hat (Center Bell)">Sombrero (Center Bell)</strong></td><td data-es="Aluminio Forjado T6-6061 Anodizado" data-en="Anodized T6-6061 Forged Aluminum">Aluminio Forjado T6-6061 Anodizado</td></tr>
+                                <tr><td><strong data-es="Perno de Sujeción" data-en="Hardware">Perno de Sujeción</strong></td><td data-es="Titanio con arandelas Wave de dilatación" data-en="Titanium with expansion Wave washers">Titanio con arandelas Wave de dilatación</td></tr>
+                                <tr><td><strong data-es="Aletas Interiores" data-en="Internal Vanes">Aletas Interiores</strong></td><td data-es="Curved Vane de alto flujo neumático" data-en="High-airflow Curved Vane design">Curved Vane de alto flujo neumático</td></tr>
+                                <tr><td><strong data-es="Tolerancia Térmica" data-en="Thermal Tolerance">Tolerancia Térmica</strong></td><td data-es="Hasta 850 °C" data-en="Up to 850 °C">Hasta 850 °C</td></tr>
+                                <tr><td><strong data-es="Garantía" data-en="Warranty">Garantía</strong></td><td data-es="1 Año de fábrica" data-en="1 Year factory warranty">1 Año de fábrica</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 8. DETALLE: Kit Freno Carbón-Cerámico -->
+        <div id="detalle-freno-carbon-ceramico" class="vista-detalle oculto">
+            <div class="detalle-header-top">
+                <button class="btn-volver" onclick="cambiarVista('vista-catalogo')" data-es="⬅ Volver al catálogo" data-en="⬅ Back to catalog">⬅ Volver al catálogo</button>
+            </div>
+            <div class="producto-layout">
+                <div class="columna-media">
+                    <div class="imagen-destacada">
+                        <img src="Multimedia/disc 8.jpg" alt="Kit Freno Carbón-Cerámico">
+                    </div>
+                    <div class="seccion-video">
+                        <h3 data-es="Tecnología Carbón-Cerámica en Superdeportivos" data-en="Carbon-Ceramic Technology in Supercars">Tecnología Carbón-Cerámica en Superdeportivos</h3>
+                        <p class="video-desc" data-es="Análisis detallado de la fibra de carbono siliconizada y su rendimiento desacelerando desde 300 km/h." data-en="Detailed analysis of siliconized carbon fiber and performance decelerating from 300 km/h.">Análisis detallado de la fibra de carbono siliconizada y su rendimiento desacelerando desde 300 km/h.</p>
+                        <div class="video-container">
+                            <iframe src="https://drive.google.com/file/d/1Q9hsLxvR5FwM8497X4Ooo-WmBpkrEOPD/preview" title="Tecnología Carbón Cerámica" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+                <div class="columna-info">
+                    <h1 class="producto-titulo"><span data-es="Kit Carbón-Cerámico" data-en="Carbon-Ceramic Kit">Kit Carbón-Cerámico</span> <span class="badge">Hypercar Spec</span></h1>
+                    <p class="producto-descripcion" data-es="La cúspide de la ingeniería automotriz. Discos de fibra de carbono siliconada que no sufren desvanecimiento incluso en temperaturas cercanas al punto de fusión metálico." data-en="The pinnacle of automotive engineering. Siliconized carbon fiber rotors with zero fading even at temperatures near metal melting point.">
+                        La cúspide de la ingeniería automotriz. Discos de fibra de carbono siliconada que no sufren desvanecimiento incluso en temperaturas cercanas al punto de fusión metálico.
+                    </p>
+                    <div class="caja-precio">
+                        <span class="precio-fuerte" data-es="$3,200.00 / Kit" data-en="$3,200.00 / Kit">$3,200.00 / Kit</span>
+                        <span class="envio-info" data-es="Precio referencial para tu proyecto." data-en="Reference price for your project.">Precio referencial para tu proyecto.</span>
+                    </div>
+                    <div class="seccion-specs">
+                        <h3 data-es="Compatibilidad Recomendada" data-en="Recommended Compatibility">Compatibilidad Recomendada</h3>
+                        <ul class="lista-compatibilidad">
+                            <li><strong data-es="Modelos Populares:" data-en="Popular Models:">Modelos Populares:</strong> Ferrari, McLaren, Porsche 911 Turbo S, GT-R preparados +700 HP.</li>
+                            <li><strong data-es="Posición:" data-en="Position:">Posición:</strong> <span data-es="Eje Delantero / Trasero." data-en="Front / Rear Axle.">Eje Delantero / Trasero.</span></li>
+                            <li><strong data-es="Uso:" data-en="Usage:">Uso:</strong> <span data-es="Superdeportivos e hiperdeportivos de pista." data-en="Track supercars and hypercars.">Superdeportivos e hiperdeportivos de pista.</span></li>
+                        </ul>
+                    </div>
+                    <div class="seccion-specs">
+                        <h3 data-es="Especificaciones Técnicas" data-en="Technical Specifications">Especificaciones Técnicas</h3>
+                        <table class="tabla-especificaciones">
+                            <tbody>
+                                <tr><td><strong data-es="Composición" data-en="Composition">Composición</strong></td><td data-es="Matriz Carbono-Silicio (C/SiC)" data-en="Carbon-Silicon Matrix (C/SiC)">Matriz Carbono-Silicio (C/SiC)</td></tr>
+                                <tr><td><strong data-es="Vida Útil Estimada" data-en="Estimated Lifespan">Vida Útil Estimada</strong></td><td data-es="Más de 150,000 km en condiciones severas" data-en="Over 150,000 km under harsh conditions">Más de 150,000 km en condiciones severas</td></tr>
+                                <tr><td><strong data-es="Tolerancia Térmica" data-en="Thermal Tolerance">Tolerancia Térmica</strong></td><td data-es="Hasta 1200 °C continuo sin fading" data-en="Up to 1200 °C continuous without fade">Hasta 1200 °C continuo sin fading</td></tr>
+                                <tr><td><strong data-es="Peso" data-en="Weight">Peso</strong></td><td data-es="Ultraligero (~4.5 kg por disco)" data-en="Ultra-light (~4.5 kg per disc)">Ultraligero (~4.5 kg por disco)</td></tr>
+                                <tr><td><strong data-es="Garantía" data-en="Warranty">Garantía</strong></td><td data-es="2 Años de fábrica" data-en="2 Years factory warranty">2 Años de fábrica</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 9. DETALLE: Disco Ranurado & Perforado X-Spec -->
+        <div id="detalle-freno-xspec" class="vista-detalle oculto">
+            <div class="detalle-header-top">
+                <button class="btn-volver" onclick="cambiarVista('vista-catalogo')" data-es="⬅ Volver al catálogo" data-en="⬅ Back to catalog">⬅ Volver al catálogo</button>
+            </div>
+            <div class="producto-layout">
+                <div class="columna-media">
+                    <div class="imagen-destacada">
+                        <img src="Multimedia/disc 9.jpg" alt="Disco Ranurado & Perforado X-Spec">
+                    </div>
+                    <div class="seccion-video">
+                        <h3 data-es="Patrón de Mecanizado X-Spec" data-en="X-Spec Machining Pattern">Patrón de Mecanizado X-Spec</h3>
+                        <p class="video-desc" data-es="Revisa cómo trabaja la combinación del ranurado en 'X' con las perforaciones pasantes de enfriamiento." data-en="See how the 'X' slotting combined with pass-through cooling holes works.">Revisa cómo trabaja la combinación del ranurado en 'X' con las perforaciones pasantes de enfriamiento.</p>
+                        <div class="video-container">
+                            <iframe src="https://drive.google.com/file/d/1Q9hsLxvR5FwM8497X4Ooo-WmBpkrEOPD/preview" title="Mecanizado Disco X-Spec" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+                <div class="columna-info">
+                    <h1 class="producto-titulo"><span data-es="Disco X-Spec Híbrido" data-en="X-Spec Hybrid Disc">Disco X-Spec Híbrido</span> <span class="badge">Drill & Slot Hybrid</span></h1>
+                    <p class="producto-descripcion" data-es="Lo mejor de dos mundos: perforaciones estratégicas para enfriamiento neumático rápido y ranuras en patrón 'X' para refrescar constantemente el compuesto de la pastilla." data-en="The best of both worlds: strategic drill holes for quick airflow cooling and 'X' pattern slots to continuously refresh pad compound.">
+                        Lo mejor de dos mundos: perforaciones estratégicas para enfriamiento neumático rápido y ranuras en patrón 'X' para refrescar constantemente el compuesto de la pastilla.
+                    </p>
+                    <div class="caja-precio">
+                        <span class="precio-fuerte" data-es="$380.00 / Par" data-en="$380.00 / Pair">$380.00 / Par</span>
+                        <span class="envio-info" data-es="Precio referencial para tu proyecto." data-en="Reference price for your project.">Precio referencial para tu proyecto.</span>
+                    </div>
+                    <div class="seccion-specs">
+                        <h3 data-es="Compatibilidad Recomendada" data-en="Recommended Compatibility">Compatibilidad Recomendada</h3>
+                        <ul class="lista-compatibilidad">
+                            <li><strong data-es="Modelos Populares:" data-en="Popular Models:">Modelos Populares:</strong> Hyundai i30N, Renault Megane RS, VW Golf R, Ford Mustang EcoBoost.</li>
+                            <li><strong data-es="Posición:" data-en="Position:">Posición:</strong> <span data-es="Eje Delantero." data-en="Front Axle.">Eje Delantero.</span></li>
+                            <li><strong data-es="Uso:" data-en="Usage:">Uso:</strong> <span data-es="Conducción agresiva urbana, tramos de montaña y track days." data-en="Aggressive urban driving, canyon runs, and track days.">Conducción agresiva urbana, tramos de montaña y track days.</span></li>
+                        </ul>
+                    </div>
+                    <div class="seccion-specs">
+                        <h3 data-es="Especificaciones Técnicas" data-en="Technical Specifications">Especificaciones Técnicas</h3>
+                        <table class="tabla-especificaciones">
+                            <tbody>
+                                <tr><td><strong data-es="Patrón de Disco" data-en="Disc Pattern">Patrón de Disco</strong></td><td data-es="Perforación pasante + Ranurado direccional X-Cross" data-en="Cross-drilled + X-Cross directional slotting">Perforación pasante + Ranurado direccional X-Cross</td></tr>
+                                <tr><td><strong data-es="Diámetro Exterior" data-en="Outer Diameter">Diámetro Exterior</strong></td><td data-es="340 mm" data-en="340 mm">340 mm</td></tr>
+                                <tr><td><strong data-es="Protección anticorrosiva" data-en="Anti-Corrosion Protection">Protección anticorrosiva</strong></td><td data-es="Geomet de alta resistencia salina" data-en="High salt spray resistant Geomet">Geomet de alta resistencia salina</td></tr>
+                                <tr><td><strong data-es="Tolerancia Térmica" data-en="Thermal Tolerance">Tolerancia Térmica</strong></td><td data-es="Hasta 750 °C" data-en="Up to 750 °C">Hasta 750 °C</td></tr>
+                                <tr><td><strong data-es="Garantía" data-en="Warranty">Garantía</strong></td><td data-es="1 Año de fábrica" data-en="1 Year factory warranty">1 Año de fábrica</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 10. DETALLE: Kit Big Brake Street-Pro -->
+        <div id="detalle-freno-big-brake" class="vista-detalle oculto">
+            <div class="detalle-header-top">
+                <button class="btn-volver" onclick="cambiarVista('vista-catalogo')" data-es="⬅ Volver al catálogo" data-en="⬅ Back to catalog">⬅ Volver al catálogo</button>
+            </div>
+            <div class="producto-layout">
+                <div class="columna-media">
+                    <div class="imagen-destacada">
+                        <img src="Multimedia/disc 10.jpg" alt="Kit Big Brake Street-Pro">
+                    </div>
+                    <div class="seccion-video">
+                        <h3 data-es="Instalación del Sistema Big Brake" data-en="Big Brake System Installation">Instalación del Sistema Big Brake</h3>
+                        <p class="video-desc" data-es="Demostración del montaje de mordazas de 6 pistones y discos sobredimensionados de 380mm." data-en="Demonstration of installing 6-piston calipers and oversized 380mm rotors.">Demostración del montaje de mordazas de 6 pistones y discos sobredimensionados de 380mm.</p>
+                        <div class="video-container">
+                            <iframe src="https://drive.google.com/file/d/1Q9hsLxvR5FwM8497X4Ooo-WmBpkrEOPD/preview" title="Instalación Big Brake Kit" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+                <div class="columna-info">
+                    <h1 class="producto-titulo"><span data-es="Kit Big Brake Street-Pro" data-en="Big Brake Street-Pro Kit">Kit Big Brake Street-Pro</span> <span class="badge">Big Brake Kit</span></h1>
+                    <p class="producto-descripcion" data-es="Sistema de frenos sobredimensionado que reemplaza la pinza y disco original por un conjunto masivo con mordaza (caliper) de 6 pistones de aluminio forjado y disco flotante de 380mm." data-en="Oversized brake conversion kit replacing OEM calipers and discs with a massive 6-piston forged aluminum caliper and 380mm floating rotor assembly.">
+                        Sistema de frenos sobredimensionado que reemplaza la pinza y disco original por un conjunto masivo con mordaza (caliper) de 6 pistones de aluminio forjado y disco flotante de 380mm.
+                    </p>
+                    <div class="caja-precio">
+                        <span class="precio-fuerte" data-es="$1,850.00 / Kit Delantero" data-en="$1,850.00 / Front Kit">$1,850.00 / Kit Delantero</span>
+                        <span class="envio-info" data-es="Precio referencial para tu proyecto." data-en="Reference price for your project.">Precio referencial para tu proyecto.</span>
+                    </div>
+                    <div class="seccion-specs">
+                        <h3 data-es="Compatibilidad Recomendada" data-en="Recommended Compatibility">Compatibilidad Recomendada</h3>
+                        <ul class="lista-compatibilidad">
+                            <li><strong data-es="Requisito Mínimo:" data-en="Minimum Requirement:">Requisito Mínimo:</strong> <span data-es="Rines de 19 pulgadas o superior." data-en="19-inch wheels or larger.">Rines de 19 pulgadas o superior.</span></li>
+                            <li><strong data-es="Modelos Populares:" data-en="Popular Models:">Modelos Populares:</strong> Ford Mustang GT, Dodge Charger SRT, Audi RS5, BMW M5.</li>
+                            <li><strong data-es="Uso:" data-en="Usage:">Uso:</strong> <span data-es="Alto rendimiento de calle y pista exigente." data-en="High performance street and hard track driving.">Alto rendimiento de calle y pista exigente.</span></li>
+                        </ul>
+                    </div>
+                    <div class="seccion-specs">
+                        <h3 data-es="Especificaciones Técnicas" data-en="Technical Specifications">Especificaciones Técnicas</h3>
+                        <table class="tabla-especificaciones">
+                            <tbody>
+                                <tr><td><strong data-es="Calipers" data-en="Calipers">Calipers</strong></td><td data-es="6 Pistones opuestos en aluminio forjado Monoblock" data-en="6 Opposed pistons in Monoblock forged aluminum">6 Pistones opuestos en aluminio forjado Monoblock</td></tr>
+                                <tr><td><strong data-es="Tamaño de Disco" data-en="Disc Size">Tamaño de Disco</strong></td><td data-es="380 mm flotante en 2 piezas" data-en="380 mm 2-piece floating">380 mm flotante en 2 piezas</td></tr>
+                                <tr><td><strong data-es="Líneas de Freno" data-en="Brake Lines">Líneas de Freno</strong></td><td data-es="Mangueras blindadas en acero inoxidable tipo aviación" data-en="Aviation-grade stainless steel braided lines">Mangueras blindadas en acero inoxidable tipo aviación</td></tr>
+                                <tr><td><strong data-es="Pastillas Incluidas" data-en="Included Pads">Pastillas Incluidas</strong></td><td data-es="Compuesto Cerámico-Metálico de alta mordida" data-en="High-bite Ceramic-Metallic compound">Compuesto Cerámico-Metálico de alta mordida</td></tr>
+                                <tr><td><strong data-es="Garantía" data-en="Warranty">Garantía</strong></td><td data-es="2 Años de fábrica" data-en="2 Years factory warranty">2 Años de fábrica</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+<footer class="footer-legacy">
+    <div class="footer-container">
+        <!-- Columna 1: Logo de la marca, lema y redes -->
+        <div class="footer-col brand-col">
+            <img src="Multimedia/Letters_Logo1.png" alt="Legacy Motors" class="footer-logo">
+            <p class="brand-tagline" data-es="Tu portal definitivo de piezas de alto rendimiento y tuning." data-en="Your ultimate portal for high performance and tuning parts.">Tu portal definitivo de piezas de alto rendimiento y tuning.</p>
+            <div class="social-links">
+                <a href="https://www.instagram.com/" target="_blank" rel="noopener">Instagram</a>
+                <a href="https://www.tiktok.com/es-419/" target="_blank" rel="noopener">TikTok</a>
+            </div>
+        </div>
+
+        <!-- Columna 2: Navegación principal -->
+        <div class="footer-col">
+            <h4 data-es="NOSOTROS" data-en="ABOUT US">NOSOTROS</h4>
+            <ul>
+                <li><a href="sobre_nosotros.html" data-es="Sobre Nosotros" data-en="About Us">Sobre Nosotros</a></li>
+                <li><a href="sobre_nosotros.html#mision" data-es="Misión y Visión" data-en="Mission & Vision">Misión y Visión</a></li>
+                <li><a href="contactos.html" data-es="Contactos" data-en="Contact">Contactos</a></li>
+                <li><a href="login.html" data-es="Mi Cuenta" data-en="My Account">Mi Cuenta</a></li>
+            </ul>
+        </div>
+
+        <!-- Columna 3: Atención y Legal -->
+        <div class="footer-col">
+            <h4 data-es="SOPORTE" data-en="SUPPORT">SOPORTE</h4>
+            <ul>
+                <li><a href="contactos.html" data-es="Atención al Cliente" data-en="Customer Support">Atención al Cliente</a></li>
+                <li><a href="sobre_nosotros.html" data-es="Preguntas Frecuentes" data-en="FAQ">Preguntas Frecuentes</a></li>
+                <li><a href="sobre_nosotros.html" data-es="Política de Privacidad" data-en="Privacy Policy">Política de Privacidad</a></li>
+                <li><a href="sobre_nosotros.html" data-es="Términos del Servicio" data-en="Terms of Service">Términos del Servicio</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Barra Inferior -->
+    <div class="footer-bottom">
+        <p data-es="© 2026 Legacy Motors | Todos los derechos reservados | Hecho con pasión por el rendimiento." data-en="© 2026 Legacy Motors | All rights reserved | Made with passion for performance.">© 2026 Legacy Motors | Todos los derechos reservados | Hecho con pasión por el rendimiento.</p>
+    </div>
+</footer>
+
+    <!-- Script para controlar la navegación interactiva entre catálogo y fichas técnicas -->
+    <script>
+        function cambiarVista(idVista) {
+            // 1. Ocultar la vista principal del catálogo
+            document.getElementById('vista-catalogo').style.display = 'none';
+
+            // 2. Ocultar todas las vistas de detalles
+            const vistasDetalle = document.querySelectorAll('.vista-detalle');
+            vistasDetalle.forEach(vista => {
+                vista.classList.add('oculto');
+            });
+
+            // 3. Mostrar la vista seleccionada
+            if (idVista === 'vista-catalogo') {
+                document.getElementById('vista-catalogo').style.display = 'block';
+            } else {
+                const vistaSeleccionada = document.getElementById(idVista);
+                if (vistaSeleccionada) {
+                    vistaSeleccionada.classList.remove('oculto');
+                }
+            }
+
+            // 4. Desplazar la pantalla arriba suavemente
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    </script>
+    <script src="JS/funciones.js"></script>
+    <script src="JS/Traducciones.js"></script>
+</body>
+</html>

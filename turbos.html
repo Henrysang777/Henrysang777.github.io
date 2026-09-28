@@ -1,0 +1,914 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-es="Catálogo de Mejoras - Legacy Motors" data-en="Upgrades Catalog - Legacy Motors">Catálogo de Mejoras - Legacy Motors</title>
+    <link rel="stylesheet" href="CSS/estilo.css">
+        <script>
+        (function() {
+            const savedTheme = localStorage.getItem("theme") || "dark";
+            document.documentElement.setAttribute("data-theme", savedTheme);
+        })();
+    </script>
+        <link rel="shortcut icon" href="Imagenes_EXTRA/Isologo.png" type="image/x-icon">
+
+</head>
+<body>
+    <header>
+        <nav class="nav-container">
+    <a href="index.html">
+<picture class="logo-wrapper">
+    <source srcset="Imagenes_EXTRA/Letters_Logo2.png" media="(prefers-color-scheme: light)" data-theme-logo>
+    <img src="Multimedia/Letters_Logo1.png" alt="Logo" class="logo-img">
+                    <div class="rgb-line"></div>
+</picture>
+</a>
+            <div class="search-wrapper">
+                <input type="search" placeholder="Buscar..." data-es="Buscar..." data-en="Search...">
+            </div>
+            <div class="nav-links">
+                                <div class="dropdown-container">
+                    <button type="button" class="dropdown-btn" id="dropdownBtn">
+                        <span data-es="PRODUCTOS" data-en="PRODUCTS">PRODUCTOS</span> <span class="arrow">▾</span>
+                    </button>
+                    <div class="dropdown-menu" id="dropdownMenu">
+                        <span class="dropdown-header" data-es="Categorías" data-en="Categories">Categorías</span>
+                        <a href="turbos.html" data-es="Turbos" data-en="Turbos">Turbos</a>
+                        <a href="NOS.html" data-es="Óxido Nitroso (NOS)" data-en="Nitrous Oxide (NOS)">Óxido Nitroso (NOS)</a>
+                        <a href="discos.html" data-es="Discos de Freno" data-en="Brake Discs">Discos de Freno</a>
+                        <a href="suspen.html" data-es="Suspensiones" data-en="Suspensions">Suspensiones</a>
+                        <a href="carroceria.html" data-es="Carrocería" data-en="Bodywork">Carrocería</a>
+                    </div>
+                </div>
+                <a href="index.html" data-es="Inicio" data-en="Home">Inicio</a>
+                <a href="sobre_nosotros.html" data-es="Sobre Nosotros" data-en="About Us">Sobre Nosotros</a>
+                <a href="contactos.html" data-es="Contactos" data-en="Contact">Contactos</a>
+                <a href="login.html" id="btn-sesion" class="btn-login active" data-es="Iniciar sesión" data-en="Log In">Iniciar sesión</a>
+            </div>
+        </nav>
+
+
+
+
+        <!--Aqui empieza-->
+    </header>
+    
+    <main>
+        <!-- ==========================================
+            VISTA 1: CATÁLOGO PRINCIPAL
+            ========================================== -->
+        <div id="vista-catalogo">
+            <div class="banner-container">
+                <img src="Imagenes_EXTRA/Legacy_Banner02.png" alt="Logo Legacy Motors" class="banner">
+            </div>
+            <hr>
+        <a href="index.html" class="btn-volver-inicio" data-es="⬅ Volver al inicio" data-en="⬅ Back to home">
+        ⬅ Volver al inicio
+</a>
+</button>
+            <h1 class="h1-title" data-es="Catálogo de Mejoras" data-en="Upgrades Catalog">Catálogo de Mejoras</h1>
+            <section class="about-section">
+                <p class="about-subtitle" data-es="Explora nuestra selección de piezas para llevar tu proyecto al siguiente nivel." data-en="Explore our selection of parts to take your project to the next level.">Explora nuestra selección de piezas para llevar tu proyecto al siguiente nivel.</p>
+            </section>
+            
+            <section class="modificaciones-grid">
+                
+                <!-- Turbo GT-500-->
+                <div class="compt" onclick="cambiarVista('detalle-turbo')">
+                    <div class="img-container">
+                        <img src="multimedia/turbo_1.png" alt="Turbo GT-500">
+                    </div>
+                    <h2 data-es="Turbo GT-500" data-en="GT-500 Turbo">Turbo GT-500</h2>
+                    <p data-es="Máxima respuesta para motores turboalimentados." data-en="Maximum response for turbocharged engines.">Máxima respuesta para motores turboalimentados.</p>
+                </div>
+<!--Turbo Extreme-->
+                <div class="compt" onclick="cambiarVista('detalle-nos')">
+                    <div class="img-container">
+                        <img src="Multimedia/turbo extreme.jpg" alt="Turbo Extreme">
+                    </div>
+                    <h2 data-es="Turbo Extreme" data-en="Extreme Turbo">Turbo Extreme</h2>
+                    <p data-es="Potencia sólida y durabilidad para uso diario." data-en="Solid power and durability for daily driving.">Potencia sólida y durabilidad para uso diario.</p>
+                </div>
+
+<!-- Turbo Sport -->
+                <div class="compt" onclick="cambiarVista('detalle-discos')">
+                    <div class="img-container">
+                        <img src="Multimedia/Turbo sport (2).avif" alt="Turbo Sport">
+                    </div>
+                    <h2 data-es="Turbo Sport" data-en="Sport Turbo">Turbo Sport</h2>
+                    <p data-es="Diseñado para aceleración rápida en pista." data-en="Designed for quick track acceleration.">Diseñado para aceleración rápida en pista.</p>
+                </div>
+
+                <!-- Turbo Pro -->
+                <div class="compt" onclick="cambiarVista('detalle-suspension')">
+                    <div class="img-container">
+                        <img src="Multimedia/Turbo Pro.jpg" alt="Turbo Pro">
+                    </div>
+                    <h2 data-es="Turbo Pro" data-en="Pro Turbo">Turbo Pro</h2>
+                    <p data-es="Eficiencia y fiabilidad para cualquier vehículo." data-en="Efficiency and reliability for any vehicle.">Eficiencia y fiabilidad para cualquier vehículo.</p>
+                </div>
+
+                <!-- Turbo Boost -->
+                <div class="compt" onclick="cambiarVista('detalle-carroceria')">
+                    <div class="img-container">
+                        <img src="multimedia/Turbo Boost.webp" alt="Turbo Boost">
+                    </div>
+                    <h2 data-es="Turbo Boost" data-en="Turbo Boost">Turbo Boost</h2>
+                    <p data-es="Mayor presión de soplado para una aceleración agresiva." data-en="Higher boost pressure for aggressive acceleration.">Mayor presión de soplado para una aceleración agresiva.</p>
+                </div>
+
+                <!--Nuevo-->
+                <div class="compt" onclick="cambiarVista('detalle-max')">
+                    <div class="img-container">
+                        <img src="Multimedia/turbo max.jpg" alt="Turbo Max">
+                    </div>
+                    <h2 data-es="Turbo Max" data-en="Max Turbo">Turbo Max</h2>
+                    <p data-es="Rendimiento excepcional en altas revoluciones, ideal para vehículos de competición." data-en="Exceptional high-RPM performance, ideal for competition vehicles.">Rendimiento excepcional en altas revoluciones, ideal para vehículos de competición.</p>
+                </div>
+                
+
+                <div class="compt" onclick="cambiarVista('detalle-eco')">
+                    <div class="img-container">
+                        <img src="Multimedia/Turbo Eco-Drive.webp" alt="Turbo Eco-Drive">
+                    </div>
+                    <h2 data-es="Turbo Eco-Drive" data-en="Eco-Drive Turbo">Turbo Eco-Drive</h2>
+                    <p data-es="Optimización del flujo de aire para mejorar el consumo de combustible sin sacrificar la potencia." data-en="Airflow optimization to improve fuel economy without sacrificing power.">Optimización del flujo de aire para mejorar el consumo de combustible sin sacrificar la potencia.</p>
+                </div>
+
+                <div class="compt" onclick="cambiarVista('detalle-titan')">
+                    <div class="img-container">
+                        <img src="Multimedia/Turbo Titan.jpg" alt="Turbo Titan">
+                    </div>
+                    <h2 data-es="Turbo Titan" data-en="Titan Turbo">Turbo Titan</h2>
+                    <p data-es="Resistencia extrema y máximo torque diseñado para vehículos pesados y todoterreno." data-en="Extreme durability and maximum torque engineered for heavy-duty and off-road vehicles.">Resistencia extrema y máximo torque diseñado para vehículos pesados y todoterreno.</p>
+                </div>
+                
+
+                <div class="compt" onclick="cambiarVista('detalle-apex')">
+                    <div class="img-container">
+                        <img src="Multimedia/Turbo Apex.webp" alt="Turbo Apex">
+                    </div>
+                    <h2 data-es="Turbo Apex" data-en="Apex Turbo">Turbo Apex</h2>
+                    <p data-es="Precisión aerodinámica que garantiza una entrega de potencia suave, lineal y constante." data-en="Aerodynamic precision ensuring smooth, linear, and consistent power delivery.">Precisión aerodinámica que garantiza una entrega de potencia suave, lineal y constante.</p>
+                </div>
+                
+
+                <div class="compt" onclick="cambiarVista('detalle-velocity')">
+                    <div class="img-container">
+                        <img src="Multimedia/Turbo Velocity.jpg" alt="Turbo Velocity">
+                    </div>
+                    <h2 data-es="Turbo Velocity" data-en="Velocity Turbo">Turbo Velocity</h2>
+                    <p data-es="Geometría variable de última generación para alcanzar velocidades punta en cuestión de segundos." data-en="Next-generation variable geometry to reach top speeds in seconds.">Geometría variable de última generación para alcanzar velocidades punta en cuestión de segundos.</p>
+                </div>
+                
+                
+                
+            </section>
+            <hr>
+            <section class="about-section">
+                <p class="about-subtitle" data-es="Desate el poder que tu motor esconde y marca una diferencia de velocidad tan imponente que solo veran tus luces traseras." data-en="Unleash the hidden power of your engine and set a speed difference so imposing they will only see your taillights.">Desate el poder que tu motor esconde y marca una diferencia de velocidad tan imponente que solo veran tus luces traseras.</p>
+            </section>
+        </div>
+<!--Hasta aca llega como el layout principal-->
+<!-- ==========================================
+            VISTAS DE DETALLES (Ocultas por defecto)
+            ========================================== -->
+
+<!-- DETALLE TURBO -->
+ <!-- DETALLE TURBO -->
+<div id="detalle-turbo" class="vista-detalle oculto">
+    
+    <div class="detalle-header-top">
+        <button class="btn-volver" onclick="cambiarVista('vista-catalogo')" data-es="⬅ Volver al catálogo" data-en="⬅ Back to catalog">⬅ Volver al catálogo</button>
+    </div>
+
+    <div class="producto-layout">
+        
+        <!-- COLUMNA IZQUIERDA: IMAGEN Y VIDEO -->
+        <div class="columna-media">
+            <div class="imagen-destacada">
+                <img src="multimedia/turbo_1.png" alt="Turbo GT-500">
+            </div>
+
+            <div class="seccion-video">
+                <h3 data-es="Tutorial de Instalación" data-en="Installation Tutorial">Tutorial de Instalación</h3>
+                <p class="video-desc" data-es="Aprende a instalar y calibrar el Turbo GT-500 correctamente en tu motor con nuestra guía paso a paso." data-en="Learn how to properly install and calibrate the GT-500 Turbo on your engine with our step-by-step guide.">Aprende a instalar y calibrar el Turbo GT-500 correctamente en tu motor con nuestra guía paso a paso.</p>
+                <div class="video-container">
+                    <!-- Reemplaza el enlace de YouTube en 'src' con tu propio video -->
+                    <iframe src="https://drive.google.com/file/d/1njOBMdJuhA9WJmVY-hU4_N-3chiL8rN3/preview" title="Instalación Turbo GT-500" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+<!-- COLUMNA DERECHA: INFORMACIÓN Y COMPRA -->
+        <div class="columna-info">
+            <h1 class="producto-titulo">Turbo GT-500 <span class="badge" data-es="Serie Pro" data-en="Pro Series">Serie Pro</span></h1>
+            
+            <p class="producto-descripcion" data-es="El Turbo GT-500 cuenta con tecnología Twin-Scroll diseñada específicamente para maximizar la respuesta en bajas revoluciones y eliminar el molesto Turbo Lag. Perfecto para entusiastas que buscan agresividad en la pista sin sacrificar la maniobrabilidad en las calles." data-en="The GT-500 Turbo features Twin-Scroll technology specifically engineered to maximize low-RPM response and eliminate annoying Turbo Lag. Perfect for enthusiasts seeking track aggressiveness without sacrificing street drivability.">
+                El Turbo GT-500 cuenta con tecnología <em>Twin-Scroll</em> diseñada específicamente para maximizar la respuesta en bajas revoluciones y eliminar el molesto <em>Turbo Lag</em>. Perfecto para entusiastas que buscan agresividad en la pista sin sacrificar la maniobrabilidad en las calles.
+            </p>
+
+            <div class="caja-precio">
+                <span class="precio-fuerte">$850.00</span>
+                <span class="envio-info" data-es="Precio referencial para tu proyecto." data-en="Reference price for your project.">Precio referencial para tu proyecto.</span>
+            </div>
+
+            <div class="seccion-specs">
+                <h3 data-es="Compatibilidad Recomendada" data-en="Recommended Compatibility">Compatibilidad Recomendada</h3>
+                <ul class="lista-compatibilidad">
+                    <li><strong data-es="Motores:" data-en="Engines:">Motores:</strong> <span data-es="4 cilindros (1.8L a 2.5L) y V6 compactos." data-en="4-cylinder (1.8L to 2.5L) and compact V6.">4 cilindros (1.8L a 2.5L) y V6 compactos.</span></li>
+                    <li><strong data-es="Modelos Populares:" data-en="Popular Models:">Modelos Populares:</strong> Honda Civic (K-Series), VW Golf GTI, Subaru WRX, Nissan Silvia (SR20DET).</li>
+                    <li><strong data-es="Uso:" data-en="Usage:">Uso:</strong> <span data-es="Street Tuning y Track Days." data-en="Street Tuning and Track Days.">Street Tuning y Track Days.</span></li>
+                </ul>
+            </div>
+
+            <div class="seccion-specs">
+                <h3 data-es="Especificaciones Técnicas" data-en="Technical Specifications">Especificaciones Técnicas</h3>
+                <table class="tabla-especificaciones">
+                    <tbody>
+                        <tr>
+                            <td><strong data-es="Presión Máxima (Boost)" data-en="Max Pressure (Boost)">Presión Máxima (Boost)</strong></td>
+                            <td>25 PSI</td>
+                        </tr>
+                        <tr>
+                            <td><strong data-es="Potencia Soportada" data-en="Supported Horsepower">Potencia Soportada</strong></td>
+                            <td data-es="Hasta 450 HP" data-en="Up to 450 HP">Hasta 450 HP</td>
+                        </tr>
+                        <tr>
+                            <td><strong data-es="Refrigeración" data-en="Cooling">Refrigeración</strong></td>
+                            <td data-es="Refrigerado por aceite y agua" data-en="Oil and water cooled">Refrigerado por aceite y agua</td>
+                        </tr>
+                        <tr>
+                            <td><strong data-es="Brida (Flange)" data-en="Flange">Brida (Flange)</strong></td>
+                            <td data-es="T3 Estándar" data-en="T3 Standard">T3 Estándar</td>
+                        </tr>
+                        <tr>
+                            <td><strong data-es="Garantía" data-en="Warranty">Garantía</strong></td>
+                            <td data-es="1 Año de fábrica" data-en="1 Year factory warranty">1 Año de fábrica</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+    </div>
+</div>
+<!-- Turbo Extreme -->
+        <div id="detalle-nos" class="vista-detalle oculto">
+            <div class="detalle-header-top">
+                <button class="btn-volver" onclick="cambiarVista('vista-catalogo')" data-es="⬅ Volver al catálogo" data-en="⬅ Back to catalog">⬅ Volver al catálogo</button>
+            </div>
+            <div class="producto-layout">
+                <div class="columna-media">
+                    <div class="imagen-destacada">
+                        <img src="Multimedia/turbo extreme.jpg" alt="Turbo Extreme">
+                    </div>
+                    <div class="seccion-video">
+                        <h3 data-es="Tutorial de Instalación" data-en="Installation Tutorial">Tutorial de Instalación</h3>
+                        <p class="video-desc" data-es="Aprende a montar y ajustar el Turbo Extreme con nuestra guía para obtener rendimiento sin comprometer la fiabilidad." data-en="Learn how to mount and adjust the Extreme Turbo with our guide to get performance without compromising reliability.">Aprende a montar y ajustar el Turbo Extreme con nuestra guía para obtener rendimiento sin comprometer la fiabilidad.</p>
+                        <div class="video-container">
+                            <iframe src="https://drive.google.com/file/d/1njOBMdJuhA9WJmVY-hU4_N-3chiL8rN3/preview" title="Instalación Turbo Extreme" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+                <div class="columna-info">
+                    <h1 class="producto-titulo">Turbo Extreme <span class="badge" data-es="Street Edition" data-en="Street Edition">Street Edition</span></h1>
+                    <p class="producto-descripcion" data-es="El Turbo Extreme está diseñado para ofrecer una combinación de potencia y durabilidad, ideal para pilotos que buscan un upgrade sólido para su motor sin perder el confort de conducción diario." data-en="The Extreme Turbo is designed to offer a blend of power and durability, ideal for drivers looking for a solid engine upgrade without losing daily driving comfort.">
+                        El Turbo Extreme está diseñado para ofrecer una combinación de potencia y durabilidad, ideal para pilotos que buscan un upgrade sólido para su motor sin perder el confort de conducción diario.
+                    </p>
+                    <div class="caja-precio">
+                        <span class="precio-fuerte">$720.00</span>
+                        <span class="envio-info" data-es="Precio referencial para tu proyecto." data-en="Reference price for your project.">Precio referencial para tu proyecto.</span>
+                    </div>
+                    <div class="seccion-specs">
+                        <h3 data-es="Compatibilidad Recomendada" data-en="Recommended Compatibility">Compatibilidad Recomendada</h3>
+                        <ul class="lista-compatibilidad">
+                            <li><strong data-es="Motores:" data-en="Engines:">Motores:</strong> <span data-es="4 cilindros 1.6L a 2.2L y 4 cilindros turbo." data-en="4-cylinder 1.6L to 2.2L and turbo 4-cylinder.">4 cilindros 1.6L a 2.2L y 4 cilindros turbo.</span></li>
+                            <li><strong data-es="Modelos Populares:" data-en="Popular Models:">Modelos Populares:</strong> Ford Fiesta ST, Seat León Cupra, Renault Megane RS, Toyota GR Yaris.</li>
+                            <li><strong data-es="Uso:" data-en="Usage:">Uso:</strong> <span data-es="Street tuning y daily driving con respuesta mejorada." data-en="Street tuning and daily driving with improved response.">Street tuning y daily driving con respuesta mejorada.</span></li>
+                        </ul>
+                    </div>
+                    <div class="seccion-specs">
+                        <h3 data-es="Especificaciones Técnicas" data-en="Technical Specifications">Especificaciones Técnicas</h3>
+                        <table class="tabla-especificaciones">
+                            <tbody>
+                                <tr>
+                                    <td><strong data-es="Presión Máxima (Boost)" data-en="Max Pressure (Boost)">Presión Máxima (Boost)</strong></td>
+                                    <td>22 PSI</td>
+                                </tr>
+                                <tr>
+                                    <td><strong data-es="Potencia Soportada" data-en="Supported Horsepower">Potencia Soportada</strong></td>
+                                    <td data-es="Hasta 380 HP" data-en="Up to 380 HP">Hasta 380 HP</td>
+                                </tr>
+                                <tr>
+                                    <td><strong data-es="Refrigeración" data-en="Cooling">Refrigeración</strong></td>
+                                    <td data-es="Refrigerado por aceite" data-en="Oil cooled">Refrigerado por aceite</td>
+                                </tr>
+                                <tr>
+                                    <td><strong data-es="Brida (Flange)" data-en="Flange">Brida (Flange)</strong></td>
+                                    <td data-es="T25 Estándar" data-en="T25 Standard">T25 Estándar</td>
+                                </tr>
+                                <tr>
+                                    <td><strong data-es="Garantía" data-en="Warranty">Garantía</strong></td>
+                                    <td data-es="1 Año de fábrica" data-en="1 Year factory warranty">1 Año de fábrica</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+<!-- Turbo Sport -->
+        <div id="detalle-discos" class="vista-detalle oculto">
+            <div class="detalle-header-top">
+                <button class="btn-volver" onclick="cambiarVista('vista-catalogo')" data-es="⬅ Volver al catálogo" data-en="⬅ Back to catalog">⬅ Volver al catálogo</button>
+            </div>
+            <div class="producto-layout">
+                <div class="columna-media">
+                    <div class="imagen-destacada">
+                        <img src="Multimedia/Turbo sport (2).avif" alt="Turbo Sport">
+                    </div>
+                    <div class="seccion-video">
+                        <h3 data-es="Guía de Desempeño" data-en="Performance Guide">Guía de Desempeño</h3>
+                        <p class="video-desc" data-es="Descubre cómo maximizar el potencial de los frenos Turbo Sport para frenadas más seguras y consistentes en pista." data-en="Discover how to maximize the potential of Turbo Sport brakes for safer, more consistent track braking.">Descubre cómo maximizar el potencial de los frenos Turbo Sport para frenadas más seguras y consistentes en pista.</p>
+                        <div class="video-container">
+                            <iframe src="https://drive.google.com/file/d/1njOBMdJuhA9WJmVY-hU4_N-3chiL8rN3/preview" title="Guía Turbo Sport" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+                <div class="columna-info">
+                    <h1 class="producto-titulo">Turbo Sport <span class="badge" data-es="Track Ready" data-en="Track Ready">Track Ready</span></h1>
+                    <p class="producto-descripcion" data-es="Diseñado para entusiastas de pista, el Turbo Sport ofrece una respuesta de frenado superior con discos ventilados y ranurados que mantienen la temperatura ideal en cada vuelta." data-en="Designed for track enthusiasts, Turbo Sport delivers superior braking response with ventilated and slotted discs that maintain ideal temperature on every lap.">
+                        Diseñado para entusiastas de pista, el Turbo Sport ofrece una respuesta de frenado superior con discos ventilados y ranurados que mantienen la temperatura ideal en cada vuelta.
+                    </p>
+                    <div class="caja-precio">
+                        <span class="precio-fuerte">$340.00</span>
+                        <span class="envio-info" data-es="Precio referencial para tu proyecto." data-en="Reference price for your project.">Precio referencial para tu proyecto.</span>
+                    </div>
+                    <div class="seccion-specs">
+                        <h3 data-es="Compatibilidad Recomendada" data-en="Recommended Compatibility">Compatibilidad Recomendada</h3>
+                        <ul class="lista-compatibilidad">
+                            <li><strong data-es="Motores:" data-en="Engines:">Motores:</strong> <span data-es="Todos los turbo 4 cilindros y V6 livianos." data-en="All 4-cylinder turbo and lightweight V6 engines.">Todos los turbo 4 cilindros y V6 livianos.</span></li>
+                            <li><strong data-es="Modelos Populares:" data-en="Popular Models:">Modelos Populares:</strong> BMW M240i, Audi S3, Subaru BRZ, Nissan 370Z.</li>
+                            <li><strong data-es="Uso:" data-en="Usage:">Uso:</strong> <span data-es="Track days y conducción deportiva intensa." data-en="Track days and intense sports driving.">Track days y conducción deportiva intensa.</span></li>
+                        </ul>
+                    </div>
+                    <div class="seccion-specs">
+                        <h3 data-es="Especificaciones Técnicas" data-en="Technical Specifications">Especificaciones Técnicas</h3>
+                        <table class="tabla-especificaciones">
+                            <tbody>
+                                <tr>
+                                    <td><strong data-es="Tipo de Disco" data-en="Disc Type">Tipo de Disco</strong></td>
+                                    <td data-es="Ventilado y ranurado" data-en="Ventilated and slotted">Ventilado y ranurado</td>
+                                </tr>
+                                <tr>
+                                    <td><strong data-es="Material" data-en="Material">Material</strong></td>
+                                    <td data-es="Aleación de carbono e hierro" data-en="Carbon iron alloy">Aleación de carbono e hierro</td>
+                                </tr>
+                                <tr>
+                                    <td><strong data-es="Diámetro" data-en="Diameter">Diámetro</strong></td>
+                                    <td>330 mm</td>
+                                </tr>
+                                <tr>
+                                    <td><strong data-es="Compatibilidad" data-en="Compatibility">Compatibilidad</strong></td>
+                                    <td data-es="Par delantero / trasero opcional" data-en="Front pair / optional rear">Par delantero / trasero opcional</td>
+                                </tr>
+                                <tr>
+                                    <td><strong data-es="Garantía" data-en="Warranty">Garantía</strong></td>
+                                    <td data-es="1 Año limitado" data-en="1 Year limited warranty">1 Año limitado</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+<!-- Turbo Pro -->
+        <div id="detalle-suspension" class="vista-detalle oculto">
+            <div class="detalle-header-top">
+                <button class="btn-volver" onclick="cambiarVista('vista-catalogo')" data-es="⬅ Volver al catálogo" data-en="⬅ Back to catalog">⬅ Volver al catálogo</button>
+            </div>
+            <div class="producto-layout">
+                <div class="columna-media">
+                    <div class="imagen-destacada">
+                        <img src="Multimedia/Turbo Pro.jpg" alt="Turbo Pro">
+                    </div>
+                    <div class="seccion-video">
+                        <h3 data-es="Instalación y Ajuste" data-en="Installation & Tuning">Instalación y Ajuste</h3>
+                        <p class="video-desc" data-es="Conoce cómo ajustar tu suspensión Turbo Pro para obtener estabilidad en curvas y confort en cada ruta." data-en="Learn how to adjust your Turbo Pro suspension for cornering stability and comfort on every drive.">Conoce cómo ajustar tu suspensión Turbo Pro para obtener estabilidad en curvas y confort en cada ruta.</p>
+                        <div class="video-container">
+                            <iframe src="https://drive.google.com/file/d/1njOBMdJuhA9WJmVY-hU4_N-3chiL8rN3/preview" title="Instalación Turbo Pro" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+                <div class="columna-info">
+                    <h1 class="producto-titulo">Turbo Pro <span class="badge" data-es="Control Total" data-en="Total Control">Control Total</span></h1>
+                    <p class="producto-descripcion" data-es="El Turbo Pro ofrece control completo de altura y dureza, con ajuste de 32 posiciones para una conducción más firme en pista y adaptable al uso diario." data-en="The Turbo Pro offers complete height and damping control, featuring 32-way adjustment for firmer track driving and adaptability for daily use.">
+                        El Turbo Pro ofrece control completo de altura y dureza, con ajuste de 32 posiciones para una conducción más firme en pista y adaptable al uso diario.
+                    </p>
+                    <div class="caja-precio">
+                        <span class="precio-fuerte">$1,100.00</span>
+                        <span class="envio-info" data-es="Precio referencial para tu proyecto." data-en="Reference price for your project.">Precio referencial para tu proyecto.</span>
+                    </div>
+                    <div class="seccion-specs">
+                        <h3 data-es="Compatibilidad Recomendada" data-en="Recommended Compatibility">Compatibilidad Recomendada</h3>
+                        <ul class="lista-compatibilidad">
+                            <li><strong data-es="Motores:" data-en="Engines:">Motores:</strong> <span data-es="coches compactos, sedanes deportivos y coupes." data-en="compact cars, sports sedans, and coupes.">coches compactos, sedanes deportivos y coupes.</span></li>
+                            <li><strong data-es="Modelos Populares:" data-en="Popular Models:">Modelos Populares:</strong> Mazda MX-5, Honda Civic Type R, Ford Focus ST, Toyota Supra.</li>
+                            <li><strong data-es="Uso:" data-en="Usage:">Uso:</strong> <span data-es="Street & track con ajuste fino." data-en="Street & track with fine tuning.">Street & track con ajuste fino.</span></li>
+                        </ul>
+                    </div>
+                    <div class="seccion-specs">
+                        <h3 data-es="Especificaciones Técnicas" data-en="Technical Specifications">Especificaciones Técnicas</h3>
+                        <table class="tabla-especificaciones">
+                            <tbody>
+                                <tr>
+                                    <td><strong data-es="Ajuste de Altura" data-en="Height Adjustment">Ajuste de Altura</strong></td>
+                                    <td data-es="1\" a 3.5\" pulgadas" data-en="1\" to 3.5\" inches">1" a 3.5" pulgadas</td>
+                                </tr>
+                                <tr>
+                                    <td><strong data-es="Modos de Dureza" data-en="Damping Levels">Modos de Dureza</strong></td>
+                                    <td data-es="32 posiciones" data-en="32 positions">32 posiciones</td>
+                                </tr>
+                                <tr>
+                                    <td><strong data-es="Tipo" data-en="Type">Tipo</strong></td>
+                                    <td data-es="Sistema roscado coilover" data-en="Coilover threaded system">Sistema roscado coilover</td>
+                                </tr>
+                                <tr>
+                                    <td><strong data-es="Material" data-en="Material">Material</strong></td>
+                                    <td data-es="Acero inoxidable reinforced" data-en="Reinforced stainless steel">Acero inoxidable reforzado</td>
+                                </tr>
+                                <tr>
+                                    <td><strong data-es="Garantía" data-en="Warranty">Garantía</strong></td>
+                                    <td data-es="1 Año de fábrica" data-en="1 Year factory warranty">1 Año de fábrica</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Turbo Boost -->
+        <div id="detalle-carroceria" class="vista-detalle oculto">
+            <div class="detalle-header-top">
+                <button class="btn-volver" onclick="cambiarVista('vista-catalogo')" data-es="⬅ Volver al catálogo" data-en="⬅ Back to catalog">⬅ Volver al catálogo</button>
+            </div>
+            <div class="producto-layout">
+                <div class="columna-media">
+                    <div class="imagen-destacada">
+                        <img src="multimedia/Turbo Boost.webp" alt="Turbo Boost">
+                    </div>
+                    <div class="seccion-video">
+                        <h3 data-es="Instalación Aerodinámica" data-en="Aerodynamic Installation">Instalación Aerodinámica</h3>
+                        <p class="video-desc" data-es="Mira cómo montar y ajustar cada pieza del kit Turbo Boost para máximo estilo y desempeño." data-en="See how to mount and adjust every part of the Turbo Boost kit for ultimate style and performance.">Mira cómo montar y ajustar cada pieza del kit Turbo Boost para máximo estilo y desempeño.</p>
+                        <div class="video-container">
+                            <iframe src="https://drive.google.com/file/d/1njOBMdJuhA9WJmVY-hU4_N-3chiL8rN3/preview" title="Instalación Turbo Boost" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+                <div class="columna-info">
+                    <h1 class="producto-titulo">Turbo Boost <span class="badge" data-es="Aero Kit" data-en="Aero Kit">Aero Kit</span></h1>
+                    <p class="producto-descripcion" data-es="El kit Turbo Boost incluye bumper delantero, difusor trasero y faldones laterales para un perfil agresivo y un mejor flujo de aire en altas velocidades." data-en="The Turbo Boost kit includes front bumper, rear diffuser, and side skirts for an aggressive stance and improved high-speed airflow.">
+                        El kit Turbo Boost incluye bumper delantero, difusor trasero y faldones laterales para un perfil agresivo y un mejor flujo de aire en altas velocidades.
+                    </p>
+                    <div class="caja-precio">
+                        <span class="precio-fuerte">$1,450.00</span>
+                        <span class="envio-info" data-es="Precio referencial para tu proyecto." data-en="Reference price for your project.">Precio referencial para tu proyecto.</span>
+                    </div>
+                    <div class="seccion-specs">
+                        <h3 data-es="Compatibilidad Recomendada" data-en="Recommended Compatibility">Compatibilidad Recomendada</h3>
+                        <ul class="lista-compatibilidad">
+                            <li><strong data-es="Modelos:" data-en="Models:">Modelos:</strong> <span data-es="deportivos compactos y sedanes de alto rendimiento." data-en="compact sports cars and high-performance sedans.">deportivos compactos y sedanes de alto rendimiento.</span></li>
+                            <li><strong data-es="Materiales:" data-en="Materials:">Materiales:</strong> <span data-es="Fibra de vidrio reforzada y opciones en carbono." data-en="Reinforced fiberglass and carbon options.">Fibra de vidrio reforzada y opciones en carbono.</span></li>
+                            <li><strong data-es="Uso:" data-en="Usage:">Uso:</strong> <span data-es="Show cars, track days y mejoras estéticas agresivas." data-en="Show cars, track days, and aggressive cosmetic upgrades.">Show cars, track days y mejoras estéticas agresivas.</span></li>
+                        </ul>
+                    </div>
+                    <div class="seccion-specs">
+                        <h3 data-es="Especificaciones Técnicas" data-en="Technical Specifications">Especificaciones Técnicas</h3>
+                        <table class="tabla-especificaciones">
+                            <tbody>
+                                <tr>
+                                    <td><strong data-es="Material" data-en="Material">Material</strong></td>
+                                    <td data-es="Fibra de vidrio reforzada (FRP) / Opcional carbono" data-en="Reinforced fiberglass (FRP) / Optional carbon">Fibra de vidrio reforzada (FRP) / Opcional carbono</td>
+                                </tr>
+                                <tr>
+                                    <td><strong data-es="Incluye" data-en="Includes">Incluye</strong></td>
+                                    <td data-es="Bumper delantero, difusor trasero, faldones laterales" data-en="Front bumper, rear diffuser, side skirts">Bumper delantero, difusor trasero, faldones laterales</td>
+                                </tr>
+                                <tr>
+                                    <td><strong data-es="Acabado" data-en="Finish">Acabado</strong></td>
+                                    <td data-es="Puente de imprimación listo para pintar" data-en="Primer finish ready to paint">Puente de imprimación listo para pintar</td>
+                                </tr>
+                                <tr>
+                                    <td><strong data-es="Peso" data-en="Weight">Peso</strong></td>
+                                    <td data-es="15 kg aprox." data-en="15 kg approx.">15 kg aprox.</td>
+                                </tr>
+                                <tr>
+                                    <td><strong data-es="Garantía" data-en="Warranty">Garantía</strong></td>
+                                    <td data-es="1 Año limitado" data-en="1 Year limited warranty">1 Año limitado</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+<!-- Turbo Max -->
+<div id="detalle-max" class="vista-detalle oculto">
+    <div class="detalle-header-top">
+        <button class="btn-volver" onclick="cambiarVista('vista-catalogo')" data-es="⬅ Volver al catálogo" data-en="⬅ Back to catalog">⬅ Volver al catálogo</button>
+    </div>
+    <div class="producto-layout">
+        <div class="columna-media">
+            <div class="imagen-destacada">
+                <img src="Multimedia/Turbo Max.jpg" alt="Turbo Max">
+            </div>
+            <div class="seccion-video">
+                <h3 data-es="Instalación y Ajuste" data-en="Installation & Tuning">Instalación y Ajuste</h3>
+                <p class="video-desc" data-es="Descubre cómo instalar el Turbo Max para aprovechar al máximo su respuesta en altas RPM y su entrega de potencia en competición." data-en="Discover how to install the Max Turbo to make the most of its high-RPM response and competitive power delivery.">Descubre cómo instalar el Turbo Max para aprovechar al máximo su respuesta en altas RPM y su entrega de potencia en competición.</p>
+                <div class="video-container">
+                    <iframe src="https://drive.google.com/file/d/1njOBMdJuhA9WJmVY-hU4_N-3chiL8rN3/preview" title="Instalación Turbo Max" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+        <div class="columna-info">
+            <h1 class="producto-titulo">Turbo Max <span class="badge" data-es="Race Performance" data-en="Race Performance">Race Performance</span></h1>
+            <p class="producto-descripcion" data-es="El Turbo Max está pensado para conductores que buscan un empuje serio y directo en altas revoluciones. Su diseño de alta eficiencia maximiza la presión de soplado y entrega una respuesta agresiva cuando más se necesita, ideal para motores preparados y uso en pista." data-en="The Max Turbo is designed for drivers seeking serious, direct high-RPM thrust. Its high-efficiency design maximizes boost pressure and delivers aggressive response when needed most, ideal for built engines and track use.">
+                El Turbo Max está pensado para conductores que buscan un empuje serio y directo en altas revoluciones. Su diseño de alta eficiencia maximiza la presión de soplado y entrega una respuesta agresiva cuando más se necesita, ideal para motores preparados y uso en pista.
+            </p>
+            <div class="caja-precio">
+                <span class="precio-fuerte">$980.00</span>
+                <span class="envio-info" data-es="Precio referencial para tu proyecto." data-en="Reference price for your project.">Precio referencial para tu proyecto.</span>
+            </div>
+            <div class="seccion-specs">
+                <h3 data-es="Compatibilidad Recomendada" data-en="Recommended Compatibility">Compatibilidad Recomendada</h3>
+                <ul class="lista-compatibilidad">
+                    <li><strong data-es="Motores:" data-en="Engines:">Motores:</strong> <span data-es="4 cilindros y V6 de alto rendimiento." data-en="4-cylinder and high-performance V6.">4 cilindros y V6 de alto rendimiento.</span></li>
+                    <li><strong data-es="Modelos Populares:" data-en="Popular Models:">Modelos Populares:</strong> Subaru WRX STI, BMW M3, Toyota Supra, Honda Civic Type R.</li>
+                    <li><strong data-es="Uso:" data-en="Usage:">Uso:</strong> <span data-es="Circuito, tuning avanzado y preparación competitiva." data-en="Circuit, advanced tuning, and race preparation.">Circuito, tuning avanzado y preparación competitiva.</span></li>
+                </ul>
+            </div>
+            <div class="seccion-specs">
+                <h3 data-es="Especificaciones Técnicas" data-en="Technical Specifications">Especificaciones Técnicas</h3>
+                <table class="tabla-especificaciones">
+                    <tbody>
+                        <tr>
+                            <td><strong data-es="Presión Máxima (Boost)" data-en="Max Pressure (Boost)">Presión Máxima (Boost)</strong></td>
+                            <td>30 PSI</td>
+                        </tr>
+                        <tr>
+                            <td><strong data-es="Potencia Soportada" data-en="Supported Horsepower">Potencia Soportada</strong></td>
+                            <td data-es="Hasta 520 HP" data-en="Up to 520 HP">Hasta 520 HP</td>
+                        </tr>
+                        <tr>
+                            <td><strong data-es="Refrigeración" data-en="Cooling">Refrigeración</strong></td>
+                            <td data-es="Refrigerado por aceite y agua" data-en="Oil and water cooled">Refrigerado por aceite y agua</td>
+                        </tr>
+                        <tr>
+                            <td><strong data-es="Diseño" data-en="Design">Diseño</strong></td>
+                            <td data-es="Geometría de alta eficiencia" data-en="High-efficiency geometry">Geometría de alta eficiencia</td>
+                        </tr>
+                        <tr>
+                            <td><strong data-es="Garantía" data-en="Warranty">Garantía</strong></td>
+                            <td data-es="1 Año de fábrica" data-en="1 Year factory warranty">1 Año de fábrica</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Turbo Eco-Drive -->
+<div id="detalle-eco" class="vista-detalle oculto">
+    <div class="detalle-header-top">
+        <button class="btn-volver" onclick="cambiarVista('vista-catalogo')" data-es="⬅ Volver al catálogo" data-en="⬅ Back to catalog">⬅ Volver al catálogo</button>
+    </div>
+    <div class="producto-layout">
+        <div class="columna-media">
+            <div class="imagen-destacada">
+                <img src="Multimedia/Turbo Eco-Drive.webp" alt="Turbo Eco-Drive">
+            </div>
+            <div class="seccion-video">
+                <h3 data-es="Optimización de consumo" data-en="Fuel Economy Optimization">Optimización de consumo</h3>
+                <p class="video-desc" data-es="Aprende a sacar el mejor equilibrio entre eficiencia y potencia con el Turbo Eco-Drive." data-en="Learn how to hit the perfect balance between efficiency and power with the Eco-Drive Turbo.">Aprende a sacar el mejor equilibrio entre eficiencia y potencia con el Turbo Eco-Drive.</p>
+                <div class="video-container">
+                    <iframe src="https://drive.google.com/file/d/1njOBMdJuhA9WJmVY-hU4_N-3chiL8rN3/preview" title="Instalación Turbo Eco-Drive" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+        <div class="columna-info">
+            <h1 class="producto-titulo">Turbo Eco-Drive <span class="badge" data-es="Efficiency" data-en="Efficiency">Efficiency</span></h1>
+            <p class="producto-descripcion" data-es="El Turbo Eco-Drive está diseñado para mejorar la respuesta del turbo sin comprometer el consumo. Optimiza el flujo de aire, reduce la pérdida de energía y entrega una aceleración más limpia y constante, perfecto para un uso diario con mejor rendimiento." data-en="The Eco-Drive Turbo is engineered to enhance spool response without sacrificing fuel economy. It optimizes airflow, cuts energy loss, and yields cleaner, linear acceleration—ideal for daily driving with increased power.">
+                El Turbo Eco-Drive está diseñado para mejorar la respuesta del turbo sin comprometer el consumo. Optimiza el flujo de aire, reduce la pérdida de energía y entrega una aceleración más limpia y constante, perfecto para un uso diario con mejor rendimiento.
+            </p>
+            <div class="caja-precio">
+                <span class="precio-fuerte">$760.00</span>
+                <span class="envio-info" data-es="Precio referencial para tu proyecto." data-en="Reference price for your project.">Precio referencial para tu proyecto.</span>
+            </div>
+            <div class="seccion-specs">
+                <h3 data-es="Compatibilidad Recomendada" data-en="Recommended Compatibility">Compatibilidad Recomendada</h3>
+                <ul class="lista-compatibilidad">
+                    <li><strong data-es="Motores:" data-en="Engines:">Motores:</strong> <span data-es="4 cilindros de uso urbano y vehículos familiares." data-en="4-cylinder urban and family vehicles.">4 cilindros de uso urbano y vehículos familiares.</span></li>
+                    <li><strong data-es="Modelos Populares:" data-en="Popular Models:">Modelos Populares:</strong> VW Golf, Peugeot 308 GT, Seat Ibiza Cupra, Mazda 3.</li>
+                    <li><strong data-es="Uso:" data-en="Usage:">Uso:</strong> <span data-es="Daily drive y conducción eficiente con potencia extra." data-en="Daily drive and efficient driving with extra power.">Daily drive y conducción eficiente con potencia extra.</span></li>
+                </ul>
+            </div>
+            <div class="seccion-specs">
+                <h3 data-es="Especificaciones Técnicas" data-en="Technical Specifications">Especificaciones Técnicas</h3>
+                <table class="tabla-especificaciones">
+                    <tbody>
+                        <tr>
+                            <td><strong data-es="Presión Máxima (Boost)" data-en="Max Pressure (Boost)">Presión Máxima (Boost)</strong></td>
+                            <td>18 PSI</td>
+                        </tr>
+                        <tr>
+                            <td><strong data-es="Potencia Soportada" data-en="Supported Horsepower">Potencia Soportada</strong></td>
+                            <td data-es="Hasta 320 HP" data-en="Up to 320 HP">Hasta 320 HP</td>
+                        </tr>
+                        <tr>
+                            <td><strong data-es="Refrigeración" data-en="Cooling">Refrigeración</strong></td>
+                            <td data-es="Refrigerado por aceite" data-en="Oil cooled">Refrigerado por aceite</td>
+                        </tr>
+                        <tr>
+                            <td><strong data-es="Rendimiento" data-en="Performance">Rendimiento</strong></td>
+                            <td data-es="Mejor entrega de par y eficiencia" data-en="Improved torque output and efficiency">Mejor entrega de par y eficiencia</td>
+                        </tr>
+                        <tr>
+                            <td><strong data-es="Garantía" data-en="Warranty">Garantía</strong></td>
+                            <td data-es="1 Año de fábrica" data-en="1 Year factory warranty">1 Año de fábrica</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Turbo Titan -->
+<div id="detalle-titan" class="vista-detalle oculto">
+    <div class="detalle-header-top">
+        <button class="btn-volver" onclick="cambiarVista('vista-catalogo')" data-es="⬅ Volver al catálogo" data-en="⬅ Back to catalog">⬅ Volver al catálogo</button>
+    </div>
+    <div class="producto-layout">
+        <div class="columna-media">
+            <div class="imagen-destacada">
+                <img src="Multimedia/Turbo Titan.jpg" alt="Turbo Titan">
+            </div>
+            <div class="seccion-video">
+                <h3 data-es="Instalación todoterreno" data-en="Off-Road Installation">Instalación todoterreno</h3>
+                <p class="video-desc" data-es="Conoce cómo montar el Turbo Titan para obtener resistencia, fuerza y estabilidad en condiciones exigentes." data-en="Learn how to install the Titan Turbo for strength, torque, and stability in harsh conditions.">Conoce cómo montar el Turbo Titan para obtener resistencia, fuerza y estabilidad en condiciones exigentes.</p>
+                <div class="video-container">
+                    <iframe src="https://drive.google.com/file/d/1njOBMdJuhA9WJmVY-hU4_N-3chiL8rN3/preview" title="Instalación Turbo Titan" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+        <div class="columna-info">
+            <h1 class="producto-titulo">Turbo Titan <span class="badge" data-es="Heavy Duty" data-en="Heavy Duty">Heavy Duty</span></h1>
+            <p class="producto-descripcion" data-es="El Turbo Titan está orientado a vehículos pesados, todoterrenos y proyectos de alto esfuerzo. Está construido para resistir cargas elevadas, mantener un par alto durante más tiempo y ofrecer una respuesta sólida incluso en terrenos difíciles o trabajo continuo." data-en="The Titan Turbo is tailored for heavy vehicles, off-roaders, and high-load projects. Built to withstand heavy stress, hold high torque longer, and deliver solid response in tough terrains or continuous work.">
+                El Turbo Titan está orientado a vehículos pesados, todoterrenos y proyectos de alto esfuerzo. Está construido para resistir cargas elevadas, mantener un par alto durante más tiempo y ofrecer una respuesta sólida incluso en terrenos difíciles o trabajo continuo.
+            </p>
+            <div class="caja-precio">
+                <span class="precio-fuerte">$1,120.00</span>
+                <span class="envio-info" data-es="Precio referencial para tu proyecto." data-en="Reference price for your project.">Precio referencial para tu proyecto.</span>
+            </div>
+            <div class="seccion-specs">
+                <h3 data-es="Compatibilidad Recomendada" data-en="Recommended Compatibility">Compatibilidad Recomendada</h3>
+                <ul class="lista-compatibilidad">
+                    <li><strong data-es="Motores:" data-en="Engines:">Motores:</strong> <span data-es="V6, diésel y preparación todoterreno." data-en="V6, diesel, and off-road builds.">V6, diésel y preparación todoterreno.</span></li>
+                    <li><strong data-es="Modelos Populares:" data-en="Popular Models:">Modelos Populares:</strong> Jeep Wrangler, Toyota Hilux, Ford Ranger, Nissan Navara.</li>
+                    <li><strong data-es="Uso:" data-en="Usage:">Uso:</strong> <span data-es="Off-road, tracción y trabajo pesado." data-en="Off-road, towing, and heavy duty.">Off-road, tracción y trabajo pesado.</span></li>
+                </ul>
+            </div>
+            <div class="seccion-specs">
+                <h3 data-es="Especificaciones Técnicas" data-en="Technical Specifications">Especificaciones Técnicas</h3>
+                <table class="tabla-especificaciones">
+                    <tbody>
+                        <tr>
+                            <td><strong data-es="Presión Máxima (Boost)" data-en="Max Pressure (Boost)">Presión Máxima (Boost)</strong></td>
+                            <td>28 PSI</td>
+                        </tr>
+                        <tr>
+                            <td><strong data-es="Potencia Soportada" data-en="Supported Horsepower">Potencia Soportada</strong></td>
+                            <td data-es="Hasta 500 HP" data-en="Up to 500 HP">Hasta 500 HP</td>
+                        </tr>
+                        <tr>
+                            <td><strong data-es="Refrigeración" data-en="Cooling">Refrigeración</strong></td>
+                            <td data-es="Refrigerado por agua y aceite" data-en="Water and oil cooled">Refrigerado por agua y aceite</td>
+                        </tr>
+                        <tr>
+                            <td><strong data-es="Diseño" data-en="Design">Diseño</strong></td>
+                            <td data-es="Carcasa reforzada para uso extremo" data-en="Reinforced housing for extreme use">Carcasa reforzada para uso extremo</td>
+                        </tr>
+                        <tr>
+                            <td><strong data-es="Garantía" data-en="Warranty">Garantía</strong></td>
+                            <td data-es="1 Año de fábrica" data-en="1 Year factory warranty">1 Año de fábrica</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Turbo Apex -->
+<div id="detalle-apex" class="vista-detalle oculto">
+    <div class="detalle-header-top">
+        <button class="btn-volver" onclick="cambiarVista('vista-catalogo')" data-es="⬅ Volver al catálogo" data-en="⬅ Back to catalog">⬅ Volver al catálogo</button>
+    </div>
+    <div class="producto-layout">
+        <div class="columna-media">
+            <div class="imagen-destacada">
+                <img src="Multimedia/Turbo Apex.webp" alt="Turbo Apex">
+            </div>
+            <div class="seccion-video">
+                <h3 data-es="Calibración precisa" data-en="Precision Calibration">Calibración precisa</h3>
+                <p class="video-desc" data-es="Ve cómo calibrar el Turbo Apex para una entrega de potencia suave, constante y muy controlada." data-en="See how to calibrate the Apex Turbo for smooth, constant, and controlled power delivery.">Ve cómo calibrar el Turbo Apex para una entrega de potencia suave, constante y muy controlada.</p>
+                <div class="video-container">
+                    <iframe src="https://drive.google.com/file/d/1njOBMdJuhA9WJmVY-hU4_N-3chiL8rN3/preview" title="Instalación Turbo Apex" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+        <div class="columna-info">
+            <h1 class="producto-titulo">Turbo Apex <span class="badge" data-es="Precision Flow" data-en="Precision Flow">Precision Flow</span></h1>
+            <p class="producto-descripcion" data-es="El Turbo Apex ofrece una entrega extremadamente lineal y estable, ideal para quienes buscan un comportamiento muy controlado en conducción diaria o performance moderada. Su aerodinámica interna entrega potencia con gran suavidad y un mejor equilibrio entre respuesta y eficiencia." data-en="The Apex Turbo delivers an exceptionally linear and stable response, ideal for drivers seeking predictable control in daily driving or mild performance setups. Its internal aerodynamics feed power smoothly with an optimal balance of response and efficiency.">
+                El Turbo Apex ofrece una entrega extremadamente lineal y estable, ideal para quienes buscan un comportamiento muy controlado en conducción diaria o performance moderada. Su aerodinámica interna entrega potencia con gran suavidad y un mejor equilibrio entre respuesta y eficiencia.
+            </p>
+            <div class="caja-precio">
+                <span class="precio-fuerte">$890.00</span>
+                <span class="envio-info" data-es="Precio referencial para tu proyecto." data-en="Reference price for your project.">Precio referencial para tu proyecto.</span>
+            </div>
+            <div class="seccion-specs">
+                <h3 data-es="Compatibilidad Recomendada" data-en="Recommended Compatibility">Compatibilidad Recomendada</h3>
+                <ul class="lista-compatibilidad">
+                    <li><strong data-es="Motores:" data-en="Engines:">Motores:</strong> <span data-es="4 cilindros turbo y sedanes deportivos." data-en="4-cylinder turbo and sports sedans.">4 cilindros turbo y sedanes deportivos.</span></li>
+                    <li><strong data-es="Modelos Populares:" data-en="Popular Models:">Modelos Populares:</strong> Toyota Corolla GR, Renault Clio RS, Audi A3, Ford Focus ST.</li>
+                    <li><strong data-es="Uso:" data-en="Usage:">Uso:</strong> <span data-es="Conducción equilibrada, touring y carretera." data-en="Balanced driving, touring, and highway.">Conducción equilibrada, touring y carretera.</span></li>
+                </ul>
+            </div>
+            <div class="seccion-specs">
+                <h3 data-es="Especificaciones Técnicas" data-en="Technical Specifications">Especificaciones Técnicas</h3>
+                <table class="tabla-especificaciones">
+                    <tbody>
+                        <tr>
+                            <td><strong data-es="Presión Máxima (Boost)" data-en="Max Pressure (Boost)">Presión Máxima (Boost)</strong></td>
+                            <td>24 PSI</td>
+                        </tr>
+                        <tr>
+                            <td><strong data-es="Potencia Soportada" data-en="Supported Horsepower">Potencia Soportada</strong></td>
+                            <td data-es="Hasta 410 HP" data-en="Up to 410 HP">Hasta 410 HP</td>
+                        </tr>
+                        <tr>
+                            <td><strong data-es="Refrigeración" data-en="Cooling">Refrigeración</strong></td>
+                            <td data-es="Refrigerado por aceite" data-en="Oil cooled">Refrigerado por aceite</td>
+                        </tr>
+                        <tr>
+                            <td><strong data-es="Respuesta" data-en="Response">Respuesta</strong></td>
+                            <td data-es="Muy estable y lineal" data-en="Highly stable and linear">Muy estable y lineal</td>
+                        </tr>
+                        <tr>
+                            <td><strong data-es="Garantía" data-en="Warranty">Garantía</strong></td>
+                            <td data-es="1 Año de fábrica" data-en="1 Year factory warranty">1 Año de fábrica</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Turbo Velocity -->
+<div id="detalle-velocity" class="vista-detalle oculto">
+    <div class="detalle-header-top">
+        <button class="btn-volver" onclick="cambiarVista('vista-catalogo')" data-es="⬅ Volver al catálogo" data-en="⬅ Back to catalog">⬅ Volver al catálogo</button>
+    </div>
+    <div class="producto-layout">
+        <div class="columna-media">
+            <div class="imagen-destacada">
+                <img src="Multimedia/Turbo Velocity.jpg" alt="Turbo Velocity">
+            </div>
+            <div class="seccion-video">
+                <h3 data-es="Máxima velocidad" data-en="Maximum Velocity">Máxima velocidad</h3>
+                <p class="video-desc" data-es="Descubre cómo el Turbo Velocity mejora la inyección de aire y la aceleración en trayectos de alta velocidad." data-en="Discover how Velocity Turbo enhances airflow and acceleration at high speeds.">Descubre cómo el Turbo Velocity mejora la inyección de aire y la aceleración en trayectos de alta velocidad.</p>
+                <div class="video-container">
+                    <iframe src="https://drive.google.com/file/d/1njOBMdJuhA9WJmVY-hU4_N-3chiL8rN3/preview" title="Instalación Turbo Velocity" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+        <div class="columna-info">
+            <h1 class="producto-titulo">Turbo Velocity <span class="badge" data-es="High Speed" data-en="High Speed">High Speed</span></h1>
+            <p class="producto-descripcion" data-es="El Turbo Velocity incorpora geometría variable de última generación para acelerar con rapidez, mantener presión constante y ofrecer un empuje muy rápido en el régimen alto. Está pensado para quienes priorizan velocidad punta, respuesta instantánea y un comportamiento más extremo." data-en="The Velocity Turbo features state-of-the-art variable geometry for quick acceleration, steady boost, and relentless top-end pull. Designed for drivers who prioritize top speed, instant response, and aggressive output.">
+                El Turbo Velocity incorpora geometría variable de última generación para acelerar con rapidez, mantener presión constante y ofrecer un empuje muy rápido en el régimen alto. Está pensado para quienes priorizan velocidad punta, respuesta instantánea y un comportamiento más extremo.
+            </p>
+            <div class="caja-precio">
+                <span class="precio-fuerte">$1,030.00</span>
+                <span class="envio-info" data-es="Precio referencial para tu proyecto." data-en="Reference price for your project.">Precio referencial para tu proyecto.</span>
+            </div>
+            <div class="seccion-specs">
+                <h3 data-es="Compatibilidad Recomendada" data-en="Recommended Compatibility">Compatibilidad Recomendada</h3>
+                <ul class="lista-compatibilidad">
+                    <li><strong data-es="Motores:" data-en="Engines:">Motores:</strong> <span data-es="4 cilindros turbo y V6 deportivos." data-en="4-cylinder turbo and sports V6.">4 cilindros turbo y V6 deportivos.</span></li>
+                    <li><strong data-es="Modelos Populares:" data-en="Popular Models:">Modelos Populares:</strong> Porsche Cayman, Audi RS3, Mercedes A45, Honda Integra Type R.</li>
+                    <li><strong data-es="Uso:" data-en="Usage:">Uso:</strong> <span data-es="Pista, aceleración rápida y conducción deportiva intensa." data-en="Track, quick acceleration, and high-level performance driving.">Pista, aceleración rápida y conducción deportiva intensa.</span></li>
+                </ul>
+            </div>
+            <div class="seccion-specs">
+                <h3 data-es="Especificaciones Técnicas" data-en="Technical Specifications">Especificaciones Técnicas</h3>
+                <table class="tabla-especificaciones">
+                    <tbody>
+                        <tr>
+                            <td><strong data-es="Presión Máxima (Boost)" data-en="Max Pressure (Boost)">Presión Máxima (Boost)</strong></td>
+                            <td>26 PSI</td>
+                        </tr>
+                        <tr>
+                            <td><strong data-es="Potencia Soportada" data-en="Supported Horsepower">Potencia Soportada</strong></td>
+                            <td data-es="Hasta 480 HP" data-en="Up to 480 HP">Hasta 480 HP</td>
+                        </tr>
+                        <tr>
+                            <td><strong data-es="Refrigeración" data-en="Cooling">Refrigeración</strong></td>
+                            <td data-es="Refrigerado por agua y aceite" data-en="Water and oil cooled">Refrigerado por agua y aceite</td>
+                        </tr>
+                        <tr>
+                            <td><strong data-es="Tipo" data-en="Type">Tipo</strong></td>
+                            <td data-es="Geometría variable" data-en="Variable geometry">Geometría variable</td>
+                        </tr>
+                        <tr>
+                            <td><strong data-es="Garantía" data-en="Warranty">Garantía</strong></td>
+                            <td data-es="1 Año de fábrica" data-en="1 Year factory warranty">1 Año de fábrica</td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+            </div>
+        </div>
+    </div>
+    
+</div>
+</main>
+
+<footer class="footer-legacy">
+    <div class="footer-container">
+        <!-- Columna 1: Logo de la marca, lema y redes -->
+        <div class="footer-col brand-col">
+            <img src="Multimedia/Letters_Logo1.png" alt="Legacy Motors" class="footer-logo">
+            <p class="brand-tagline" data-es="Tu portal definitivo de piezas de alto rendimiento y tuning." data-en="Your ultimate hub for high-performance tuning parts.">Tu portal definitivo de piezas de alto rendimiento y tuning.</p>
+            <div class="social-links">
+                <a href="https://www.instagram.com/" target="_blank" rel="noopener">Instagram</a>
+                <a href="https://www.tiktok.com/es-419/" target="_blank" rel="noopener">TikTok</a>
+            </div>
+        </div>
+
+        <!-- Columna 2: Navegación principal -->
+        <div class="footer-col">
+            <h4 data-es="NOSOTROS" data-en="ABOUT US">NOSOTROS</h4>
+            <ul>
+                <li><a href="sobre_nosotros.html" data-es="Sobre Nosotros" data-en="About Us">Sobre Nosotros</a></li>
+                <li><a href="sobre_nosotros.html#mision" data-es="Misión y Visión" data-en="Mission & Vision">Misión y Visión</a></li>
+                <li><a href="contactos.html" data-es="Contactos" data-en="Contact">Contactos</a></li>
+                <li><a href="login.html" data-es="Mi Cuenta" data-en="My Account">Mi Cuenta</a></li>
+            </ul>
+        </div>
+
+        <!-- Columna 3: Atención y Legal -->
+        <div class="footer-col">
+            <h4 data-es="SOPORTE" data-en="SUPPORT">SOPORTE</h4>
+            <ul>
+               <li><a href="contactos.html" data-es="Atención al Cliente" data-en="Customer Support">Atención al Cliente</a></li>
+                <li><a href="sobre_nosotros.html" data-es="Preguntas Frecuentes" data-en="FAQs">Preguntas Frecuentes</a></li>
+                <li><a href="sobre_nosotros.html" data-es="Política de Privacidad" data-en="Privacy Policy">Política de Privacidad</a></li>
+                <li><a href="sobre_nosotros.html" data-es="Términos del Servicio" data-en="Terms of Service">Términos del Servicio</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Barra Inferior -->
+    <div class="footer-bottom">
+        <p data-es="© 2026 Legacy Motors | Todos los derechos reservados | Hecho con pasión por el rendimiento." data-en="© 2026 Legacy Motors | All rights reserved | Built with passion for performance.">© 2026 Legacy Motors | Todos los derechos reservados | Hecho con pasión por el rendimiento.</p>
+    </div>
+</footer>
+
+    <!-- SCRIPT AVANZADO PERO FÁCIL DE ENTENDER -->
+    <script>
+        function cambiarVista(idDestino) {
+            // 1. Ocultar el catálogo principal
+            document.getElementById('vista-catalogo').classList.add('oculto');
+
+            // 2. Ocultar TODAS las vistas de detalles
+            // Esto busca todos los elementos con la clase 'vista-detalle' y los esconde
+            let todasLasVistas = document.querySelectorAll('.vista-detalle');
+            todasLasVistas.forEach(function(vista) {
+                vista.classList.add('oculto');
+            });
+
+            // 3. Mostrar SOLO la vista que pediste (ya sea el catálogo o un producto específico)
+            document.getElementById(idDestino).classList.remove('oculto');
+            
+            // 4. Hacer que la pantalla vuelva al inicio suavemente
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    </script>
+    <script src="JS/funciones.js"></script>
+    <script src="JS/Traducciones.js"></script>
+</body>
+</html>
